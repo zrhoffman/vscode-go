@@ -25,11 +25,12 @@ go get -d github.com/Azure/azure-sdk-for-go/management
 code --enableExtensionGallery
 ```
 5. Install the Go extension with `F1` then `Install Extension` then search for `Go`.
-6. Relaunch Code on the `GOPATH` folder
+6. Turn on AutoSave under `File -> Auto Save`.
+7. Relaunch Code on the `GOPATH` folder
 ```bash
 code $GOPATH
 ```
-7. Go to the debug viewlet, and click the gear icon.  Replace the generated launch.json with:
+8. Go to the debug viewlet, and click the gear icon.  Replace the generated launch.json with:
 ```json
 {
     "version": "0.1.0",
