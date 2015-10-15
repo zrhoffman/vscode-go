@@ -52,5 +52,10 @@ code $GOPATH
 | Hit `^-` to navigate back.  Hover over `listenAndServe` and do the same to navigate to definition. | We can use this to browse the implementation of the built-in Go libraries - including seeing their documentation. |
 | Go-to-definition on `makeHandler`.  Create a new line after `fn(w, r, m[2])`. Type `validPath.FindStringSubmatch(r.URL)`. | We can get completion lists which helps us use the Go libraries correctly. |
 | Hover over the red squiggle. Then fix by changing to `r.URL.Path`.  | We can also catch errors inside the editor. Here we used a URL instead of a String. |
+| Delete the line that was just added.  Set a breakpoint on line `85`. | There's a lot more IDE-like features available as well - but the really nice thing about Code is it's support for debugging - that's something that not many developer tools support yet for Go. |
+| Hit `F5` to start debugging.  Wait for the breakpoint to be hit. | We set up our app to be debugged, so when we hit `F5` we'll hit our breakpoint. |
+| In the callstack, navigate to each frame down the stack. | We can see the calling stack frames, down to the assembly code that launches the main goroutine. |
+| Go back to `main.main` in the callstack, then set a breakpoint on line `34` and hit `F5` to continue. | Let's break on some more interesting code. |
+| Open a browser and navigate to `localhost:8080/view/foo`.  Wait for the breakpoint to be hit. | We can see the locals at our breakpoint, including the `foo` article we just tried to load. |
 
  
