@@ -49,5 +49,8 @@ code $GOPATH
 | Show the installed extensions and highlight `Go`. | We used to have Go colorization, but with the new Go extension we are able to provide really rich Go language support inside Code. |
 | Open `src/github.com/lukehoban/webapp-go/main.go`.  Navigate to the end of the file. | Colorization is based on a TextMAte bundle used by Atom and other text editors. |
 | Hover over `viewHandler`.  Then hold down `cmd` while hovering.  Then left-click while holding down `cmd` and hovering. | We can get type information via QuickInfo, peek at the declaration of a function, and Go to Definition. |
+| Hit `^-` to navigate back.  Hover over `listenAndServe` and do the same to navigate to definition. | We can use this to browse the implementation of the built-in Go libraries - including seeing their documentation. |
+| Go-to-definition on `makeHandler`.  Create a new line after `fn(w, r, m[2])`. Type `validPath.FindStringSubmatch(r.URL)`. | We can get completion lists which helps us use the Go libraries correctly. |
+| Hover over the red squiggle. Then fix by changing to `r.URL.Path`.  | We can also catch errors inside the editor. Here we used a URL instead of a String. |
 
  
