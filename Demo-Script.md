@@ -43,3 +43,11 @@ code $GOPATH
 
 ## Demo script
 
+
+| Demo        | Talking points  |
+| ------------- |---------------|
+| Show the installed extensions and highlight `Go`. | We used to have Go colorization, but with the new Go extension we are able to provide really rich Go language support inside Code. |
+| Open `src/github.com/lukehoban/webapp-go/main.go`.  Navigate to the end of the file. | Colorization is based on a TextMAte bundle used by Atom and other text editors. |
+| Hover over `viewHandler`.  Then hold down `cmd` while hovering.  Then left-click while holding down `cmd` and hovering. | We can get type information via QuickInfo, peek at the declaration of a function, and Go to Definition. |
+
+ 
