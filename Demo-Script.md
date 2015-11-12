@@ -4,7 +4,7 @@
 2. Choose a folder to use as your GOPATH workspace.  We'll use `$HOME/gopath`.
 ```bash
 export GOPATH=$HOME/gopath
-cd GOPATH
+cd $GOPATH
 ```
 3. Get tools and samples (Note - the extension should offer to auto-install these tools - but for fewer moving pieces we'll just install them in advance):
 ```bash
@@ -18,7 +18,7 @@ go get -u -v github.com/golang/lint/golint
 go get -u -v github.com/lukehoban/go-find-references
 # Sample code
 go get -d github.com/Azure/azure-sdk-for-go/management
-go get -u -v https://github.com/lukehoban/webapp-go
+go get -u -v github.com/lukehoban/webapp-go
 ```
 4. Follow the instructions at https://github.com/derekparker/delve/wiki/Building to install the Delve debugger.
 4. Install Code `0.9.1` and launch it with Gallery support enabled:
