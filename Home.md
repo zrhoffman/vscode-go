@@ -1,3 +1,3 @@
 See the [FAQ](Usage-FAQ).
 
-Read a demo script.
+Read a [demo script](demo-script).
