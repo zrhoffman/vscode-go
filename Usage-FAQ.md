@@ -41,7 +41,7 @@ This will create a `tasks.json` file in your workspace's `.vscode` folder.  Repl
 }
 ```
 
-You can now invoke <kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>b</kbd> to run `go install -v ./...` and report results in the output window, or kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>t</kbd> to run `go test -v ./...`.
+You can now invoke <kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>b</kbd> to run `go install -v ./...` and report results in the output window, or <kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>t</kbd> to run `go test -v ./...`.
 
 You can use this same technique to invoke other build and test tools. For example, to invoke makefile targets if your build is defined in a makefile, or to invoke tools like `go generate`.
 
