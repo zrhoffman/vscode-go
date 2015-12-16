@@ -1,19 +1,3 @@
-## How do I start the test suite using a keyboard shortcut?
-
-1. Edit your keybindings.json file:  `Code > Preferences > Keyboard Shortcuts`
-2. Add a new entry such as:
-
-```
-	{
-		"key": "cmd+r",
-		"command": "go.test.package"
-	}
-```
-
-The list of available Go specific commands is available in [this file](https://github.com/Microsoft/vscode-go/blob/master/package.json).
-
-3. Click `cmd + r` to start the package test suite.
-
 ## How to I use VS Code's "Tasks" with Go?
 
 Invoke `Tasks: Configure Task Runner` from the command palette.
@@ -46,3 +30,20 @@ You can now invoke <kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>b</kbd> to run `go inst
 You can use this same technique to invoke other build and test tools. For example, to invoke makefile targets if your build is defined in a makefile, or to invoke tools like `go generate`.
 
 More on configuring tasks in VS Code can be found at https://code.visualstudio.com/docs/editor/tasks.
+
+## How do I bind a keyboard shortcut to one of the Go commands?
+
+1. Edit your keybindings.json file:  `Code > Preferences > Keyboard Shortcuts`
+2. Add a new entry such as:
+
+```
+	{
+		"key": "cmd+r",
+		"command": "go.test.package"
+	}
+```
+
+The list of available Go specific commands is available [here](https://github.com/Microsoft/vscode-go#commands).
+
+3. Click `cmd + r` to start the package test suite.
+
