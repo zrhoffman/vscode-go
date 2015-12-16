@@ -1,1 +1,3 @@
-Welcome to the vscode-go wiki!
+See the FAQ.
+
+Read a demo script.
