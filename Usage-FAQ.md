@@ -43,7 +43,7 @@ More on configuring tasks in VS Code can be found at https://code.visualstudio.c
 	}
 ```
 
-The list of available Go specific commands is available [here](https://github.com/Microsoft/vscode-go#commands).
+The list of available Go specific commands is available [here](https://github.com/Microsoft/vscode-go/blob/master/package.json#L79).
 
 3. Click `cmd + r` to start the package test suite.
 
