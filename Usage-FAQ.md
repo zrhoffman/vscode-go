@@ -19,7 +19,7 @@ This will create a `tasks.json` file in your workspace's `.vscode` folder.  Repl
 		{
 			"taskName": "test",
 			"args": [ "-v", "./..."],
-			"isBuildCommand": true
+			"isTestCommand": true
 		}
 	]
 }
