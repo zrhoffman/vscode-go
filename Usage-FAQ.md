@@ -1,4 +1,4 @@
-## How to I use VS Code's "Tasks" with Go?
+## How do I use VS Code's "Tasks" with Go?
 
 Invoke `Tasks: Configure Task Runner` from the command palette.
 
