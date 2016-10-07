@@ -20,6 +20,7 @@ This wiki page captures changes/features/bug fixes for each release of the Go ex
     * Enable autocomplete for functions from unimported packages and for unimported packages themselves. [PR #497](https://github.com/Microsoft/vscode-go/pull/497)
     * Do not allow to import already imported packages via the `Go: Add Import` command. [PR #508](https://github.com/Microsoft/vscode-go/pull/508)
     * Suggest `gometalinter` to Go 1.5 users since `golint` dropped support for Go 1.5 [PR #509](https://github.com/Microsoft/vscode-go/pull/509)    
+    * Fix broken installation for `goimports`. [PR #470](https://github.com/Microsoft/vscode-go/pull/470) and [PR #509](https://github.com/Microsoft/vscode-go/pull/509)        
 
 
 ## 0.6.43 - August 2016
