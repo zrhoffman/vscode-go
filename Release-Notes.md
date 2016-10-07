@@ -4,14 +4,6 @@ This wiki page captures changes/features/bug fixes for each release of the Go ex
 ## Coming Soon...
 * [Ludwig Valda Vasquez (@bredov)](https://github.com/bredov) 
     * New configuration `go.formatFlags` to pass flags to the formatting tool [PR #461](https://github.com/Microsoft/vscode-go/pull/461)
-* [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a)
-    * New configuration `go.testEnVars` to pass environment variables to Go tests [PR #498](https://github.com/Microsoft/vscode-go/pull/498)
-    * Changes made to GOROOT and GOPATH via settings now take effect immediately without requiring to reload/restart VS Code [PR #458](https://github.com/Microsoft/vscode-go/pull/458)
-    * Go extension ready to use after installing tools without requiring to reload/restart VS Code [PR #457](https://github.com/Microsoft/vscode-go/pull/457)
-    * Enable Undo after Rename. [PR #477](https://github.com/Microsoft/vscode-go/pull/477)
-    * Enable autocomplete for functions from unimported packages and for unimported packages themselves. [PR #497](https://github.com/Microsoft/vscode-go/pull/497)
-    * Do not allow to import already imported packages via the `Go: Add Import` command. [PR #508](https://github.com/Microsoft/vscode-go/pull/508)
-    * Suggest `gometalinter` to Go 1.5 users since `golint` dropped support for Go 1.5 [PR #509](https://github.com/Microsoft/vscode-go/pull/509)    
 * [Dan Mace (@@ironcladlou](https://github.com/ironcladlou) 
     * New command to execute the last run test. The command is `Go: Test Previous` [PR #478](https://github.com/Microsoft/vscode-go/pull/478)
     * Send test output to a distinct output channel [PR #499](https://github.com/Microsoft/vscode-go/pull/499)
@@ -20,6 +12,14 @@ This wiki page captures changes/features/bug fixes for each release of the Go ex
        * `Go: Generate unit tests for current file`
        * `Go: Generate unit tests for current function`
        * `Go: Generate unit tests for current package`
+* [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a)
+    * New configuration `go.testEnVars` to pass environment variables to Go tests [PR #498](https://github.com/Microsoft/vscode-go/pull/498)
+    * Changes made to GOROOT and GOPATH via settings now take effect immediately without requiring to reload/restart VS Code [PR #458](https://github.com/Microsoft/vscode-go/pull/458)
+    * Go extension ready to use after installing tools without requiring to reload/restart VS Code [PR #457](https://github.com/Microsoft/vscode-go/pull/457)
+    * Enable Undo after Rename. [PR #477](https://github.com/Microsoft/vscode-go/pull/477)
+    * Enable autocomplete for functions from unimported packages and for unimported packages themselves. [PR #497](https://github.com/Microsoft/vscode-go/pull/497)
+    * Do not allow to import already imported packages via the `Go: Add Import` command. [PR #508](https://github.com/Microsoft/vscode-go/pull/508)
+    * Suggest `gometalinter` to Go 1.5 users since `golint` dropped support for Go 1.5 [PR #509](https://github.com/Microsoft/vscode-go/pull/509)    
 
 
 ## 0.6.43 - August 2016
