@@ -2,26 +2,36 @@ This wiki page captures changes/features/bug fixes for each release of the Go ex
 
 
 ## Upcoming release
-* New configuration `go.formatFlags` to pass flags to the formatting tool
-* New configuration `go.testEnVars` to pass environment variables to Go tests
-* New command to execute the last run test. The command is `Go: Test Previous`
-* Enable Undo after Rename. Fix for [#13](https://github.com/Microsoft/vscode-go/issues/13)
-* New commands to generate unit test skeletons using `gotests` tool. Needs Go 1.6 or higher. The commands are
-   * Go: Generate unit tests for current file
-   * Go: Generate unit tests for current function
-   * Go: Generate unit tests for current package
-* Enable autocomplete for functions from unimported packages and for unimported packages themselves. See the feature requests [#407](https://github.com/Microsoft/vscode-go/issues/407) or [#437](https://github.com/Microsoft/vscode-go/issues/437) for details
-* Send test output to a distinct output channel
-* Changes made to GOROOT and GOPATH via settings now take effect immediately without requiring to reload/restart VS Code
-* Go extension ready to use after installing tools without requiring to reload/restart VS Code
+* [Ludwig Valda Vasquez (@bredov)](https://github.com/bredov) 
+    * New configuration `go.formatFlags` to pass flags to the formatting tool [PR #461](https://github.com/Microsoft/vscode-go/pull/461)
+* [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a)
+    * New configuration `go.testEnVars` to pass environment variables to Go tests [PR #498](https://github.com/Microsoft/vscode-go/pull/498)
+    * Changes made to GOROOT and GOPATH via settings now take effect immediately without requiring to reload/restart VS Code [PR #458](https://github.com/Microsoft/vscode-go/pull/458)
+    * Go extension ready to use after installing tools without requiring to reload/restart VS Code [PR #457](https://github.com/Microsoft/vscode-go/pull/457)
+    * Enable Undo after Rename. Fix for [#13](https://github.com/Microsoft/vscode-go/issues/13) [PR #477](https://github.com/Microsoft/vscode-go/pull/477)
+    * Enable autocomplete for functions from unimported packages and for unimported packages themselves. [PR #497](https://github.com/Microsoft/vscode-go/pull/497)
+* [Dan Mace (@@ironcladlou](https://github.com/ironcladlou) 
+    * New command to execute the last run test. The command is `Go: Test Previous` [PR #478](https://github.com/Microsoft/vscode-go/pull/478)
+    * Send test output to a distinct output channel [PR #499](https://github.com/Microsoft/vscode-go/pull/499)
+* [Cedric Lamoriniere (@cedriclam)](https://github.com/cedriclam)
+    * New commands to generate unit test skeletons using `gotests` tool. Needs Go 1.6 or higher. [PR #489](https://github.com/Microsoft/vscode-go/pull/489)
+       * `Go: Generate unit tests for current file`
+       * `Go: Generate unit tests for current function`
+       * `Go: Generate unit tests for current package`
 
 
 ## 0.6.43 - August 2016
-* New command to install/update all the Go tools that the Go extension is dependent on. The command is `Go: Install Tools`
-* Auto-generated launch.json to have `showLog:true`. For more details see #412
-* Updates to Extra Info feature: Documentation from `godoc` now appears on hover 
+* [Matt Aimonetti (@mattetti)](https://github.com/mattetti)
+    * New command to install/update all Go tools that the Go extension needs. The command is `Go: Install Tools` [PR #428](https://github.com/Microsoft/vscode-go/pull/428)
+* [Ryan Veazey (@ryanz)](https://github.com/ryanvz)
+    * Auto-generated launch.json to have `showLog:true`. [PR #412](https://github.com/Microsoft/vscode-go/pull/412)
+* [Arnaud Barisain-Monrose (@abarisain)](https://github.com/abarisain)
+    * Updates to Extra Info feature: Documentation from `godoc` now appears on hover [PR #424](https://github.com/Microsoft/vscode-go/pull/424)
 
 ## 0.6.40-42 - July 2016
-* Option to choose `gometalinter` as tool for linting
-* New configuration `showLog` to toggle the debugging output from `delve`
-* Better logging while installing tools
+* [Sajjad Hashemian (@sijad)](https://github.com/sijad)
+    * Option to choose `gometalinter` as tool for linting [PR #294](https://github.com/Microsoft/vscode-go/pull/294)
+* [Bartosz Wróblewski (@bawr)](https://github.com/bawr)
+    * New configuration `showLog` to toggle the debugging output from `delve` [PR #352](https://github.com/Microsoft/vscode-go/pull/352)
+* [benclarkwood (@benclarkwood)](https://github.com/benclarkwood)
+    * Better logging while installing tools [PR #375](https://github.com/Microsoft/vscode-go/pull/375)
