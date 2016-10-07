@@ -8,7 +8,7 @@ This wiki page captures changes/features/bug fixes for each release of the Go ex
     * New configuration `go.testEnVars` to pass environment variables to Go tests [PR #498](https://github.com/Microsoft/vscode-go/pull/498)
     * Changes made to GOROOT and GOPATH via settings now take effect immediately without requiring to reload/restart VS Code [PR #458](https://github.com/Microsoft/vscode-go/pull/458)
     * Go extension ready to use after installing tools without requiring to reload/restart VS Code [PR #457](https://github.com/Microsoft/vscode-go/pull/457)
-    * Enable Undo after Rename. Fix for [#13](https://github.com/Microsoft/vscode-go/issues/13) [PR #477](https://github.com/Microsoft/vscode-go/pull/477)
+    * Enable Undo after Rename. [PR #477](https://github.com/Microsoft/vscode-go/pull/477)
     * Enable autocomplete for functions from unimported packages and for unimported packages themselves. [PR #497](https://github.com/Microsoft/vscode-go/pull/497)
     * Do not allow to import already imported packages via the `Go: Add Import` command. [PR #508](https://github.com/Microsoft/vscode-go/pull/508)
 * [Dan Mace (@@ironcladlou](https://github.com/ironcladlou) 
