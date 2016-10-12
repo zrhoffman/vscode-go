@@ -1,7 +1,7 @@
 This wiki page captures changes/features/bug fixes for each release of the Go extension from version 0.6.40
 
 
-## Coming Soon...
+## 0.6.44 - October 2016
 * [Ludwig Valda Vasquez (@bredov)](https://github.com/bredov) 
     * New configuration `go.formatFlags` to pass flags to the formatting tool [PR #461](https://github.com/Microsoft/vscode-go/pull/461)
 * [Dan Mace (@@ironcladlou](https://github.com/ironcladlou) 
