@@ -10,18 +10,18 @@ Pre-requisites for testing Go extension if you don't already have Go installed a
 5. Open any Go file. You will see "Analysis Tools Missing" in the status bar. Click on it to install the Go tools that the extension needs.
 
 
-Auto complete
-Auto complete for unimported packages 
-Signature Help 
-Snippets
-Hover Info 
-Goto and Peek Definition 
-Find References 
-File outline 
-Rename
-Build-on-save 
-Lint-on-save 
-Format 
-Generate unit tests squeleton
-Add Imports 
-Debugging 
+- Auto complete
+- Auto complete for unimported packages 
+- Signature Help 
+- Snippets
+- Hover Info 
+- Goto and Peek Definition 
+- Find References 
+- File outline 
+- Rename
+- Build-on-save 
+- Lint-on-save 
+- Format 
+- Generate unit tests squeleton
+- Add Imports 
+- Debugging 
