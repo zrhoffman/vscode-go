@@ -1,5 +1,17 @@
 This wiki page captures changes/features/bug fixes for each release of the Go extension from version 0.6.40
 
+## 0.6.48 - Coming Soon
+* [Ramya Rao(@ramya-rao-a)](https://github.com/ramya-rao-a)
+    * Support for `editor.formatOnSave` and deprecating `go.formatOnSave` [PR 578](https://github.com/Microsoft/vscode-go/pull/578)
+    * Remove deprecated language configuration settings [PR 587](https://github.com/Microsoft/vscode-go/pull/587)
+    * Commands to jump from Go file to its test file and vice versa. Option to jump to generated test file. [PR 590](https://github.com/Microsoft/vscode-go/pull/590)
+    * Prompt to set GOPATH [PR 591](https://github.com/Microsoft/vscode-go/pull/591)
+    * Bug Fixes
+         * [#389]((https://github.com/Microsoft/vscode-go/issues/389) Fix issue with autocomplete popping up at the end of a string [PR 586](https://github.com/Microsoft/vscode-go/pull/586)
+         * [#592]((https://github.com/Microsoft/vscode-go/issues/592) Use Go from GOROOT while installing tools [PR 594](https://github.com/Microsoft/vscode-go/pull/594)
+         * [#585]((https://github.com/Microsoft/vscode-go/issues/585) Use fs.stat instead of fs.exists to avoid mistaking "go" folder as "go" file
+
+
 ## 0.6.47 - 26th October 2016
 * [Rob Lourens @roblourens](https://github.com/roblourens)
     * Fix the regression in debugging [PR #576](https://github.com/Microsoft/vscode-go/pull/576)
