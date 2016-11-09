@@ -1,6 +1,6 @@
 This wiki page captures changes/features/bug fixes for each release of the Go extension from version 0.6.40
 
-## 0.6.48 - Coming Soon
+## 0.6.48 - 9th November, 2016
 * [Mark LaPerriere (@marklap)](https://github.com/marklap)
     * Snippets for method declaration, main and init functions [PR 602](https://github.com/Microsoft/vscode-go/pull/602)
 * [Rob Lourens @roblourens](https://github.com/roblourens)
