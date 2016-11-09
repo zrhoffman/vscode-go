@@ -6,15 +6,16 @@ This wiki page captures changes/features/bug fixes for each release of the Go ex
     * Remove deprecated language configuration settings [PR 587](https://github.com/Microsoft/vscode-go/pull/587)
     * Commands to jump from Go file to its test file and vice versa. Option to jump to generated test file. [PR 590](https://github.com/Microsoft/vscode-go/pull/590)
     * Prompt to set GOPATH [PR 591](https://github.com/Microsoft/vscode-go/pull/591)
-    * Bug Fixes
+    * Improvements to auto complete 
          * [#389](https://github.com/Microsoft/vscode-go/issues/389) Fix issue with autocomplete popping up at the end of a string [PR 586](https://github.com/Microsoft/vscode-go/pull/586)
+         * [#598](https://github.com/Microsoft/vscode-go/issues/598) Importable packages in auto complete should appear after rest of the suggestions. [PR 603](https://github.com/Microsoft/vscode-go/pull/603)
+         * [#598](https://github.com/Microsoft/vscode-go/issues/598) Importing vendored packages from other Go projects should not be allowed. [PR 605](https://github.com/Microsoft/vscode-go/pull/605)
+         * [#598](https://github.com/Microsoft/vscode-go/issues/598) When there is an identifier with same name as an available package, do not show the package in the compeltion list
+    * Other Bug Fixes
          * [#592](https://github.com/Microsoft/vscode-go/issues/592) Use Go from GOROOT while installing tools [PR 594](https://github.com/Microsoft/vscode-go/pull/594)
          * [#585](https://github.com/Microsoft/vscode-go/issues/585) Use fs.stat instead of fs.exists to avoid mistaking "go" folder as "go" file [PR 595](https://github.com/Microsoft/vscode-go/pull/595)
          * [#563](https://github.com/Microsoft/vscode-go/issues/563) Dont run `gotests` on non Go files [PR 584](https://github.com/Microsoft/vscode-go/pull/584)
-         * [#598](https://github.com/Microsoft/vscode-go/issues/598) Importable packages in auto complete should appear after rest of the suggestions. [PR 603](https://github.com/Microsoft/vscode-go/pull/603)
-         * [#598](https://github.com/Microsoft/vscode-go/issues/598) Importing vendored packages from other Go projects should not be allowed. [PR 605](https://github.com/Microsoft/vscode-go/pull/605)
-
-
+         
 ## 0.6.47 - 26th October 2016
 * [Rob Lourens @roblourens](https://github.com/roblourens)
     * Fix the regression in debugging [PR #576](https://github.com/Microsoft/vscode-go/pull/576)
