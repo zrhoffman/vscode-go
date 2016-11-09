@@ -3,6 +3,8 @@ This wiki page captures changes/features/bug fixes for each release of the Go ex
 ## 0.6.48 - Coming Soon
 * [Mark LaPerriere (@marklap)](https://github.com/marklap)
     * Snippets for method declaration, main and init functions [PR 602](https://github.com/Microsoft/vscode-go/pull/602)
+* [Rob Lourens @roblourens](https://github.com/roblourens)
+    * launch.json intellisense to include all "mode" values. Fixes [#574](https://github.com/Microsoft/vscode-go/issues/574)
 * [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a) 
     * Support for `editor.formatOnSave` and deprecating `go.formatOnSave` [PR 578](https://github.com/Microsoft/vscode-go/pull/578)
     * Remove deprecated language configuration settings [PR 587](https://github.com/Microsoft/vscode-go/pull/587)
