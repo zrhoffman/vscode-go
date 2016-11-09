@@ -1,7 +1,9 @@
 This wiki page captures changes/features/bug fixes for each release of the Go extension from version 0.6.40
 
 ## 0.6.48 - Coming Soon
-* [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a)
+* [Mark LaPerriere (@marklap)](https://github.com/marklap)
+    * Snippets for method declaration, main and init functions [PR 602](https://github.com/Microsoft/vscode-go/pull/602)
+* [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a) 
     * Support for `editor.formatOnSave` and deprecating `go.formatOnSave` [PR 578](https://github.com/Microsoft/vscode-go/pull/578)
     * Remove deprecated language configuration settings [PR 587](https://github.com/Microsoft/vscode-go/pull/587)
     * Commands to jump from Go file to its test file and vice versa. Option to jump to generated test file. [PR 590](https://github.com/Microsoft/vscode-go/pull/590)
