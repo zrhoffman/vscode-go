@@ -1,5 +1,21 @@
 This wiki page captures changes/features/bug fixes for each release of the Go extension from version 0.6.40
 
+## 0.6.50 - Coming Soon
+* [lixiaohui (@leaxoy)](https://github.com/leaxoy), [Arnaud Barisain-Monrose (@abarisain)](https://github.com/abarisain) and [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a) 
+    * Added option to use `gogetdoc` for Goto Definition , Hover and Signature Help features. [PR 622](https://github.com/Microsoft/vscode-go/pull/622) To use this, add a setting `"go.docstool": "gogetdoc"` to your settings. This fixes the below bugs
+         * [#440](https://github.com/Microsoft/vscode-go/issues/440) Hover info does not show doc string for structs
+         * [#442](https://github.com/Microsoft/vscode-go/issues/442) Goto Definition, Hover, Signature Help do not work for `net` package
+         * [#496](https://github.com/Microsoft/vscode-go/issues/496) Goto Definition, Hover, Signature Help do not work for Dot imported functions 
+         * [#515](https://github.com/Microsoft/vscode-go/issues/515) Go to definition and type info doesn't work with mux.Vars or anything else from gorilla/mux
+         * [#567](https://github.com/Microsoft/vscode-go/issues/567) Signature Help and Quick Info do not show function comments for unexported functions
+
+         
+
+
+## 0.6.49 - 10th November, 2016
+* [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a) 
+    * Revert the deprecation of `go.formatOnSave` due to popular demand. 
+
 ## 0.6.48 - 9th November, 2016
 * [Mark LaPerriere (@marklap)](https://github.com/marklap)
     * Snippets for method declaration, main and init functions [PR 602](https://github.com/Microsoft/vscode-go/pull/602)
