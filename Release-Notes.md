@@ -1,6 +1,6 @@
 This wiki page captures changes/features/bug fixes for each release of the Go extension from version 0.6.40
 
-## 0.6.51 - Coming Soon
+## 0.6.51 - 29th November, 2016
 * [Jimmy Kuu (@jimmykuu)](https://github.com/jimmykuu)
     *  Remove blank space in the end of code snippet on function suggest. [PR 628](https://github.com/Microsoft/vscode-go/pull/628)
 * [Ahmed W. (@OneofOne)](https://github.com/OneOfOne)
