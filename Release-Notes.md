@@ -8,6 +8,7 @@ This wiki page captures changes/features/bug fixes for each release of the Go ex
 * [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a)
     * Implement Step Out in debgging [Commit 6d0f440](https://github.com/Microsoft/vscode-go/commit/6d0f4405330efb789c16a01434cf096f0f9fb29c)
     * Improve performance by reducing number of calls to `godoc`, `godef`, `gogetdoc`. [PR 711](https://github.com/Microsoft/vscode-go/pull/711)
+    * Default value for `go.autocompleteUnimportedPackages` is now false to reduce noise in the suggestion list. Members of unimported packages will still show up in suggestion list after typing dot after package name.
 
 
 ## 0.6.51 - 29th November, 2016
