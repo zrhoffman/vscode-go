@@ -16,4 +16,4 @@ If you are working on the extension itself, you might want to sideload it to tes
 
 6. load the extension
 
-`code Go-xxx.vsix` <- the vsix created by the step before
+Open the extensions menu in VSCode and choose `Install from VSIX` and select the `Go-xxx.vsix` file created by step 5.
