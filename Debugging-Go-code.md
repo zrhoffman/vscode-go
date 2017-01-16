@@ -3,7 +3,7 @@
 To use the debugger, you must currently manually install `delve`.  See the [Installation Instructions](https://github.com/derekparker/delve/tree/master/Documentation/installation) for full details.  On OS X it requires creating a self-signed cert to sign the `dlv` binary.
 
 Based on how you install delve it will either end up in your PATH or GOPATH. 
-If it ends up in your GOPATH, then the Go extension cannot find it using the GOPATH you set in user/workspace settings. Therefore, either ensure that `dlv` is in your path or ensure that GOPATH is set outside of VS Code so that the Go extension can find it.
+If it ends up in your GOPATH which you have only set in user/workspace settings, then the Go extension cannot find it. Therefore, either ensure that `dlv` is in your path or ensure that GOPATH is set outside of VS Code so that the Go extension can find it.
 
 # Set up configurations in launch.json
 
