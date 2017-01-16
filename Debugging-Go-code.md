@@ -18,13 +18,13 @@ Once delve is installed, you can either press `F5` or go to the Code debug viewl
 			"type": "go",
 			"request": "launch",
 			"mode": "debug",
-                        "remotePath": "",
-                        "port": 2345,
-                        "host": "127.0.0.1",
+			"remotePath": "",
+			"port": 2345,
+			"host": "127.0.0.1",
 			"program": "${workspaceRoot}",
 			"env": {},
 			"args": [],
-                        "showLog": true
+			"showLog": true
 		}
 	]
 }
@@ -87,5 +87,4 @@ _Solution_: You can either set the GOPATH as an env var or point PATH to the dlv
 If you have set GOPATH using `go.gopath` in your settings, then the debug adapter cannot read it as the it is not aware of the settings. 
 
 _Solution_: Add the GOPATH as an env var in the `env` property in the `launch.json` file.
-
 
