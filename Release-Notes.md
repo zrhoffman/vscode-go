@@ -4,20 +4,20 @@ This wiki page captures changes/features/bug fixes for each release of the Go ex
 
 ### Build Improvements
 * [Matt Aimonetti (@mattetti)](https://github.com/mattetti)
-    * While building, use the `-i` flag which installs dependent packages, which in turn get used in subsequent builds resulting in faster builds in bigger workspaces.
+    * While building, use the `-i` flag which installs dependent packages, which in turn get used in subsequent builds resulting in faster builds in bigger workspaces. [PR 718](https://github.com/Microsoft/vscode-go/pull/718)
 * [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a)
-    * Build errors with no line numbers (for eg. Import cycle) are now displayed in the output window and will be mapped to the first line of the file.
+    * Build errors with no line numbers (for eg. Import cycle) are now displayed in the output window and will be mapped to the first line of the file. [PR 740](https://github.com/Microsoft/vscode-go/pull/740)
 
 ### Installation Improvements
 * [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a)
-    * All the "Install tool" options (the pop ups you see) and the `Go: Install Tools` command now support `gometalinter` if it is your chosen linting tool.
+    * All the "Install tool" options (the pop ups you see) and the `Go: Install Tools` command now support `gometalinter` if it is your chosen linting tool. [PR 735](https://github.com/Microsoft/vscode-go/pull/735)
 * [Sam Herrmann (@samherrmann)](https://github.com/samherrmann), [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a)
-    *  A new setting `go.toolsGopath` for providing a location to install all the Go tools that the extension depends on, if you don't want them cluttering your GOPATH. Also useful when you work on different GOPATHs.
+    *  A new setting `go.toolsGopath` for providing a location to install all the Go tools that the extension depends on, if you don't want them cluttering your GOPATH. Also useful when you work on different GOPATHs. [PR 351](https://github.com/Microsoft/vscode-go/pull/351) and [PR 737](https://github.com/Microsoft/vscode-go/pull/737)
 
 ### Test Improvements
 * [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a)
     * A new setting `go.testFlags` that will be used to run tests. If null, `go.buildFlags` will be used.
-    * Customize flags for each of the test command by using different keybindings. In the below example, the command can be `go.test.package`, `go.test.file` or `go.test.cursor`
+    * Customize flags for each of the test command by using different keybindings. [PR 482](https://github.com/Microsoft/vscode-go/pull/482). In the below example, the command can be `go.test.package`, `go.test.file` or `go.test.cursor`
     ```json
     {
         "key": "ctrl+shift+t",
@@ -28,7 +28,7 @@ This wiki page captures changes/features/bug fixes for each release of the Go ex
         "when": "editorTextFocus"
     }
     ```
-    * New toggle command `Go: Toggle Test File` that lets you toggle between your Go file and the corresponding test file. Previous commands `Go: Open Test File` and `Go: Open Implementation For Test File` have been deprecated in favor of this new command. You can add a keyboard binding to this as below:
+    * New toggle command `Go: Toggle Test File` that lets you toggle between your Go file and the corresponding test file. Previous commands `Go: Open Test File` and `Go: Open Implementation For Test File` have been deprecated in favor of this new command. [PR 739](https://github.com/Microsoft/vscode-go/pull/739). You can add a keyboard binding to this as below:
     ```json
     {
         "key": "ctrl+shift+t",
