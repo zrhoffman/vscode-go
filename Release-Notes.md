@@ -11,6 +11,7 @@ This wiki page captures changes/features/bug fixes for each release of the Go ex
 ### Installation Improvements
 * [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a)
     * All the "Install tool" options (the pop ups you see) and the `Go: Install Tools` command now support `gometalinter` if it is your chosen linting tool. [PR 735](https://github.com/Microsoft/vscode-go/pull/735)
+    * GOPATH set in the `env` property in `launch.json` will also be used to find `dlv` tool. [PR 725](https://github.com/Microsoft/vscode-go/pull/725). 
 * [Sam Herrmann (@samherrmann)](https://github.com/samherrmann), [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a)
     *  A new setting `go.toolsGopath` for providing a location to install all the Go tools that the extension depends on, if you don't want them cluttering your GOPATH. Also useful when you work on different GOPATHs. [PR 351](https://github.com/Microsoft/vscode-go/pull/351) and [PR 737](https://github.com/Microsoft/vscode-go/pull/737)
 
