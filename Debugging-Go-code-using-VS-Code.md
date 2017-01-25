@@ -74,7 +74,7 @@ example of running these on different hosts, see the example of debugging a proc
 
 ## Troubleshooting
 
-### `Cannot find Delve debugger at ... Ensure it is in your "GOPATH/bin" or "PATH".
+### Cannot find Delve debugger at ... Ensure it is in your "GOPATH/bin" or "PATH".
 
 Like the error message says, the extension cannot find `dlv`. 
 This can happen if `dlv` got installed to your GOPATH which you have set using `go.gopath` in the settings.
@@ -82,13 +82,13 @@ Since the debug adapter cannot read the settings, it is not aware of this GOPATH
 
 _Solution_: You can either set the GOPATH as an env var or point PATH to the dlv binary.
 
-### `Cannot find package ".." in any of ... 
+### Cannot find package ".." in any of ... 
 
 If you have set GOPATH using `go.gopath` in your settings, then the debug adapter cannot read it as the it is not aware of the settings. 
 
 _Solution_: Add the GOPATH as an env var in the `env` property in the `launch.json` file.
 
-### `Failed to continue: "Error: spawn EACCES"`
+### Failed to continue: "Error: spawn EACCES"
 
 You have `dlv` running just fine from command line, but VS Code gives this access related error. 
 The Go extension first tries to find `dlv` in your $GOPATH/bin and then in your $PATH.  
