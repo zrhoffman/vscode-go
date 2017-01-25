@@ -88,3 +88,8 @@ If you have set GOPATH using `go.gopath` in your settings, then the debug adapte
 
 _Solution_: Add the GOPATH as an env var in the `env` property in the `launch.json` file.
 
+### `Failed to continue: "Error: spawn EACCES"`
+
+You have `dlv` running just fine from command line, but VS Code gives this access related error. 
+The Go extension first tries to find `dlv` in your $GOPATH/bin and then in your $PATH.  
+Run `which dlv` on the command line. If the output is not your $GOPATH/bin, delete any file called `dlv` in your $GOPATH/bin and try again. 
