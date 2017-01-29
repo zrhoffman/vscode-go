@@ -7,7 +7,6 @@ This wiki page captures changes/features/bug fixes for each release of the Go ex
     * A new setting `go.useLanguageServer` to use the Go language server from Sourcegraph for features like Hover, Definition, Find All References, Signature Help, File Outline and Workspace Symbol Search.
         * This is an experimental feature.
         * If set to true, you will be prompted to install the Go language server. This will be run by the Go extension in the background to provide services needed for the above mentioned features.
-        * Any change to this setting needs a reload of the VS Code window.
 
 ### Build improvements
 * [Matt Aimonetti (@mattetti)](https://github.com/mattetti)
