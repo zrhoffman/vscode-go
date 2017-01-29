@@ -4,7 +4,7 @@ This wiki page captures changes/features/bug fixes for each release of the Go ex
 
 ### Tooling improvements
 * [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a) and [Sourcegraph](https://github.com/sourcegraph/go-langserver)
-    * A new setting `go.useLanguageServer` to use the Go language server from Sourcegraph for features like Hover, Definition, Find All References, Signature Help, File Outline and Workspace Symbol Search.
+    * A new setting `go.useLanguageServer` to use the Go language server from Sourcegraph for features like Hover, Definition, Find All References, Signature Help, File Outline and Workspace Symbol Search. [PR 750](https://github.com/Microsoft/vscode-go/pull/750)
         * This is an experimental feature.
         * If set to true, you will be prompted to install the Go language server. This will be run by the Go extension in the background to provide services needed for the above mentioned features.
 
