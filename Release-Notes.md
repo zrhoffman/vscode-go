@@ -2,13 +2,20 @@ This wiki page captures changes/features/bug fixes for each release of the Go ex
 
 ## Coming Soon...
 
-### Build Improvements
+### Tooling improvements
+* [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a) and [Sourcegraph](https://github.com/sourcegraph/go-langserver)
+    * A new setting `go.useLanguageServer` to opt in using the Go language server from Sourcegraph for features like Hover, Definition, Find All References, Signature Help, File Outline and Workspace Symbol Search.
+        * This is an experimental feature and there is not feature level setting to switch between the language server and the tools we use today. There is just one setting for all the above mentioned features.
+        * If set to true, you will be prompted to install the Go language server. This will be run by the Go extension in the background to provide services needed for the above mentioned features.
+        * Any change to this setting needs a reload of the VS Code window.
+
+### Build improvements
 * [Matt Aimonetti (@mattetti)](https://github.com/mattetti)
     * While building, use the `-i` flag which installs dependent packages, which in turn get used in subsequent builds resulting in faster builds in bigger workspaces. [PR 718](https://github.com/Microsoft/vscode-go/pull/718)
 * [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a)
     * Build errors with no line numbers (for eg. Import cycle) are now displayed in the output window and will be mapped to the first line of the file. [PR 740](https://github.com/Microsoft/vscode-go/pull/740)
 
-### Installation Improvements
+### Installation improvements
 * [Sam Herrmann (@samherrmann)](https://github.com/samherrmann), [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a)
     *  A new setting `go.toolsGopath` for providing a location to install all the Go tools that the extension depends on, if you don't want them cluttering your GOPATH. [PR 351](https://github.com/Microsoft/vscode-go/pull/351) and [PR 737](https://github.com/Microsoft/vscode-go/pull/737).
         * This is useful when you work on different GOPATHs. 
@@ -18,7 +25,7 @@ This wiki page captures changes/features/bug fixes for each release of the Go ex
         * Since `gometalinter` internally installs linters and expects them to be in the user's GOPATH, `gometalinter` will get installed to your GOPATH and not the alternate location specified in `go.toolsGopath`
 
 
-### Test Improvements
+### Test improvements
 * [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a)
     * A new setting `go.testFlags` that will be used to run tests. If null, `go.buildFlags` will be used.
     * Customize flags for each of the test command by using different keybindings. [PR 482](https://github.com/Microsoft/vscode-go/pull/482). In the below example, the command can be `go.test.package`, `go.test.file` or `go.test.cursor`
@@ -44,7 +51,7 @@ This wiki page captures changes/features/bug fixes for each release of the Go ex
 * [Marcel Voigt (@nochso)](https://github.com/nochso)
    * Show error message in output window when running test coverage fails. [PR 721](https://github.com/Microsoft/vscode-go/pull/721)
 
-### Debugging
+### Debugging improvements
 * [Andreas Kuhn (@ankon)](https://github.com/ankon)
    * Honor the `cwd` launch configuration argument. [PR 714](https://github.com/Microsoft/vscode-go/pull/714)
 * [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a)
