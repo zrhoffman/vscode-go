@@ -10,10 +10,12 @@ This wiki page captures changes/features/bug fixes for each release of the Go ex
 
 ### Installation Improvements
 * [Sam Herrmann (@samherrmann)](https://github.com/samherrmann), [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a)
-    *  A new setting `go.toolsGopath` for providing a location to install all the Go tools that the extension depends on, if you don't want them cluttering your GOPATH. Also useful when you work on different GOPATHs. [PR 351](https://github.com/Microsoft/vscode-go/pull/351) and [PR 737](https://github.com/Microsoft/vscode-go/pull/737). 
-    Remember to run `Go: Install Tools` command to install the tools to the new location.
+    *  A new setting `go.toolsGopath` for providing a location to install all the Go tools that the extension depends on, if you don't want them cluttering your GOPATH. [PR 351](https://github.com/Microsoft/vscode-go/pull/351) and [PR 737](https://github.com/Microsoft/vscode-go/pull/737).
+        * This is useful when you work on different GOPATHs. 
+        * Remember to run `Go: Install Tools` command to install the tools to the new location.
 * [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a)
-    * All the "Install tool" options (the pop ups you see) and the `Go: Install Tools` command now support `gometalinter` if it is your chosen linting tool. [PR 735](https://github.com/Microsoft/vscode-go/pull/735). Since `gometalinter` internally installs linters and expects them to be in the user's GOPATH, `gometalinter` will get installed to your GOPATH and not the alternate location specified in `go.toolsGopath`
+    * All the "Install tool" options (the pop ups you see) and the `Go: Install Tools` command now support `gometalinter` if it is your chosen linting tool. [PR 735](https://github.com/Microsoft/vscode-go/pull/735). 
+        * Since `gometalinter` internally installs linters and expects them to be in the user's GOPATH, `gometalinter` will get installed to your GOPATH and not the alternate location specified in `go.toolsGopath`
 
 
 ### Test Improvements
