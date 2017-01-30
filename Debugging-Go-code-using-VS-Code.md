@@ -103,3 +103,9 @@ your `GOPATH/bin`
 You may see this in the debug console, while trying to run in the `test` mode. This happens when the `program` attribute points to a folder with no test files.
 
 **_Solution_**: Ensure that the `program` attribute points to the folder that contains the test files you want to run.
+
+### could not launch process: could not fork/exec
+
+This usually happens in OSX due to signing issues. See the discussions in please see [#717](https://github.com/Microsoft/vscode-go/issues/717), [#269](https://github.com/Microsoft/vscode-go/issues/269) and [derekparker/delve/357](https://github.com/derekparker/delve/issues/357)
+
+**_Solution_**: You may have to uninstall dlv and install it manually as per [instructions](https://github.com/derekparker/delve/blob/master/Documentation/installation/osx/install.md#manual-install)
