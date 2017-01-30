@@ -27,7 +27,7 @@ This wiki page captures changes/features/bug fixes for each release of the Go ex
 ### Test improvements
 * [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a)
     * A new setting `go.testFlags` that will be used to run tests. If null, `go.buildFlags` will be used.
-    * Customize flags for each of the test command by using different keybindings. [PR 482](https://github.com/Microsoft/vscode-go/pull/482). In the below example, the command can be `go.test.package`, `go.test.file` or `go.test.cursor`
+    * Customize flags for each of the test command by using different keybindings. [PR 482](https://github.com/Microsoft/vscode-go/pull/482). In the below example, `ctrl+shift+t` is bound to run the tests in current file with `-short` flag. The commands here can be `go.test.package`, `go.test.file` or `go.test.cursor`.
     ```json
     {
         "key": "ctrl+shift+t",
