@@ -80,13 +80,13 @@ Like the error message says, the extension cannot find `dlv`.
 This can happen if `dlv` got installed to your GOPATH which you have set using `go.gopath` in the settings.
 Since the debug adapter cannot read the settings, it is not aware of this GOPATH.
 
-_Solution_: You can either set the GOPATH as an env var or point PATH to the dlv binary.
+**_Solution_**: You can either set the GOPATH as an env var or point PATH to the dlv binary.
 
 ### Cannot find package ".." in any of ... 
 
 If you have set GOPATH using `go.gopath` in your settings, then the debug adapter cannot read it as the it is not aware of the settings. 
 
-_Solution_: Add the GOPATH as an env var in the `env` property in the `launch.json` file.
+**_Solution_**: Add the GOPATH as an env var in the `env` property in the `launch.json` file.
 
 ### Failed to continue: "Error: spawn EACCES"
 
@@ -94,7 +94,7 @@ You have `dlv` running just fine from command line, but VS Code gives this acces
 This can happen if the extension is trying to run the `dlv` binary from a wrong location.
 The Go extension first tries to find `dlv` in your $GOPATH/bin and then in your $PATH.  
 
-_Solution_: Run `which dlv` in the command line. If this doesnt match your `GOPATH/bin`, then delete the `dlv` file in 
+**_Solution_**: Run `which dlv` in the command line. If this doesnt match your `GOPATH/bin`, then delete the `dlv` file in 
 your `GOPATH/bin`
 
 
@@ -102,4 +102,4 @@ your `GOPATH/bin`
 
 You may see this in the debug console, while trying to run in the `test` mode. This happens when the `program` attribute points to a folder with no test files.
 
-_Solution_: Ensure that the `program` attribute points to the folder that contains the test files you want to run.
+**_Solution_**: Ensure that the `program` attribute points to the folder that contains the test files you want to run.
