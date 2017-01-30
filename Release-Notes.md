@@ -10,41 +10,41 @@ This wiki page captures changes/features/bug fixes for each release of the Go ex
 
 ### Installation improvements
 * [Sam Herrmann (@samherrmann)](https://github.com/samherrmann), [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a)
-    *  A new setting `go.toolsGopath` for providing a location to install all the Go tools that the extension depends on, if you don't want them cluttering your GOPATH. [PR 351](https://github.com/Microsoft/vscode-go/pull/351) and [PR 737](https://github.com/Microsoft/vscode-go/pull/737).
-        * This is useful when you work on different GOPATHs. 
+    *  A new setting `go.toolsGopath` for providing an alternate location to install all the Go tools that the extension depends on, if you don't want them cluttering your GOPATH. [PR 351](https://github.com/Microsoft/vscode-go/pull/351) and [PR 737](https://github.com/Microsoft/vscode-go/pull/737).
+        * This is useful when you work on different GOPATHs.
         * Remember to run `Go: Install Tools` command to install the tools to the new location.
 * [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a)
-    * All the "Install tool" options (the pop ups you see) and the `Go: Install Tools` command now support `gometalinter` if it is your chosen linting tool. [PR 735](https://github.com/Microsoft/vscode-go/pull/735). 
+    * All the "Install tool" options (the pop ups you see) and the `Go: Install Tools` command now support `gometalinter` if it is your chosen linting tool. [PR 735](https://github.com/Microsoft/vscode-go/pull/735).
         * Since `gometalinter` internally installs linters and expects them to be in the user's GOPATH, `gometalinter` will get installed to your GOPATH and not the alternate location specified in `go.toolsGopath`
 
 ### Build improvements
 * [Matt Aimonetti (@mattetti)](https://github.com/mattetti)
-    * While building, use the `-i` flag which installs dependent packages, which in turn get used in subsequent builds resulting in faster builds in bigger workspaces. [PR 718](https://github.com/Microsoft/vscode-go/pull/718)
+    * While building, we now use the `-i` flag (for non main packages) which installs dependent packages, which in turn get used in subsequent builds resulting in faster builds in bigger workspaces. [PR 718](https://github.com/Microsoft/vscode-go/pull/718)
 * [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a)
     * Build errors with no line numbers (for eg. Import cycle) are now displayed in the output window and will be mapped to the first line of the file. [PR 740](https://github.com/Microsoft/vscode-go/pull/740)
 
 ### Test improvements
 * [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a)
-    * A new setting `go.testFlags` that will be used to run tests. If null, `go.buildFlags` will be used.
+    * A new setting `go.testFlags` that can be used to run tests. If null, `go.buildFlags` will be used. [PR 482](https://github.com/Microsoft/vscode-go/pull/482)
     * Customize flags for each of the test command by using different keybindings. [PR 482](https://github.com/Microsoft/vscode-go/pull/482). In the below example, `ctrl+shift+t` is bound to run the tests in current file with `-short` flag. The commands here can be `go.test.package`, `go.test.file` or `go.test.cursor`.
-    ```json
-    {
-        "key": "ctrl+shift+t",
-        "command": "go.test.file",
-        "args": {
-            "flags": ["-short"]
-        },
-        "when": "editorTextFocus"
-    }
-    ```
+        ```json
+        {
+            "key": "ctrl+shift+t",
+            "command": "go.test.file",
+            "args": {
+                "flags": ["-short"]
+            },
+            "when": "editorTextFocus"
+        }
+        ```
     * New toggle command `Go: Toggle Test File` that lets you toggle between your Go file and the corresponding test file. Previous commands `Go: Open Test File` and `Go: Open Implementation For Test File` have been deprecated in favor of this new command. [PR 739](https://github.com/Microsoft/vscode-go/pull/739). You can add a keyboard binding to this as below:
-    ```json
-    {
-        "key": "ctrl+shift+t",
-        "command": "go.toggle.test.file",
-        "when": "editorTextFocus && editorLangId == 'go'"
-    }
-    ```
+        ```json
+        {
+            "key": "ctrl+shift+t",
+            "command": "go.toggle.test.file",
+            "when": "editorTextFocus && editorLangId == 'go'"
+        }
+        ```
     * If current file is not a test file, show error message while running test commands, instead of displaying success message. Fixes [#303](https://github.com/Microsoft/vscode-go/issues/303)
 * [Marcel Voigt (@nochso)](https://github.com/nochso)
    * Show error message in output window when running test coverage fails. [PR 721](https://github.com/Microsoft/vscode-go/pull/721)
@@ -53,9 +53,9 @@ This wiki page captures changes/features/bug fixes for each release of the Go ex
 * [Andreas Kuhn (@ankon)](https://github.com/ankon)
    * Honor the `cwd` launch configuration argument. [PR 714](https://github.com/Microsoft/vscode-go/pull/714)
 * [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a)
-   * GOPATH set in the `env` property in `launch.json` will also be used to find `dlv` tool. [PR 725](https://github.com/Microsoft/vscode-go/pull/725). 
+   * GOPATH set in the `env` property in `launch.json` will also be used to find `dlv` tool. [PR 725](https://github.com/Microsoft/vscode-go/pull/725).
 * [Rob Lourens (@roblourens)](https://github.com/roblourens)
-   * Add option to have verbose logging while debugging using vscode-debug-logger. [PR 753](https://github.com/Microsoft/vscode-go/pull/753). This will help in diagnosing issues with debugging in the Go extension.
+   * New property `trace` in `launch.json` to provide option to have verbose logging while debugging using vscode-debug-logger. [PR 753](https://github.com/Microsoft/vscode-go/pull/753). This will help in diagnosing issues with debugging in the Go extension.
 
 ## 0.6.52 - 5th January, 2017
 * [Yuwei Ba (@ibigbug)](https://github.com/ibigbug)
