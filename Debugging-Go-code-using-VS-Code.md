@@ -93,5 +93,6 @@ _Solution_: Add the GOPATH as an env var in the `env` property in the `launch.js
 You have `dlv` running just fine from command line, but VS Code gives this access related error. 
 This can happen if the extension is trying to run the `dlv` binary from a wrong location.
 The Go extension first tries to find `dlv` in your $GOPATH/bin and then in your $PATH.  
-Run `which dlv` in the command line. If this doesnt match your `GOPATH/bin`, then delete the `dlv` file in 
+
+_Solution_: Run `which dlv` in the command line. If this doesnt match your `GOPATH/bin`, then delete the `dlv` file in 
 your `GOPATH/bin`
