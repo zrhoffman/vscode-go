@@ -8,12 +8,6 @@ This wiki page captures changes/features/bug fixes for each release of the Go ex
         * This is an experimental feature.
         * If set to true, you will be prompted to install the Go language server. This will be run by the Go extension in the background to provide services needed for the above mentioned features.
 
-### Build improvements
-* [Matt Aimonetti (@mattetti)](https://github.com/mattetti)
-    * While building, use the `-i` flag which installs dependent packages, which in turn get used in subsequent builds resulting in faster builds in bigger workspaces. [PR 718](https://github.com/Microsoft/vscode-go/pull/718)
-* [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a)
-    * Build errors with no line numbers (for eg. Import cycle) are now displayed in the output window and will be mapped to the first line of the file. [PR 740](https://github.com/Microsoft/vscode-go/pull/740)
-
 ### Installation improvements
 * [Sam Herrmann (@samherrmann)](https://github.com/samherrmann), [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a)
     *  A new setting `go.toolsGopath` for providing a location to install all the Go tools that the extension depends on, if you don't want them cluttering your GOPATH. [PR 351](https://github.com/Microsoft/vscode-go/pull/351) and [PR 737](https://github.com/Microsoft/vscode-go/pull/737).
@@ -23,6 +17,11 @@ This wiki page captures changes/features/bug fixes for each release of the Go ex
     * All the "Install tool" options (the pop ups you see) and the `Go: Install Tools` command now support `gometalinter` if it is your chosen linting tool. [PR 735](https://github.com/Microsoft/vscode-go/pull/735). 
         * Since `gometalinter` internally installs linters and expects them to be in the user's GOPATH, `gometalinter` will get installed to your GOPATH and not the alternate location specified in `go.toolsGopath`
 
+### Build improvements
+* [Matt Aimonetti (@mattetti)](https://github.com/mattetti)
+    * While building, use the `-i` flag which installs dependent packages, which in turn get used in subsequent builds resulting in faster builds in bigger workspaces. [PR 718](https://github.com/Microsoft/vscode-go/pull/718)
+* [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a)
+    * Build errors with no line numbers (for eg. Import cycle) are now displayed in the output window and will be mapped to the first line of the file. [PR 740](https://github.com/Microsoft/vscode-go/pull/740)
 
 ### Test improvements
 * [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a)
