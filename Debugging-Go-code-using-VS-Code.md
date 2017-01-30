@@ -2,12 +2,12 @@
 
 To use the debugger, you must currently manually install `delve`.  See the [Installation Instructions](https://github.com/derekparker/delve/tree/master/Documentation/installation) for full details.  On OS X it requires creating a self-signed cert to sign the `dlv` binary.
 
-Based on how you install delve it will either end up in your PATH or GOPATH. 
-If it ends up in your GOPATH which you have only set in user/workspace settings, then the Go extension cannot find it. Therefore, either ensure that `dlv` is in your path or ensure that GOPATH is set outside of VS Code so that the Go extension can find it.
+Based on how you install delve it will either end up in your `PATH` or `GOPATH/bin`. 
+If `dlv` binary is in your `GOPATH/bin` and this GOPATH is not set as an environment variable, then make sure your PATH points to this `GOPATH/bin` so that the Go extension can find the `dlv` binary.
 
 ## Set up configurations in launch.json
 
-Once delve is installed, you can either press `F5` or go to the Code debug viewlet and select the configuration gear. Select `Go` if there is a popup asking you to select your environment. This will create a `launch.json` file which will contain the configurations for debugging. By default, there would be a single configuration as below:
+Once delve is installed, you can either press `F5` or go to the Code debug viewlet and select the configuration gear. If you are using Visual Studio Code 1.8.1 or below, you will see a pop up asking you to select your environment. Select 'Go'. This will create a `launch.json` file which will contain the configurations for debugging. By default, there would be a single configuration as below:
 
 ```json
 {
@@ -39,7 +39,7 @@ The `mode` parameter can be set to:
 * `exec` to run a pre-built binary specified in program, for example `"program":"${workspaceRoot}/mybin"`.
 * `remote` to attach to a remote headless Delve server.  You must manually run Delve on the remote machine, and provide the additional `remotePath`, `host` and `port` debug configuration options pointing at the remote machine.
 
-The debugger cannot read GOPATH from the user/workspace settings. Therefore, if you want to use a GOPATH that is different from the one set outside of VS Code, then set it in the `env` property in the launch.json file.
+GOPATH set using the `go.gopath` setting in Visual Studio Code is not readable by the debugger in the Go extension. Therefore, if you do use the `go.gopath` setting, remember to pass the same in the `env` property of the `launch.json` as an environment variable.
 
 ## Remote Debugging
 
@@ -91,5 +91,7 @@ _Solution_: Add the GOPATH as an env var in the `env` property in the `launch.js
 ### Failed to continue: "Error: spawn EACCES"
 
 You have `dlv` running just fine from command line, but VS Code gives this access related error. 
+This can happen if the extension is trying to run the `dlv` binary from a wrong location.
 The Go extension first tries to find `dlv` in your $GOPATH/bin and then in your $PATH.  
-Run `which dlv` on the command line. If the output is not your $GOPATH/bin, delete any file called `dlv` in your $GOPATH/bin and try again. 
+Run `which dlv` in the command line. If this doesnt match your `GOPATH/bin`, then delete the `dlv` file in 
+your `GOPATH/bin`
