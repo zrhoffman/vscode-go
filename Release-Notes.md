@@ -55,6 +55,8 @@ This wiki page captures changes/features/bug fixes for each release of the Go ex
    * Honor the `cwd` launch configuration argument. [PR 714](https://github.com/Microsoft/vscode-go/pull/714)
 * [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a)
    * GOPATH set in the `env` property in `launch.json` will also be used to find `dlv` tool. [PR 725](https://github.com/Microsoft/vscode-go/pull/725). 
+* [Rob Lourens (@roblourens)](https://github.com/roblourens)
+   * Add option to have verbose logging while debugging using vscode-debug-logger. [PR 753](https://github.com/Microsoft/vscode-go/pull/753). This will help in diagnosing issues with debugging in the Go extension.
 
 ## 0.6.52 - 5th January, 2017
 * [Yuwei Ba (@ibigbug)](https://github.com/ibigbug)
