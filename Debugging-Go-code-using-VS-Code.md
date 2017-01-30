@@ -96,3 +96,10 @@ The Go extension first tries to find `dlv` in your $GOPATH/bin and then in your 
 
 _Solution_: Run `which dlv` in the command line. If this doesnt match your `GOPATH/bin`, then delete the `dlv` file in 
 your `GOPATH/bin`
+
+
+### could not launch process: stat ***/debug.test: no such file or directory
+
+You may see this in the debug console, while trying to run in the `test` mode. This happens when the `program` attribute points to a folder with no test files.
+
+_Solution_: Ensure that the `program` attribute points to the folder that contains the test files you want to run.
