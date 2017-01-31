@@ -1,12 +1,6 @@
 This wiki page captures changes/features/bug fixes for each release of the Go extension from version 0.6.40
 
-## Coming Soon...
-
-### Tooling improvements
-* [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a) and [Sourcegraph](https://github.com/sourcegraph/go-langserver)
-    * A new setting `go.useLanguageServer` to use the Go language server from [Sourcegraph](https://github.com/sourcegraph/go-langserver) for features like Hover, Definition, Find All References, Signature Help, File Outline and Workspace Symbol Search. [PR 750](https://github.com/Microsoft/vscode-go/pull/750)
-        * This is an experimental feature.
-        * If set to true, you will be prompted to install the Go language server. This will be run by the Go extension in the background to provide services needed for the above mentioned features.
+## 0.6.53 - 30th January, 2017
 
 ### Installation improvements
 * [Sam Herrmann (@samherrmann)](https://github.com/samherrmann), [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a)
