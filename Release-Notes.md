@@ -21,7 +21,7 @@ This wiki page captures changes/features/bug fixes for each release of the Go ex
 * [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a)
     * A new setting `go.testFlags` that can be used to run tests. If null, `go.buildFlags` will be used. [PR 482](https://github.com/Microsoft/vscode-go/pull/482)
     * Customize flags for each of the test command by using different keybindings. [PR 482](https://github.com/Microsoft/vscode-go/pull/482). In the below example, `ctrl+shift+t` is bound to run the tests in current file with `-short` flag. The commands here can be `go.test.package`, `go.test.file` or `go.test.cursor`.
-        ```json
+ ```json
         {
             "key": "ctrl+shift+t",
             "command": "go.test.file",
@@ -30,15 +30,15 @@ This wiki page captures changes/features/bug fixes for each release of the Go ex
             },
             "when": "editorTextFocus"
         }
-        ```
+ ```
     * New toggle command `Go: Toggle Test File` that lets you toggle between your Go file and the corresponding test file. Previous commands `Go: Open Test File` and `Go: Open Implementation For Test File` have been deprecated in favor of this new command. [PR 739](https://github.com/Microsoft/vscode-go/pull/739). You can add a keyboard binding to this as below:
-        ```json
+ ```json
         {
             "key": "ctrl+shift+t",
             "command": "go.toggle.test.file",
             "when": "editorTextFocus && editorLangId == 'go'"
         }
-        ```
+ ```
     * If current file is not a test file, show error message while running test commands, instead of displaying success message. Fixes [#303](https://github.com/Microsoft/vscode-go/issues/303)
 * [Marcel Voigt (@nochso)](https://github.com/nochso)
    * Show error message in output window when running test coverage fails. [PR 721](https://github.com/Microsoft/vscode-go/pull/721)
