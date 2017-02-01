@@ -80,7 +80,8 @@ Like the error message says, the extension cannot find `dlv`.
 This can happen if `dlv` got installed to your GOPATH which you have set using `go.gopath` in the settings.
 Since the debug adapter cannot read the settings, it is not aware of this GOPATH.
 
-**_Solution_**: You can either set the GOPATH as an env var or point PATH to the dlv binary.
+**_Solution_**: You can either set the GOPATH as an env var outside VS Code or point PATH to the dlv binary.
+Another way is to update the `env` property in `launch.json` to have GOPATH as a env variable.
 
 ### Cannot find package ".." in any of ... 
 
