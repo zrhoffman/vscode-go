@@ -32,7 +32,7 @@ You will now see a `launch.json` file created for your workspace, which will con
 }
 ```
 
-The `program` option can refer to a package folder to debug, or a file within that folder.
+The `program` option can refer to a package folder to debug, or a file within that folder. This should be a full path and not relative.
 
 The `mode` parameter can be set to:
 
