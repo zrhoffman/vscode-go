@@ -11,7 +11,7 @@ This wiki page captures changes/features/bug fixes for each release of the Go ex
 
 ### GOPATH improvements
 * [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a)
-    * Fix for [Bug 623](https://github.com/Microsoft/vscode-go/issues/623): `${workspaceRoot}` and `~` are now supported in `go.gopath` and `go.toolsGopath` settings. [PR 768](https://github.com/Microsoft/vscode-go/pull/768)
+    * Fix for [Bug 623](https://github.com/Microsoft/vscode-go/issues/623). `${workspaceRoot}` and `~` are now supported in `go.gopath` and `go.toolsGopath` settings. [PR 768](https://github.com/Microsoft/vscode-go/pull/768)
     * The default GOPATH used by Go 1.8 when none is set as environment variable is now supported by the extension as well. [PR 820](https://github.com/Microsoft/vscode-go/pull/820)
 * [Vincent Chinedu Okonkwo (@codmajik)](https://github.com/codmajik)
     * Added new setting `go.inferGopath`. When `true` GOPATH will be inferred from the path of the folder opened in VS Code.
@@ -28,11 +28,14 @@ This wiki page captures changes/features/bug fixes for each release of the Go ex
     * Fix for [Bug 438](https://github.com/Microsoft/vscode-go/issues/438). Now when you stop a debug session, all processes started by the session will be closed as well. [PR 765](https://github.com/Microsoft/vscode-go/pull/765)
 * [Suraj Barkale (@surajbarkale-dolby)](https://github.com/surajbarkale-dolby)
     * Fix for [Bug 782](https://github.com/Microsoft/vscode-go/issues/782). Helpful error messages when the `program` attribute in `launch.json` file is invalid or not a full path. [PR 790](https://github.com/Microsoft/vscode-go/pull/790)
+* [F0zi (@f0zi)](https://github.com/f0zi)
+    * Fix for [Bug 689](https://github.com/Microsoft/vscode-go/issues/689). When debugging against a remote machine, paths anywhere under the GOPATH will be correctly mapped so you can set breakpoints in them. 
+    Previously only paths next to the program could be debugged. [PR 742](https://github.com/Microsoft/vscode-go/pull/742)
 
 ### Testing improvements
 * [Oleg Bulatov (@dmage)](https://github.com/dmage)
     * Added new setting `go.testOnSave`. When `true`, all tests in the current package will be run on saving a Go file. 
-    The status of the tests will be shown in the status bar at the bottom of the VS Code window. [PR 810](https://github.com/Microsoft/vscode-go/pull/810)
+    The status of the tests will be shown in the status bar at the bottom of the VS Code window. It is not advised to have this on when you have Auto Save enabled. [PR 810](https://github.com/Microsoft/vscode-go/pull/810)
 * [Jeff Willette (@deltaskelta)](https://github.com/deltaskelta)
     * Test output is no longer verbose by default. Add `-v` to the `go.testFlags` to get verbose output. [PR 817](https://github.com/Microsoft/vscode-go/pull/817)
     
