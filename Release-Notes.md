@@ -1,6 +1,6 @@
 This wiki page captures changes/features/bug fixes for each release of the Go extension from version 0.6.40
 
-## 0.6.54 - Coming Soon
+## 0.6.54 - 28th February, 2017
 
 ### Tooling improvements
 * [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a) and [Sourcegraph](https://github.com/sourcegraph/go-langserver)
