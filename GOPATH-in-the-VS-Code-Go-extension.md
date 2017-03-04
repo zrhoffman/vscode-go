@@ -1,3 +1,5 @@
+## GOPATH in the extension
+
 Out of the box, the extension uses the value of the environment variable `GOPATH`. From Go 1.8 onwards, if no such environment variable is set, then the default GOPATH as deciphered from the command `go env` is used.
 
 Setting `go.gopath` in User settings overrides the GOPATH that was derived from the above logic.
@@ -10,4 +12,10 @@ For example, if your project looks like `/aaa/bbb/ccc/src/...`, then opening the
 
 This setting is useful when you are working on different Go projects which have different GOPATHs. Instead of setting the GOPATH in the workspace settings of each project or setting all the paths as `;`/`:` separated string, you can just set `go.inferGopath` to `true`and the extension uses the right GOPATH automatically.
 
-By default, all the dependent Go tools are used from the GOPATH derived from the above logic. If they are available on your PATH, the PATH is used to locate the Go tools. If the Go tools are not in your path, you might end up with the same Go tools installed in each of your GOPATHs. To prevent the Go tools from cluttering your GOPATH, use the `go.toolsGopath` setting to provide a location for the Go tools. 
+By default, all the dependent Go tools are used from the GOPATH derived from the above logic. If they are available on your PATH, the PATH is used to locate the Go tools. If the Go tools are not in your path, you might end up with the same Go tools installed in each of your GOPATHs. To prevent the Go tools from cluttering your GOPATH, use the `go.toolsGopath` setting to provide a separate location for the Go tools. 
+
+## GOPATH while debugging
+
+The debug adapter in the Go extension does not have access to your User/Workspace settings. Therefore, the only GOPATH the debugger is aware of is the one set as environment variable outside of VS Code.
+
+Read https://github.com/Microsoft/vscode-go/wiki/Debugging-Go-code-using-VS-Code#troubleshooting to see how you can go around the GOPATH issue while debugging
