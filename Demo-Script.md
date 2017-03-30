@@ -6,24 +6,22 @@
 export GOPATH=$HOME/gopath
 cd $GOPATH
 ```
-3. Get all the Go tools that the extension depends on by running the command `Go: Install Tools`. Get sample code from below
+3. Get some sample code 
 ```bash
 # Sample code
 go get -d github.com/Azure/azure-sdk-for-go/management
 go get -u -v github.com/lukehoban/webapp-go
 ```
-4. If on Mac OSX, follow the instructions at https://github.com/derekparker/delve/wiki/Building to install the Delve debugger.
-4. Install Code `0.9.1` and launch it with Gallery support enabled:
-```bash
-code --enableExtensionGallery
-```
-5. Install the Go extension with `F1` then `Install Extension` then search for `Go`.
-6. Turn on AutoSave under `File -> Auto Save`.
-7. Relaunch Code on the `GOPATH` folder
+4. Install the latest VS Code from http://code.visualstudio.com/.
+5. Open VS Code and install the Go extension for VS Code.
+6. Get all the Go tools that the extension depends on by running the command `Go: Install Tools`. 
+7. If on Mac OSX, follow the instructions at https://github.com/derekparker/delve/wiki/Building to install the Delve debugger.
+8. Turn on AutoSave under `File -> Auto Save`.
+9. Relaunch Code on the `GOPATH` folder
 ```bash
 code $GOPATH
 ```
-8. Go to the debug viewlet, and click the gear icon.  Replace the generated launch.json with:
+10. Go to the debug viewlet, and click the gear icon.  Replace the generated launch.json with:
 ```json
 {
     "version": "0.1.0",
