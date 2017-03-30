@@ -12,7 +12,7 @@ cd $GOPATH
 go get -d github.com/Azure/azure-sdk-for-go/management
 go get -u -v github.com/lukehoban/webapp-go
 ```
-4. Follow the instructions at https://github.com/derekparker/delve/wiki/Building to install the Delve debugger.
+4. If on Mac OSX, follow the instructions at https://github.com/derekparker/delve/wiki/Building to install the Delve debugger.
 4. Install Code `0.9.1` and launch it with Gallery support enabled:
 ```bash
 code --enableExtensionGallery
