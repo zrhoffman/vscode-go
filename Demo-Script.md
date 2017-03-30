@@ -6,16 +6,8 @@
 export GOPATH=$HOME/gopath
 cd $GOPATH
 ```
-3. Get tools and samples (Note - the extension should offer to auto-install these tools - but for fewer moving pieces we'll just install them in advance):
+3. Get all the Go tools that the extension depends on by running the command `Go: Install Tools`. Get sample code from below
 ```bash
-# Go tools
-go get -u -v github.com/derekparker/delve/cmd/dlv
-go get -u -v golang.org/x/tools/cmd/gorename
-go get -u -v github.com/nsf/gocode
-go get -u -v sourcegraph.com/sqs/goreturns
-go get -u -v github.com/rogpeppe/godef
-go get -u -v github.com/golang/lint/golint
-go get -u -v github.com/lukehoban/go-find-references
 # Sample code
 go get -d github.com/Azure/azure-sdk-for-go/management
 go get -u -v github.com/lukehoban/webapp-go
