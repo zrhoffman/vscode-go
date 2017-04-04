@@ -13,7 +13,7 @@ This wiki page captures changes/features/bug fixes for each release of the Go ex
         * Note: Once you have a `launch.json` file, GOPATH from settings wont be read. You will need to set it in the `env` property as before
 
 * [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a)
-    * `--config` flag for `gometalinter` now supports the use of `${workspaceRoot}` and `~` that allows users to provide config file path relative to workspace or home directory respectively. [PR 909](https://github.com/Microsoft/vscode-go/pull/903)
+    * `--config` flag for `gometalinter` now supports the use of `${workspaceRoot}` and `~` that allows users to provide config file path relative to workspace or home directory respectively. [PR 909](https://github.com/Microsoft/vscode-go/pull/909)
     * New command `Go: Test All Packages in Workspace` to run tests from all packages in the workspace.
 
 ## 0.6.57 - 30th March, 2017
