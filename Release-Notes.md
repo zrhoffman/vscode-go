@@ -7,6 +7,7 @@ This wiki page captures changes/features/bug fixes for each release of the Go ex
         * New setting `go.liveErrors` controls this feature. 
         * Set `"go.liveErrors": { "enabled": true }` to enable this feature
         * Edit the delay property in `"go.liveErrors": { "enabled": true, "delay": 500 }` to update the delay (in milliseconds) after which `gotype-live` would be run post a keystroke
+        * This feature will not come into affect if auto save is on. We will look into enabling this feature with auto save on in the next update
 
 * [Eon S. Jeon (@esjeon)](https://github.com/esjeon)
     * GOPATH from settings is now honored when users debug current file without having a `launch.json` file. [PR 904](https://github.com/Microsoft/vscode-go/pull/904)
