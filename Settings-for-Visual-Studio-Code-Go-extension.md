@@ -16,7 +16,7 @@ go.formatTool | "goreturns" | Specifies formatting tool to use. Choices are 'gof
 go.formatFlags | `[]` | Flags to pass to format tool (e.g. ['-s'])
 go.testOnSave | `false` | Run 'go test' on save for current package. It is not advised to set this to `true` when you have Auto Save enabled.
 go.coverOnSave | `false` | Run 'go test -coverprofile' on save
-go.coverageOptions | "showBothCoveredAndUncoveredCode" | Use these options to control whether only covered or only uncovered code or both should be highlighted after running test coverage
+go.coverageOptions |  | Choose between "showCoveredCodeOnly", "showUncoveredCodeOnly" and "showBothCoveredAndUncoveredCode". Default is "showBothCoveredAndUncoveredCode". Use these options to control whether only covered or only uncovered code or both should be highlighted after running test coverage
 go.testTimeout | "30s" | Specifies the timeout for go test in ParseDuration format.
 go.testEnvVars |  {} |  Environment variables that will passed to the process that runs the Go tests
 go.testFlags |  null |  Flags to pass to `go test`. If null, then buildFlags will be used.
