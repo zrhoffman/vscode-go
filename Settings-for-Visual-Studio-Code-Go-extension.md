@@ -34,4 +34,5 @@ go.addTags | | Comma separated tags and options used by the `Go: Add Tags` comma
 go.removeTags | | Comma separated tags and options used by the `Go: RemoveTags` command. Set `promptForTags` to `true` to be prompted for tags when the `Go: RemoveTags` command is run. See https://github.com/fatih/gomodifytags to learn more about how these settings are used. Default value is : `{ "tags": "", "options": "", "promptForTags": false }`
 go.editortorContextMenuCommands | | Experimental Feature: Enable/Disable commands from the context menu in the editor. Default value is: `{ "toggleTestFile": true, "addTags": true, "testAtCursor": true, "generateTestForFunction": true, "addImport": false, "removeTags": false, "testFile": false, "testPackage": false, "generateTestForFile": false, "generateTestForPackage": false, "testCoverage": false }`
 go.liveErrors | `{"enabled": true, "delay": 500 }` | Use gotype on the file currently being edited and report any semantic or syntactic errors found after configured delay post keystroke
+go.referencesCodeLens.enabled | `true` | Shows reference count above functions using codelens.
 
