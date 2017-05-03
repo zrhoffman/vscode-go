@@ -16,13 +16,15 @@ go.formatTool | "goreturns" | Specifies formatting tool to use. Choices are 'gof
 go.formatFlags | `[]` | Flags to pass to format tool (e.g. ['-s'])
 go.testOnSave | `false` | Run 'go test' on save for current package. It is not advised to set this to `true` when you have Auto Save enabled.
 go.coverOnSave | `false` | Run 'go test -coverprofile' on save
+go.coverageOptions | "showBothCoveredAndUncoveredCode" | Use these options to control whether only covered or only uncovered code or both should be highlighted after running test coverage
 go.testTimeout | "30s" | Specifies the timeout for go test in ParseDuration format.
 go.testEnvVars |  {} |  Environment variables that will passed to the process that runs the Go tests
 go.testFlags |  null |  Flags to pass to `go test`. If null, then buildFlags will be used.
 go.inferGopath |  `false` | Infer GOPATH from the workspace root.
 go.goroot |  null |  Specifies the GOROOT to use when no environment variable is set.
 go.gopath |  null |  Specifies the GOPATH to use when no environment variable is set. The inferred GOPATH from workspace root overrides this, if go.inferGopath is set to true.
-go.toolsGopath |  "" |  Location to install the Go tools that the extension depends on if you don't want them in your GOPATH
+go.toolsGopath |  "" | Location to install the Go tools that the extension depends on if you don't want them in your GOPATH
+go.toolsEnvVars | `{}` | Environment variables that will passed to the processes that run the Go tools (e.g. CGO_CFLAGS)
 go.gocodeAutoBuild |  `false` |  Enable gocode's autobuild feature
 go.useCodeSnippetsOnFunctionSuggest |  `false` | Auto Complete functions with their parameter signature
 go.autocompleteUnimportedPackages |  `false` | Include unimported packages in auto-complete suggestions
