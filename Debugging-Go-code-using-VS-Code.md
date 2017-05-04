@@ -112,3 +112,7 @@ You may see this in the debug console, while trying to run in the `test` mode. T
 This usually happens in OSX due to signing issues. See the discussions in please see [#717](https://github.com/Microsoft/vscode-go/issues/717), [#269](https://github.com/Microsoft/vscode-go/issues/269) and [derekparker/delve/357](https://github.com/derekparker/delve/issues/357)
 
 **_Solution_**: You may have to uninstall dlv and install it manually as per [instructions](https://github.com/derekparker/delve/blob/master/Documentation/installation/osx/install.md#manual-install)
+
+### could not launch process: exec: "lldb-server": executable file not found in $PATH
+
+This error can show up for Mac users using delve of version 0.12.2 or above. Not sure why, but doing a `xcode-select --install` has solved the problem for users who have seen this issue.
