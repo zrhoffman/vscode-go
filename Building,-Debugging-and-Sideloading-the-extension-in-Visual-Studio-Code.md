@@ -19,7 +19,7 @@ You can now hit breakpoints and step through the extension.
 
 If you make edits in the extension `.ts` files, just reload (`cmd-r`) the `[Extension Development Host]` instance of Code to load in the new extension code.  The debugging instance will automatically reattach.
 
-To debug the debugger, see [the debugAdapter readme](src/debugAdapter/Readme.md).
+To debug the debugger, see [the debugAdapter readme](/Microsoft/vscode-go/tree/master/src/debugAdapter).
 
 ## Sideloading the extension
 If you are working on the extension itself, you might want to sideload it to test it in Code. This can be done by preparing the extension and loading it directly.
