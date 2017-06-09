@@ -26,7 +26,7 @@ This wiki page captures changes/features/bug fixes for each release of the Go ex
     * Fix for [Bug 968](https://github.com/Microsoft/vscode-go/issues/968) where rename fails if `---` is anywhere in the file
     * Fix for [Bug 981](https://github.com/Microsoft/vscode-go/issues/981) where `Go: Test Function At Cursor` fails.
     * Fix for [Bug 983](https://github.com/Microsoft/vscode-go/issues/983) where the Go binary is not found in MSYS2 as it is not located in GOROOT.
-    * Fix for [Bug 1022](https://github.com/Microsoft/vscode-go/issues/1002) where snippets from function auto complete do not insert the placeholders
+    * Fix for [Bug 1022](https://github.com/Microsoft/vscode-go/issues/1022) where snippets from function auto complete do not insert the placeholders
     * Fix for [Bug 962](https://github.com/Microsoft/vscode-go/issues/962) where references codelens wouldnt work for methods.
 * [F0zi (@f0zi)](https://github.com/f0zi)
     * Fix for [Bug 1009](https://github.com/Microsoft/vscode-go/issues/1009) where remote debugging fails to verify breakpoint if GOPATH partially matches remote GOPATH
