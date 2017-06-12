@@ -18,6 +18,7 @@ If you wish to have the extension use a separate GOPATH for its tools, provide t
 - gotests: `go get -u -v github.com/cweill/gotests/...`
 - godoc: `go get -u -v golang.org/x/tools/cmd/godoc`
 - gomodifytags: `go get -u -v github.com/fatih/gomodifytags`
+- impl: `go get -u -v github.com/josharian/impl`
 
 To install the tools manually in the current GOPATH, just paste and run:
 ```bash
@@ -34,6 +35,7 @@ go get -u -v golang.org/x/tools/cmd/guru
 go get -u -v github.com/cweill/gotests/...
 go get -u -v golang.org/x/tools/cmd/godoc
 go get -u -v github.com/fatih/gomodifytags
+go get -u -v github.com/josharian/impl
 ```
 
 And for debugging:
