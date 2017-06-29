@@ -43,6 +43,12 @@ The `mode` parameter can be set to:
 
 GOPATH set using the `go.gopath` setting in Visual Studio Code is not readable by the debugger in the Go extension. Therefore, if you do use the `go.gopath` setting, remember to pass the same in the `env` property of the `launch.json` as an environment variable.
 
+## Snippets for Debug Configurations
+
+As of 0.6.54 version of the Go extension, you can now make use of snippets while editing the launch.json file. 
+Type "Go" and you will get debug configuration snippets for debugging current file/package, a test function etc.
+
+
 ## Remote Debugging
 
 To remote debug using VS Code, you must first run a headless Delve server on the target machine.  For example:
