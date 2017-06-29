@@ -48,6 +48,11 @@ GOPATH set using the `go.gopath` setting in Visual Studio Code is not readable b
 As of 0.6.54 version of the Go extension, you can now make use of snippets while editing the launch.json file. 
 Type "Go" and you will get debug configuration snippets for debugging current file/package, a test function etc.
 
+## Debugging the Debugger?
+
+Set `showLog` attribute in your debug configuration to `true`. You will see logs in the debug console from delve.
+
+Set `trace` attribute in your debug configuration to `verbose`. You will see logs in the debug console from the Go extension's debug adapter. These logs will be saved to a file whose path will be printed at the beginning in the debug console.
 
 ## Remote Debugging
 
