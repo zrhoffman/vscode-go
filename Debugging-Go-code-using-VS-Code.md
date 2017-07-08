@@ -42,6 +42,12 @@ The `mode` parameter can be set to:
 * `remote` to attach to a remote headless Delve server.  You must manually run Delve on the remote machine, and provide the additional `remotePath`, `host` and `port` debug configuration options pointing at the remote machine.
 
 GOPATH set using the `go.gopath` setting in Visual Studio Code is not readable by the debugger in the Go extension. Therefore, if you do use the `go.gopath` setting, remember to pass the same in the `env` property of the `launch.json` as an environment variable.
+Example below is the `env` property from the `launch.json` file just change the paths to suit your setup, which can be found by typing `go env` in the integrated terminal.
+```json
+"env": {"GOPATH": "/home/username/go",
+        "GOROOT": "/usr/local/go1.8.1/go"  
+},
+```
 
 ## Snippets for Debug Configurations
 
