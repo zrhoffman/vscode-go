@@ -1,6 +1,8 @@
 ## Install delve
 
-To use the debugger, you must currently manually install `delve`.  See the [Installation Instructions](https://github.com/derekparker/delve/tree/master/Documentation/installation) for full details.  On OS X it requires creating a self-signed cert to sign the `dlv` binary.
+If you are on Windows or Linux, running `Go: Install/Update Tools` would have installed delve for you.
+If you don't want to run that command or you are on OS X, you can manually install delve as per the [Installation Instructions](https://github.com/derekparker/delve/tree/master/Documentation/installation).
+On OS X it requires creating a self-signed cert to sign the `dlv` binary.
 
 Based on how you install delve it will either end up in your `PATH` or `GOPATH/bin`. 
 If `dlv` binary is in your `GOPATH/bin` and this GOPATH is not set as an environment variable, then make sure your PATH points to this `GOPATH/bin` so that the Go extension can find the `dlv` binary.
