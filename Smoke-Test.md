@@ -11,7 +11,7 @@
 
 **Features to Smoke Test:**
 
-Try the below features for functions, structs and interfaces
+Try the below features for functions, structs and interfaces from current/std/third party packages
 - Goto and Peek Definition 
 - Find References 
 - Hover Info 
@@ -22,7 +22,7 @@ Try the below for functions in built-in (fmt, strings, math etc) and custom pack
 - Set `go.useCodeSnippetsOnFunctionSuggest` to true and check if code snippets show up for functions 
 - Signature Help 
 
-Enable build, vet, lint and format On Save features, make a change in a go file and save
+Enable build, vet, lint and format On Save features, make a change in a go file and save. Try both values "package" and "workspace" for the settings.
 - The output channel for Go should show build, vet and linting results
 - If there were errors, red squiggle lines should show up in the editor
 - Remove comments on an exported member (anything whose name starts with a capital letter), and make sure linter asks you to add the comment
