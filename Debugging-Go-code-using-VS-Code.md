@@ -34,7 +34,7 @@ You will now see a `launch.json` file created for your workspace, which will con
 }
 ```
 
-The `program` option can refer to a package folder to debug, or a file within that folder. This should be a full path and not relative.
+The `program` option is mandatory and can refer to a package folder to debug, or a file within that folder. This should be a full path and not relative.
 
 The `mode` parameter can be set to:
 
@@ -43,13 +43,7 @@ The `mode` parameter can be set to:
 * `exec` to run a pre-built binary specified in program, for example `"program":"${workspaceRoot}/mybin"`.
 * `remote` to attach to a remote headless Delve server.  You must manually run Delve on the remote machine, and provide the additional `remotePath`, `host` and `port` debug configuration options pointing at the remote machine.
 
-GOPATH set using the `go.gopath` setting in Visual Studio Code is not readable by the debugger in the Go extension. Therefore, if you do use the `go.gopath` setting, remember to pass the same in the `env` property of the `launch.json` as an environment variable.
-Example below is the `env` property from the `launch.json` file just change the paths to suit your setup, which can be found by typing `go env` in the integrated terminal.
-```json
-"env": {"GOPATH": "/home/username/go",
-        "GOROOT": "/usr/local/go1.8.1/go"  
-},
-```
+The debugger cannot read your settings. It figures out the GOPATH from either the environment variables or based on the path provided in the `program` option. If you have set multiple GOPATHs in the `go.gopath` setting, pass the same in the `env` option of the `launch.json` as an environment variable.
 
 ## Snippets for Debug Configurations
 
