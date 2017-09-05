@@ -64,6 +64,8 @@ To remote debug using VS Code, you must first run a headless Delve server on the
 $ dlv debug --headless --listen=:2345 --log
 ```
 
+> Note: Do not pass the flag `–api-version=2` to dlv. The Go extension doesn't support v2 of delve APIs yet.
+
 Then, create a remote debug configuration in VS Code `launch.json`.
 
 ```json
