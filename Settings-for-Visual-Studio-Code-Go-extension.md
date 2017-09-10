@@ -26,8 +26,8 @@ go.gopath |  null |  Specifies the GOPATH to use when no environment variable is
 go.toolsGopath |  "" | Location to install the Go tools that the extension depends on if you don't want them in your GOPATH
 go.toolsEnvVars | `{}` | Environment variables that will passed to the processes that run the Go tools (e.g. CGO_CFLAGS)
 go.gocodeAutoBuild |  `false` |  Enable gocode's autobuild feature
-go.useCodeSnippetsOnFunctionSuggest |  `false` | Auto Complete functions with their parameter signature
-go.autocompleteUnimportedPackages |  `false` | Include unimported packages in auto-complete suggestions
+go.useCodeSnippetsOn<br>FunctionSuggest |  `false` | Auto Complete functions with their parameter signature
+go.autocomplete<br>UnimportedPackages |  `false` | Include unimported packages in auto-complete suggestions
 go.docsTool |  "godoc" |  Pick 'godoc' or 'gogetdoc' to get documentation. In Go 1.5, godoc is used regardless of the choice here.
 go.useLanguageServer |  `false` | Experimental: Not available in Windows. Use Go language server from Sourcegraph for Hover, Definition, Find All References, Signature Help, File Outline and Workspace Symbol features
 go.addTags | | Comma separated tags and options used by the `Go: Add Tags` command. Set `promptForTags` to `true` to be prompted for tags when the `Go: Add Tags` command is run. See https://github.com/fatih/gomodifytags to learn more about how these settings are used. Default value is: `{ "tags": "json", "options": "json=omitempty", "promptForTags": false }`
