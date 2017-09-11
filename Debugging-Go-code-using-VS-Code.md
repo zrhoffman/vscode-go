@@ -131,3 +131,7 @@ This usually happens in OSX due to signing issues. See the discussions in please
 ### could not launch process: exec: "lldb-server": executable file not found in $PATH
 
 This error can show up for Mac users using delve of version 0.12.2 or above. Not sure why, but doing a `xcode-select --install` has solved the problem for users who have seen this issue.
+
+### Unverified breakpoints when remote debugging
+
+Check the version of delve api being used in the remote delve process. v2 is not yet supported in the Go extension. So if you have `–api-version=2` being passed to `dlv`, remove that flag and try again
