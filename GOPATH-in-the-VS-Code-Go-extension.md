@@ -20,6 +20,7 @@ The first time you set `go.toolsGopath`, you will have to run `Go: Install Tools
 
 ### GOPATH while debugging
 
-The debug adapter in the Go extension does not have access to your User/Workspace settings. Therefore, the only GOPATH the debugger is aware of is the one set as environment variable outside of VS Code.
+The debug adapter in the Go extension does not have access to your User/Workspace settings. Therefore, the only GOPATH the debugger is aware of is the one set as environment variable outside of VS Code. If there is no such environment variable, then the debugger tries to guess the GOPATH by using the same logic as the `inferGopath` setting described above
 
-Read https://github.com/Microsoft/vscode-go/wiki/Debugging-Go-code-using-VS-Code#troubleshooting to see how you can go around the GOPATH issue while debugging
+You can also provide GOPATH in the `env` property of the debug configuration
+Read more on debugging at [Debugging-Go-code-using-VS-Code](https://github.com/Microsoft/vscode-go/wiki/Debugging-Go-code-using-VS-Code)
