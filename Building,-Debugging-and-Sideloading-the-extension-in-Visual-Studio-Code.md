@@ -41,3 +41,10 @@ If you are working on the extension itself, you might want to sideload it to tes
 6. load the extension
 
 Open the extensions menu in VSCode and choose `Install from VSIX` and select the `Go-xxx.vsix` file created by step 5.
+
+## Beta testing this extension
+
+If you want to help with testing the next update to this extension, its easy to do so
+- Download https://github.com/Microsoft/vscode-go/blob/master/Go-latest.vsix
+- Run `code --install-extension Go-latest.vsix` 
+- Reload VS Code
