@@ -3,7 +3,6 @@ The Go extension for Visual Studio Code uses the following tools, installed in t
 You can install all these tools at once by running the command `Go: Install/Update Tools`. The same command can be used to keep the tools up to date as well as to re-compile in case you change the version of Go being used.
 
 If you wish to have the extension use a separate GOPATH for its tools, provide the desired location in the setting `go.toolsGopath`.
-`gometalinter` and `dlv` are two tools that are exceptions, and will need to be installed in your GOPATH.
 
 - gocode: `go get -u -v github.com/nsf/gocode`
 - godef: `go get -u -v github.com/rogpeppe/godef`
