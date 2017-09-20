@@ -57,6 +57,8 @@ Set `showLog` attribute in your debug configuration to `true`. You will see logs
 
 Set `trace` attribute in your debug configuration to `verbose`. You will see logs in the debug console from the Go extension's debug adapter. These logs will be saved to a file whose path will be printed at the beginning in the debug console.
 
+If you want to dig deeper and debug the debugger using source code of this extension, read [building-and-debugging-the-extension](https://github.com/Microsoft/vscode-go/wiki/Building,-Debugging-and-Sideloading-the-extension-in-Visual-Studio-Code#building-and-debugging-the-extension)
+
 ## Remote Debugging
 
 To remote debug using VS Code, you must first run a headless Delve server on the target machine.  For example:
