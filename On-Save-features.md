@@ -13,7 +13,7 @@ If `go.buildOnSave` is not `off` and the current file being edited and saved is 
 
 If `go.buildOnSave` is set to `package`, then `go build -i -o` is run on the current package
 
-If `go.buildOnSave` is set to `workspace`, then `go build -i` is run on each package under current workspace that is not a vendor package. 
+If `go.buildOnSave` is set to `workspace`, then `go build -i -o` is run on each package under current workspace that is not a vendor package. 
 
 In all the above cases, the values you have set in `go.buildFlags` and `go.buildTags` will be used as well.
 
