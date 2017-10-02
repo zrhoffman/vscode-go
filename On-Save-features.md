@@ -9,9 +9,13 @@ The below can be enabled to run on file save by turning them on in settings
 * Code Coverage
 
 ## Build on save
-Since `go build` ignores test files, we use `go test -i -c -o` instead on the current package. This will compile the whole package. 
+If `go.buildOnSave` is not `off` and the current file being edited and saved is a test file, then `go test -i -c -o` is run on the current package.
 
-You can set `go.buildOnSave` to `workspace` to run the same for all the packages in the workspace. 
+If `go.buildOnSave` is set to `package`, then `go build -i -o` is run on the current package
+
+If `go.buildOnSave` is set to `workspace`, then `go build -i` is run on each package under current workspace that is not a vendor package. 
+
+In all the above cases, the values you have set in `go.buildFlags` and `go.buildTags` will be used as well.
 
 ## Lint on save
 
@@ -46,7 +50,6 @@ If you have Auto Save feature enabled, then you might want to disable the format
 By default, `goreturns` is the tool used for formatting. You can choose `goimports` or `gofmt` by changing the `go.formatTool` setting
 
 If you see your unused imports disappearing or unimported packages getting added automatically, thats the `goreturns` tool doing the magic behind the scenes.
-
 
 
 
