@@ -9,7 +9,7 @@ If you wish to have the extension use a separate GOPATH for its tools, provide t
 - gogetdoc: `go get -u -v github.com/zmb3/gogetdoc`
 - golint: `go get -u -v github.com/golang/lint/golint`
 - go-outline: `go get -u -v github.com/ramya-rao-a/go-outline`
-- goreturns: `go get -u -v sourcegraph.com/sqs/goreturns`
+- goreturns: `go get -u -v github.com/sqs/goreturns`
 - gorename: `go get -u -v golang.org/x/tools/cmd/gorename`
 - gopkgs: `go get -u -v github.com/tpng/gopkgs`
 - go-symbols: `go get -u -v github.com/acroca/go-symbols`
