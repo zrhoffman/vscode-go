@@ -4,37 +4,38 @@ You can install all these tools at once by running the command `Go: Install/Upda
 
 If you wish to have the extension use a separate GOPATH for its tools, provide the desired location in the setting `go.toolsGopath`.
 
+- go-outline: `go get -u -v github.com/ramya-rao-a/go-outline`
+- go-symbols: `go get -u -v github.com/acroca/go-symbols`
 - gocode: `go get -u -v github.com/nsf/gocode`
 - godef: `go get -u -v github.com/rogpeppe/godef`
+- godoc: `go get -u -v golang.org/x/tools/cmd/godoc`
 - gogetdoc: `go get -u -v github.com/zmb3/gogetdoc`
 - golint: `go get -u -v github.com/golang/lint/golint`
-- go-outline: `go get -u -v github.com/ramya-rao-a/go-outline`
-- goreturns: `go get -u -v github.com/sqs/goreturns`
-- gorename: `go get -u -v golang.org/x/tools/cmd/gorename`
-- gopkgs: `go get -u -v github.com/tpng/gopkgs`
-- go-symbols: `go get -u -v github.com/acroca/go-symbols`
-- guru: `go get -u -v golang.org/x/tools/cmd/guru`
-- gotests: `go get -u -v github.com/cweill/gotests/...`
-- godoc: `go get -u -v golang.org/x/tools/cmd/godoc`
 - gomodifytags: `go get -u -v github.com/fatih/gomodifytags`
+- gopkgs: `go get -u -v github.com/uudashr/gopkgs/cmd/gopkgs`
+- gorename: `go get -u -v golang.org/x/tools/cmd/gorename`
+- goreturns: `go get -u -v sourcegraph.com/sqs/goreturns`
+- gotests: `go get -u -v github.com/cweill/gotests/...`
+- guru: `go get -u -v golang.org/x/tools/cmd/guru`
 - impl: `go get -u -v github.com/josharian/impl`
 
 To install the tools manually in the current GOPATH, just paste and run:
 ```bash
-go get -u -v github.com/nsf/gocode
-go get -u -v github.com/rogpeppe/godef
-go get -u -v github.com/zmb3/gogetdoc
-go get -u -v github.com/golang/lint/golint
-go get -u -v github.com/ramya-rao-a/go-outline
-go get -u -v github.com/sqs/goreturns
-go get -u -v golang.org/x/tools/cmd/gorename
-go get -u -v github.com/tpng/gopkgs
-go get -u -v github.com/acroca/go-symbols
-go get -u -v golang.org/x/tools/cmd/guru
-go get -u -v github.com/cweill/gotests/...
-go get -u -v golang.org/x/tools/cmd/godoc
-go get -u -v github.com/fatih/gomodifytags
-go get -u -v github.com/josharian/impl
+go get -u -v \
+    github.com/ramya-rao-a/go-outline \
+    github.com/acroca/go-symbols \
+    github.com/nsf/gocode \
+    github.com/rogpeppe/godef \
+    golang.org/x/tools/cmd/godoc \
+    github.com/zmb3/gogetdoc \
+    github.com/golang/lint/golint \
+    github.com/fatih/gomodifytags \
+    github.com/uudashr/gopkgs/cmd/gopkgs \
+    golang.org/x/tools/cmd/gorename \
+    sourcegraph.com/sqs/goreturns \
+    github.com/cweill/gotests/... \
+    golang.org/x/tools/cmd/guru \
+    github.com/josharian/impl
 ```
 
 And for debugging:
