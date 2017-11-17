@@ -35,7 +35,11 @@ You will now see a `launch.json` file created for your workspace, which will con
 ```
 You can ignore `remotePath`, `port` and `host` if you are not remote debugging
 
-The `program` option is mandatory and can refer to a package folder to debug, or a file within that folder. This should be a full path and not relative.
+The `program` option is mandatory.
+
+* This can refer to a package folder to debug, or a file within that folder. 
+* This should be a full path and not relative.
+* Use `${fileDirname}` to debug current package i.e the package to which the current file that is open belongs to
 
 The `mode` parameter can be set to:
 
