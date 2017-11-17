@@ -46,6 +46,8 @@ The `mode` parameter can be set to:
 
 In version 0.6.66 or lesser of the Go extension, the debugger cannot read your settings. It figures out the GOPATH from either the environment variables or from the path provided in the `program` option. If you have set multiple GOPATHs in the `go.gopath` setting, pass the same in the `env` option of the `launch.json` as an environment variable.
 
+As of 0.6.67 version, the debugger will inherit the GOPATH from settings. Run `Go: Current GOPATH` command to see the GOPATH being used by the Go extension and the debugger.
+
 ## Snippets for Debug Configurations
 
 As of 0.6.54 version of the Go extension, you can now make use of snippets while editing the launch.json file. 
