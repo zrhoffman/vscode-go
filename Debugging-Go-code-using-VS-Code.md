@@ -44,7 +44,7 @@ The `mode` parameter can be set to:
 * `exec` to run a pre-built binary specified in program, for example `"program":"${workspaceRoot}/mybin"`.
 * `remote` to attach to a remote headless Delve server.  You must manually run Delve on the remote machine, and provide the additional `remotePath`, `host` and `port` debug configuration options pointing at the remote machine.
 
-The debugger cannot read your settings. It figures out the GOPATH from either the environment variables or from the path provided in the `program` option. If you have set multiple GOPATHs in the `go.gopath` setting, pass the same in the `env` option of the `launch.json` as an environment variable.
+In version 0.6.66 or lesser of the Go extension, the debugger cannot read your settings. It figures out the GOPATH from either the environment variables or from the path provided in the `program` option. If you have set multiple GOPATHs in the `go.gopath` setting, pass the same in the `env` option of the `launch.json` as an environment variable.
 
 ## Snippets for Debug Configurations
 
