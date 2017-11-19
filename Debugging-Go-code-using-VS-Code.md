@@ -44,7 +44,7 @@ The `program` option is mandatory.
 The `mode` parameter can be set to:
 
 * `debug` to compile the contents of the program folder and launch under the debugger. [default]
-* `test` to debug tests in the program folder. To debug a single test, pass `-test.run` and the Test name as args.
+* `test` to debug tests in the program folder. To debug a single test, pass `-test.run` and the Test name as args. Additionally, you can pass `-test.v` to get verbose output as well.
 * `exec` to run a pre-built binary specified in program, for example `"program":"${workspaceRoot}/mybin"`.
 * `remote` to attach to a remote headless Delve server.  You must manually run Delve on the remote machine, and provide the additional `remotePath`, `host` and `port` debug configuration options pointing at the remote machine.
 
