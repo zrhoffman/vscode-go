@@ -21,21 +21,20 @@ If you wish to have the extension use a separate GOPATH for its tools, provide t
 
 To install the tools manually in the current GOPATH, just paste and run:
 ```bash
-go get -u -v \
-    github.com/ramya-rao-a/go-outline \
-    github.com/acroca/go-symbols \
-    github.com/nsf/gocode \
-    github.com/rogpeppe/godef \
-    golang.org/x/tools/cmd/godoc \
-    github.com/zmb3/gogetdoc \
-    github.com/golang/lint/golint \
-    github.com/fatih/gomodifytags \
-    github.com/uudashr/gopkgs/cmd/gopkgs \
-    golang.org/x/tools/cmd/gorename \
-    sourcegraph.com/sqs/goreturns \
-    github.com/cweill/gotests/... \
-    golang.org/x/tools/cmd/guru \
-    github.com/josharian/impl
+go get -u -v github.com/ramya-rao-a/go-outline
+go get -u -v github.com/acroca/go-symbols
+go get -u -v github.com/nsf/gocode
+go get -u -v github.com/rogpeppe/godef
+go get -u -v golang.org/x/tools/cmd/godoc
+go get -u -v github.com/zmb3/gogetdoc
+go get -u -v github.com/golang/lint/golint
+go get -u -v github.com/fatih/gomodifytags
+go get -u -v github.com/uudashr/gopkgs/cmd/gopkgs
+go get -u -v golang.org/x/tools/cmd/gorename
+go get -u -v sourcegraph.com/sqs/goreturns
+go get -u -v github.com/cweill/gotests/...
+go get -u -v golang.org/x/tools/cmd/guru
+go get -u -v github.com/josharian/impl
 ```
 
 And for debugging:
