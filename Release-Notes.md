@@ -1,6 +1,6 @@
 This wiki page captures changes/features/bug fixes for each release of the Go extension from version 0.6.40
 
-## 0.6.68 - 27th November, 2017
+## 0.6.69 - 27th November, 2017
 
 * New commands
     * [Frederik Ring (@m90)](https://github.com/m90)
