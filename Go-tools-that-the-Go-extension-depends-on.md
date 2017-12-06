@@ -18,6 +18,7 @@ If you wish to have the extension use a separate GOPATH for its tools, provide t
 - gotests: `go get -u -v github.com/cweill/gotests/...`
 - guru: `go get -u -v golang.org/x/tools/cmd/guru`
 - impl: `go get -u -v github.com/josharian/impl`
+- go play: `go get -u -v github.com/haya14busa/goplay/cmd/goplay`
 
 To install the tools manually in the current GOPATH, just paste and run:
 ```bash
@@ -35,6 +36,7 @@ go get -u -v sourcegraph.com/sqs/goreturns
 go get -u -v github.com/cweill/gotests/...
 go get -u -v golang.org/x/tools/cmd/guru
 go get -u -v github.com/josharian/impl
+go get -u -v github.com/haya14busa/goplay/cmd/goplay
 ```
 
 And for debugging:
