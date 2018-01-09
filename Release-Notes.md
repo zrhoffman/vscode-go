@@ -1,6 +1,6 @@
 This wiki page captures changes/features/bug fixes for each release of the Go extension from version 0.6.40
 
-## 0.6.72 - 9th January, 2019
+## 0.6.72 - 9th January, 2018
 
 * [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a)
     * Fix the issue that got introduced in the previous release, where formatter reverts changes unless `goreturns` is updated. Fixes [Bug 1447](https://github.com/Microsoft/vscode-go/issues/1447)
