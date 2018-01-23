@@ -33,7 +33,7 @@ You will now see a `launch.json` file created for your workspace, which will con
 	]
 }
 ```
-You can ignore `remotePath` and `host` if you are not remote debugging, but you should of course give the `port` which is not in use now. To see the ports used by applications use `ps` command and grep it for the port `ps -aux | grep <port>`. (Please keep in mind grep will always show one result for that port because you just passed that argument to grep. So, if grep is showing more then one match then only you should consider that port to be used by another process).
+You can ignore `remotePath`, `host` and `port` if you are not remote debugging.
 
 The `program` option is mandatory.
 
