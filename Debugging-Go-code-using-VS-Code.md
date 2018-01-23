@@ -39,7 +39,8 @@ The `program` option is mandatory.
 
 * This can refer to a package folder to debug, or a file within that folder. 
 * This should be a full path and not relative.
-* You can use `${workspaceFolder}` or `${file}` to debug package at the root of the workspace that is opened in VS Code or the current file.
+* Use `${workspaceFolder}` to debug package at the root of the workspace that is opened in VS Code 
+* Use `${file}` to debug the current file.
 
 The `mode` parameter can be set to:
 
