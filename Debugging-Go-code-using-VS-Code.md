@@ -9,7 +9,7 @@ If `dlv` binary is in your `GOPATH/bin` and this GOPATH is not set as an environ
 
 ## Set up configurations in launch.json
 
-Once delve is installed, you can either press `F5` or go to the Code debug viewlet and select the configuration gear. If you are using Visual Studio Code 1.8.1 or below, you will see a pop up asking you to select your environment. Select 'Go'. 
+Once delve is installed, you can either press `F5` or go to the Code debug viewlet and select the configuration gear.  
 
 You will now see a `launch.json` file created for your workspace, which will contain the configurations for debugging. By default, there would be a single configuration as below:
 
