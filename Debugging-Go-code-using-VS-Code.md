@@ -25,7 +25,7 @@ You will now see a `launch.json` file created for your workspace, which will con
 			"remotePath": "",
 			"port": 2345,
 			"host": "127.0.0.1",
-			"program": "${workspaceRoot}",
+			"program": "${fileDirname}",
 			"env": {},
 			"args": [],
 			"showLog": true
@@ -33,13 +33,13 @@ You will now see a `launch.json` file created for your workspace, which will con
 	]
 }
 ```
-You can ignore `remotePath`, `host` and `port` if you are not remote debugging.
+Ignore `remotePath`, `host` and `port` if you are not remote debugging.
 
 The `program` option is mandatory.
 
 * This can refer to a package folder to debug, or a file within that folder. 
 * This should be a full path and not relative.
-* Use `${fileDirname}` to debug current package i.e the package to which the current file that is open belongs to
+* You can use `${workspaceFolder}` or `${file}` to debug package at the root of the workspace that is opened in VS Code or the current file.
 
 The `mode` parameter can be set to:
 
