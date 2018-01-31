@@ -24,6 +24,27 @@ This will create a `tasks.json` file in your workspace's `.vscode` folder.  Repl
 	]
 }
 ```
+```json
+{
+	"version": "2.0.0",	
+	"type": "shell",	
+	"echoCommand": true,
+	"options": {
+		"cwd": "${workspaceRoot}",		
+	},
+	"tasks": [
+		{
+			"label": "rungo",
+			"command": "go run ${file}",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},		
+	]
+}
+
+```
 
 You can now invoke <kbd>ctrl/cmd</kbd>+<kbd>shift</kbd>+<kbd>b</kbd> to run `go install -v ./...` and report results in the output window, or <kbd>ctrl/cmd</kbd>+<kbd>shift</kbd>+<kbd>t</kbd> to run `go test -v ./...`.
 
@@ -53,25 +74,6 @@ You can define a specific task to run only some tests:
 }
 ```
 
-
-{
-	"version": "2.0.0",	
-	"type": "shell",	
-	"echoCommand": true,
-	"options": {
-		"cwd": "${workspaceRoot}",		
-	},
-	"tasks": [
-		{
-			"label": "rungo",
-			"command": "go run ${file}",
-			"group": {
-				"kind": "build",
-				"isDefault": true
-			}
-		},		
-	]
-}
 The above task would run all tests with `User` in their name.
 
 ## How do I bind a keyboard shortcut to one of the Go commands?
