@@ -53,6 +53,25 @@ You can define a specific task to run only some tests:
 }
 ```
 
+
+{
+	"version": "2.0.0",	
+	"type": "shell",	
+	"echoCommand": true,
+	"options": {
+		"cwd": "${workspaceRoot}",		
+	},
+	"tasks": [
+		{
+			"label": "rungo",
+			"command": "go run ${file}",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},		
+	]
+}
 The above task would run all tests with `User` in their name.
 
 ## How do I bind a keyboard shortcut to one of the Go commands?
