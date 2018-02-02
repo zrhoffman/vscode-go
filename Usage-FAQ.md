@@ -29,9 +29,7 @@ This will create a `tasks.json` file in your workspace's `.vscode` folder.  Repl
 	"version": "2.0.0",	
 	"type": "shell",	
 	"echoCommand": true,
-	"options": {
-		"cwd": "${workspaceFolder}",		
-	},
+	"cwd": "${workspaceFolder}",
 	"tasks": [
 		{
 			"label": "rungo",
