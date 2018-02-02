@@ -30,7 +30,7 @@ This will create a `tasks.json` file in your workspace's `.vscode` folder.  Repl
 	"type": "shell",	
 	"echoCommand": true,
 	"options": {
-		"cwd": "${workspaceRoot}",		
+		"cwd": "${workspaceFolder}",		
 	},
 	"tasks": [
 		{
