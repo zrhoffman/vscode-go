@@ -21,6 +21,16 @@ If you make edits in the extension `.ts` files, just reload (`cmd-r`) the `[Exte
 
 To debug the debugger, see [the debugAdapter readme](/Microsoft/vscode-go/tree/master/src/debugAdapter).
 
+## Running the tests
+Tests may be run locally via the Debug viewlet: select `Launch Tests` then hit run (`F5`).
+
+The `Gometalinter error checking` and `Test Linter for Package` tests require gometalinter in order to pass:
+
+```bash
+go get -u github.com/alecthomas/gometalinter
+gometalinter --install
+```
+
 ## Sideloading the extension
 If you are working on the extension itself, you might want to sideload it to test it in Code. This can be done by preparing the extension and loading it directly.
 
