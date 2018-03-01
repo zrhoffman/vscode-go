@@ -37,6 +37,8 @@ Additionally, linux systems also may require manual installation of `gogetdoc`:
 go get -u github.com/zmb3/gogetdoc
 ```
 
+See [this](https://github.com/Microsoft/vscode-go/wiki/Go-tools-that-the-Go-extension-depends-on) page for a complete list of dependencies required by the extension.
+
 ## Sideloading the extension
 If you are working on the extension itself, you might want to sideload it to test it in Code. This can be done by preparing the extension and loading it directly.
 
