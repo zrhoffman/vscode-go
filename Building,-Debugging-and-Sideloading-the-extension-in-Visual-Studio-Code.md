@@ -24,11 +24,17 @@ To debug the debugger, see [the debugAdapter readme](/Microsoft/vscode-go/tree/m
 ## Running the tests
 Tests may be run locally via the Debug viewlet: select `Launch Tests` then hit run (`F5`).
 
-The `Gometalinter error checking` and `Test Linter for Package` tests require gometalinter in order to pass:
+Linter tests require gometalinter in order to run properly:
 
 ```bash
 go get -u github.com/alecthomas/gometalinter
 gometalinter --install
+```
+
+Additionally, linux systems also may require manual installation of `gogetdoc`:
+
+```bash
+go get -u github.com/zmb3/gogetdoc
 ```
 
 ## Sideloading the extension
