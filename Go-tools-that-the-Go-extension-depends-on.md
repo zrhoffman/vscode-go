@@ -24,6 +24,7 @@ There are other features of this extension which you most probably wouldn't be u
 - [gotype-live](https:///tylerb/gotype-live) for providing diagnostics as you type
 - [gotests](https://github.com/cweill/gotests/) for generating unit tests
 - [go-langserver](https://github.com/sourcegraph/go-langserver) for using the Go language server by Sourcegraph
+- [go-fill-struct](https://github.com/davidrjenni/reftools/tree/master/cmd/fillstruct)
 
 You can install all these tools at once by running the command `Go: Install/Update Tools`. The same command can be used to keep the tools up to date as well as to re-compile in case you change the version of Go being used.
 
@@ -50,6 +51,7 @@ go get -u -v github.com/josharian/impl
 go get -u -v github.com/haya14busa/goplay/cmd/goplay
 go get -u -v github.com/uudashr/gopkgs/cmd/gopkgs
 go get -u -v github.com/fatih/gomodifytags
+go get -u -v github.com/davidrjenni/reftools/cmd/fillstruct
 ```
 
 And for debugging:
