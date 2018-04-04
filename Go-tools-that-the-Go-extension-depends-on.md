@@ -8,7 +8,7 @@ Tools essential for the general features of this extension:
 - [gopkgs](https://github.com/uudashr/gopkgs/cmd/gopkgs) for auto-completion of unimported packages
 - [guru](https://golang.org/x/tools/cmd/guru) for the `Find all References` feature
 - [gorename](https://golang.org/x/tools/cmd/gorename) for renaming symbols
-- [goreturns](https://github.com/sqs/goreturns)or [goimports](https://golang.org/x/tools/cmd/goimports) for formatting code
+- [goreturns](https://github.com/sqs/goreturns) or [goimports](https://golang.org/x/tools/cmd/goimports) for formatting code
 - [godef](https://github.com/rogpeppe/godef) or [gogetdoc](https://github.com/zmb3/gogetdoc) for the `Go to Definition` feature
 - [godoc](https://golang.org/x/tools/cmd/godoc) or [gogetdoc](https://github.com/zmb3/gogetdoc) for the documentation that appears on hover
 - [golint](https://github.com/golang/lint/golint) or [gometalinter](https://github.com/alecthomas/gometalinter) or  [megacheck](https://honnef.co/go/tools/) for linting
