@@ -18,10 +18,10 @@ If any of these tools are missing, you will see an "Analysis Tools Missing" warn
 
 There are other features of this extension which you most probably wouldn't be using every day. For eg: Generating unit tests or generating stubs for interface or modify tags. The tools used for such features are:
 
-- [gomodifytags](https:///fatih/gomodifytags) for modifying tags on structs
-- [goplay](https:///haya14busa/goplay/cmd/goplay) for running current file in the Go playground
-- [impl](https:///josharian/impl) for generating stubs for interfaces
-- [gotype-live](https:///tylerb/gotype-live) for providing diagnostics as you type
+- [gomodifytags](https://github.com/fatih/gomodifytags) for modifying tags on structs
+- [goplay](https://github.com/haya14busa/goplay/) for running current file in the Go playground
+- [impl](https://github.com/josharian/impl) for generating stubs for interfaces
+- [gotype-live](https://github.com/tylerb/gotype-live) for providing diagnostics as you type
 - [gotests](https://github.com/cweill/gotests/) for generating unit tests
 - [go-langserver](https://github.com/sourcegraph/go-langserver) for using the Go language server by Sourcegraph
 - [fillstruct](https://github.com/davidrjenni/reftools/tree/master/cmd/fillstruct) for filling a struct literal with default values
