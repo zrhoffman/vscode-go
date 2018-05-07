@@ -5,7 +5,7 @@ Tools essential for the general features of this extension:
 - [gocode](https://github.com/nsf/gocode) for auto-completion
 - [go-outline](https://github.com/ramya-rao-a/go-outline) for symbol search in the current file
 - [go-symbols](https://github.com/acroca/go-symbols) for symbol search in the current workspace
-- [gopkgs](https://github.com/uudashr/gopkgs/cmd/gopkgs) for auto-completion of unimported packages
+- [gopkgs](https://github.com/uudashr/gopkgs) for auto-completion of unimported packages
 - [guru](https://golang.org/x/tools/cmd/guru) for the `Find all References` feature
 - [gorename](https://golang.org/x/tools/cmd/gorename) for renaming symbols
 - [goreturns](https://github.com/sqs/goreturns) or [goimports](https://golang.org/x/tools/cmd/goimports) for formatting code
