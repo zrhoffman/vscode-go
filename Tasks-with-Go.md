@@ -74,19 +74,7 @@ You can define a specific task to run only some tests:
 
 The above task would run all tests with `User` in their name.
 
-## How do I bind a keyboard shortcut to one of the Go commands?
 
-1. Edit your keybindings.json file:  `Code > Preferences > Keyboard Shortcuts`
-2. Add a new entry such as:
 
-```
-	{
-		"key": "cmd+r",
-		"command": "go.test.package"
-	}
-```
 
-The list of available Go specific commands is available [here](https://github.com/Microsoft/vscode-go/blob/master/package.json#L79).
-
-3. Click `cmd + r` to start the package test suite.
 
