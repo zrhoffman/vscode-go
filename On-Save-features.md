@@ -22,7 +22,7 @@ The below settings control the build on save feature
 - go.buildFlags
      - Is used both by the build and test processes
 - go.installDependenciesWhenBuilding
-     - By default, `-i` flag is passed to speed up the build process. If you don't want the `-i` flag to be used, disable the `go.installDependenciesWhenBuilding` setting.
+     - By default, `-i` flag is passed to speed up the build process. If you don't want the `-i` flag to be used, set `go.installDependenciesWhenBuilding` to `false`.
 
 ## Lint on save
 
