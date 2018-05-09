@@ -28,3 +28,7 @@ GOPATH to the value in that setting before running `go get` so that the tool is 
 - If it still doesnt work, run `gocode -s -debug` in a terminal and try again. Results from `gocode` will show up in the terminal. 
 If you see expected results in the terminal, but not in VS Code, log an issue in the [vscode-go](https://github.com/Microsoft/vscode-go) repo, else 
 log an issue in the [gocode](https://github.com/nsf/gocode) repo.
+
+**Q: Why doesn't formatting doesn't work on file save?
+
+**A:** Check the console (Help -> Toggle Developer Tools -> Console) for messages like "Formatting took too long" or "Format On Save feature could be aborted". If you find such a message, then chances are formatted was aborted because it took too long and so can affect the save experience. You can control this timeout using the setting `editor.formatOnSaveTimeout`
