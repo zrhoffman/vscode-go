@@ -2,7 +2,7 @@
 
 **Q: I installed the plugin, but none of the features are working. Why?**
 
-**A:** Make sure to install all the dependent Go tools. Run `Go: Install/Update Tools`. If you want to install only selected tools, then go through the [Go tools that this plugin depends on](https://github.com/Microsoft/vscode-go/wiki/Go-tools-that-the-Go-extension-depends-on) and install the ones you need.
+**A:** Make sure to install all the dependent Go tools. Run `Go: Install/Update Tools`. If you want to install only selected tools, then go through the [Go tools that this plugin depends on](https://github.com/Microsoft/vscode-go/wiki/Go-tools-that-the-Go-extension-depends-on) and install the ones you need manually
 
 **Q: Why do my imported packages keep disappearing?**
 
