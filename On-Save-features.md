@@ -1,4 +1,4 @@
-The Go extension runs the below on each file save by default. You can turn them off in [settings](https://github.com/Microsoft/vscode-go/wiki/On-Save-features).
+The Go extension runs the below on each file save by default. You can turn them off in settings.
 * Build
 * Lint
 * Vet
