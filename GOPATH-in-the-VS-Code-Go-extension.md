@@ -1,3 +1,5 @@
+At any point in time, you can run the command `Go: Current GOPATH` to see the GOPATH being used by the extension.
+
 ### GOPATH from the environment variable
 Out of the box, the extension uses the value of the environment variable `GOPATH`. From Go 1.8 onwards, if no such environment variable is set, then the default GOPATH as deciphered from the command `go env` is used.
 
