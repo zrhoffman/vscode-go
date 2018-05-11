@@ -32,3 +32,7 @@ log an issue in the [gocode](https://github.com/nsf/gocode) repo.
 **Q: Why doesn't formatting doesn't work on file save?**
 
 **A:** Check the console (Help -> Toggle Developer Tools -> Console) for messages like "Formatting took too long" or "Format On Save feature could be aborted". If you find such a message, then chances are formatted was aborted because it took too long and so can affect the save experience. You can control this timeout using the setting `editor.formatOnSaveTimeout`
+
+**Q: My imports have red lines saying "package not found"**
+
+**A:** These are build errors. Go to View -> Output -> Select "Go" from the dropdown on the top right corner of the panel. Here you can see the output of the `go build` (or `go test` if the current file is a test file). Copy the `go build` command along with arguments and try running it in the terminal. If you still see the same errors, then the problem is in your setup of GOPATH. If it runs fine, then log an issue and we can look into it
