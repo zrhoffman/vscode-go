@@ -1,8 +1,14 @@
 The Go extension runs the below on each file save by default. You can turn them off in settings.
-* Build
-* Lint
-* Vet
-* Format
+* Build (Turn off using `go.buildOnSave` setting)
+* Lint (Turn off using `go.lintOnSave` setting)
+* Vet (Turn off using `go.vetOnSave` setting)
+* Format (Turn off by adding the below in your settings)
+```
+"[go]": {
+    "editor.formatOnSave": false
+}
+
+```
 
 The below can be enabled to run on file save by turning them on in settings
 * Test
@@ -62,5 +68,4 @@ If you have Auto Save feature enabled, then you might want to disable the format
 By default, `goreturns` is the tool used for formatting. You can choose `goimports` or `gofmt` by changing the `go.formatTool` setting
 
 If you see your unused imports disappearing or unimported packages getting added automatically, thats the `goreturns` tool doing the magic behind the scenes.
-
 
