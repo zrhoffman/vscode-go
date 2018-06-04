@@ -1,5 +1,53 @@
 This wiki page captures changes/features/bug fixes for each release of the Go extension from version 0.6.40
 
+## 0.6.81 - 4th June, 2018
+
+### Features
+
+* [Luis GG (@lggomez)](https://github.com/lggomez)
+    * Use debug configuration to choose to use version 2 of delve apis when debugging. [Feature Request 1555](https://github.com/Microsoft/vscode-go/issues/1555) implemented with [PR 1647](https://github.com/Microsoft/vscode-go/pull/1647). This enables you to set configuration to increase the size of arrays and strings that are watchable during debugging which fixes [Bug 868](https://github.com/Microsoft/vscode-go/issues/868)
+
+* [@golangci](https://github.com/golangci)
+    * Support the use of `golangci-lint` as a linter. [Feature Request 1693](https://github.com/Microsoft/vscode-go/issues/1693) implemented with [PR 1693](https://github.com/Microsoft/vscode-go/pull/1693)
+
+* [Minko Gechev (@mgechev)](https://github.com/mgechev) and [Mark Wolfe (@wolfeidau)](https://github.com/wolfeidau)
+    * Support the use of `revive` as a linter. [Feature Request 1697](https://github.com/Microsoft/vscode-go/issues/1697) implemented with [PR 1699](https://github.com/Microsoft/vscode-go/pull/1699), [PR 1703](https://github.com/Microsoft/vscode-go/pull/1703) and commit [d31636](https://github.com/Microsoft/vscode-go/commit/d31636a89931add2b799610d91dce1f67b27d5d8)
+
+* [Kent Quirk (@kentquirk)](https://github.com/kentquirk)
+    * Customize the colors used in highlighting covered/uncovered code or the gutter styles used to indicated covered/uncovered code using the setting `go.coverageDecorator`. [Feature Request 1302](https://github.com/Microsoft/vscode-go/issues/1302) implemented with [PR 1695](https://github.com/Microsoft/vscode-go/pull/1695).
+
+* [Shreyas Karnik (@shreyu86)](https://github.com/shreyu86)
+    * Include exported member name in completions when starting a comment above it. Use Ctrl+Space to trigger completions inside comments. [Feature Request 1005](https://github.com/Microsoft/vscode-go/issues/1005) implemented with [PR 1675](https://github.com/Microsoft/vscode-go/pull/1675) and [PR 1706](https://github.com/Microsoft/vscode-go/pull/1706)
+
+* [Frederik Ring (@m90)](https://github.com/m90), [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a)
+    * Get code completion and formatting features when using language server. Use the new setting `go.languageServerExperimentalFeatures` to opt-in to try such new features from the language server that might not be feature complete yet. [Feature Request 1593](https://github.com/Microsoft/vscode-go/issues/1593) implemented with [PR 1607](https://github.com/Microsoft/vscode-go/pull/1607)
+
+* [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a)
+    * Resolve `~`, `${workspaceRoot}`, `${workspaceFolder}` in the `go.testFlags` setting. [Feature Request 928](https://github.com/Microsoft/vscode-go/issues/928)
+    * Ensure `Go: Add Import` shows up the list of imports ASAP. Fixes [Feature Request 1450](https://github.com/Microsoft/vscode-go/issues/1450)
+    * Prompt user to install missing tool when they change either of `go.formatTool`, `go.lintTool` or `go.docsTool` setting to a tool that they dont have installed yet.
+    * Pass the environment variables in the `go.toolsEnvVars` setting to the process that runs the language server.
+    * Include the GOPATH from environment variable in the inferred GOPATH when `go.inferGopath` setting is enabled. [Feature Request 1525](https://github.com/Microsoft/vscode-go/issues/1525)
+
+### Bug Fixes
+
+* [Kent Quirk (@kentquirk)](https://github.com/kentquirk)
+    * Fix code coverage when code is covered by multiple tests. [Bug 1683](https://github.com/Microsoft/vscode-go/issues/1683).
+
+* [Nuruddin Ashr (@uudashr)](https://github.com/uudashr)
+    * Imrpove performance when using `gopkgs`. Fixes [Bug 1490](https://github.com/Microsoft/vscode-go/issues/1490) with [PR 1658](https://github.com/Microsoft/vscode-go/pull/1658)
+    * Internal packages at the root of GOROOT should not be importable. [PR 1681](https://github.com/Microsoft/vscode-go/pull/1681).
+
+* [Gordon Tyler (@doxxx)](https://github.com/doxxx)
+    * Fix the improper usage of Cancellation Tokens that resulted in lint/vet processes getting cancelled. [PR 1704](https://github.com/Microsoft/vscode-go/pull/1704)
+
+* [Luis GG (@lggomez)](https://github.com/lggomez)
+    * Exlcude parameters in the function snippet in auto-completions if there is a `()` after cursor. Fixes [Bug 1655](https://github.com/Microsoft/vscode-go/issues/1655) with [PR 1696](https://github.com/Microsoft/vscode-go/pull/1696)
+
+* [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a)
+    * Support `Go to Definition` feature when the entire symbol is selected with cursor at the end. Fixes [Bug 891](https://github.com/Microsoft/vscode-go/issues/891).
+
+
 ## 0.6.80 - 14th May, 2018
 
 * [Ramya Rao (@ramya-rao-a)](https://github.com/ramya-rao-a)
