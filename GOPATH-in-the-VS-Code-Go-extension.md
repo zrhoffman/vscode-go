@@ -9,7 +9,7 @@ Setting `go.gopath` in Workspace settings overrides the one from User settings.
 You can set multiple folders as GOPATH in this setting. Note that they should be `;` separated in Windows and `:` separated otherwise.
 
 ### GOPATH from `go.inferGopath` setting
-Setting `go.inferGopath` overrides all of the above. If `go.inferGopath` is set to true, the extension will try to infer the `GOPATH` from the path of the workspace i.e. the directory opened in `vscode`. It searches upwards in the path for the `src` directory, and sets `GOPATH` to one level above that.
+Setting `go.inferGopath` overrides the value set in `go.gopath` setting. If `go.inferGopath` is set to true, the extension will try to infer the `GOPATH` from the path of the workspace i.e. the directory opened in `vscode`. It searches upwards in the path for the `src` directory, and sets `GOPATH` to one level above that. It will also include the global GOPATH. Run `go env GOPATH` to find out what your global GOPATH is.
 
 For example, if your project looks like `/aaa/bbb/ccc/src/...`, then opening the directory `/aaa/bbb/ccc/src` (or anything below that) will cause the extension to search upwards, find the `src` component in the path, and set the `GOPATH` to one level above that i.e. `GOPATH=/aaa/bbb/ccc`. 
 
