@@ -2,7 +2,7 @@ The Go extension for Visual Studio Code various Go tools, installed in the user'
 
 Tools essential for the general features of this extension:
 
-- [gocode](https://github.com/nsf/gocode) for auto-completion
+- [gocode](https://github.com/mdempsky/gocode) for auto-completion
 - [go-outline](https://github.com/ramya-rao-a/go-outline) for symbol search in the current file
 - [go-symbols](https://github.com/acroca/go-symbols) for symbol search in the current workspace
 - [gopkgs](https://github.com/uudashr/gopkgs) for auto-completion of unimported packages
@@ -35,7 +35,7 @@ To install the tools manually in the current GOPATH, just copy the below (after 
 ```bash
 go get -u -v github.com/ramya-rao-a/go-outline
 go get -u -v github.com/acroca/go-symbols
-go get -u -v github.com/nsf/gocode
+go get -u -v github.com/mdempsky/gocode
 go get -u -v github.com/rogpeppe/godef
 go get -u -v golang.org/x/tools/cmd/godoc
 go get -u -v github.com/zmb3/gogetdoc
