@@ -41,7 +41,6 @@ go get -u -v golang.org/x/tools/cmd/godoc
 go get -u -v github.com/zmb3/gogetdoc
 go get -u -v github.com/golang/lint/golint
 go get -u -v github.com/fatih/gomodifytags
-go get -u -v github.com/uudashr/gopkgs/cmd/gopkgs
 go get -u -v golang.org/x/tools/cmd/gorename
 go get -u -v sourcegraph.com/sqs/goreturns
 go get -u -v golang.org/x/tools/cmd/goimports
