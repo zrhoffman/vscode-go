@@ -114,7 +114,7 @@ Like the error message says, the extension cannot find `dlv`. Remember, the debu
 
 ### Cannot find package ".." in any of ... 
 
-The debugger is not using the right GOPATH. This shouldnt happen, if it does, log a bug. 
+The debugger is not using the right GOPATH. This shouldn't happen, if it does, log a bug. 
 
 **_Solution_**: Until the bug you logged is resolved, the work around is to add the GOPATH as an env var in the `env` property in the `launch.json` file.
 
@@ -124,7 +124,7 @@ You have `dlv` running just fine from command line, but VS Code gives this acces
 This can happen if the extension is trying to run the `dlv` binary from a wrong location.
 The Go extension first tries to find `dlv` in your $GOPATH/bin and then in your $PATH.  
 
-**_Solution_**: Run `which dlv` in the command line. If this doesnt match your `GOPATH/bin`, then delete the `dlv` file in 
+**_Solution_**: Run `which dlv` in the command line. If this doesn't match your `GOPATH/bin`, then delete the `dlv` file in 
 your `GOPATH/bin`
 
 
