@@ -2,7 +2,7 @@
 
 1. Install [Go](https://golang.org/doc/install#install)
 2. Run `go get github.com/golang/example/hello`
-3. Sideload the Go extension and open the folder $GOPATH/src/GitHub.com/golang/example in VS Code
+3. Sideload the Go extension and open the folder $HOME/go/src/gitHub.com/golang/example in VS Code
 4. Open any Go file. You will see "Analysis Tools Missing" in the status bar. Click on it to install the Go tools that the extension needs.
 
 **Features to Smoke Test:**
