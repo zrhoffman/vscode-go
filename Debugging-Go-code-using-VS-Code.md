@@ -5,6 +5,20 @@ You can manually install delve as per the [Installation Instructions](https://gi
 Based on how you install delve it will either end up in your `PATH` or `GOPATH/bin`. 
 If `dlv` binary is in your `GOPATH/bin` and this GOPATH is not set as an environment variable, then make sure your PATH points to this `GOPATH/bin` so that the Go extension can find the `dlv` binary.
 
+## Set up configurations in your settings
+
+The below settings are used by the debugger
+- `go.gopath`. See [GOPATH in VS Code](https://github.com/Microsoft/vscode-go/wiki/GOPATH-in-the-VS-Code-Go-extension)
+- `go.inferGopath`. See [GOPATH in VS Code](https://github.com/Microsoft/vscode-go/wiki/GOPATH-in-the-VS-Code-Go-extension)
+- `go.delveConfig`
+     - `useApiV1`: Controls whether the version of delve apis to be used when launching the delve headless server
+     - `dlvLoadConfig`: The configuration passed to delve. Controls [various features of delve](https://github.com/Microsoft/vscode-go/blob/0.6.85/package.json#L431-L468)
+
+Some common cases where you might want to tweak the configurations passed to delve
+- Use the latest v2 apis
+- Change the default cap of 64 on string and array length when inspecting variables in the debug viewlet.
+- Evaluate variables that are nested when inspecting them in the debug viewlet.
+
 ## Set up configurations in launch.json
 
 Once delve is installed, you can either press `F5` or go to the Code debug viewlet and select the configuration gear.  
