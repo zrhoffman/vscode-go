@@ -7,5 +7,5 @@
 - [Release Notes](https://github.com/Microsoft/vscode-go/wiki/Release-Notes)
 
 
-See the [FAQ](Usage-FAQ).
+See the [FAQ](https://github.com/Microsoft/vscode-go/wiki/Go-with-VS-Code-FAQ-and-Troubleshooting).
 Read a [demo script](demo-script).
