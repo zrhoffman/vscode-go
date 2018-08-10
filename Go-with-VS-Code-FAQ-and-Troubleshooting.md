@@ -23,8 +23,7 @@
 **Q: Auto-completions stopped working. What do I do?**
 
 - Run `gocode close` in a terminal and try again.
-- If it still doesnt work, run `go get -u github.com/mdempsky/gocode` to update the tool. If you use the `go.toolsGopath` setting, then set 
-GOPATH to the value in that setting before running `go get` so that the tool is installed/updated in the right location
+- If it still doesnt work, run `Go: Install/Update Tools`, choose `gocode` to update the tool. 
 - If it still doesnt work, run `gocode -s -debug` in a terminal and try again. Results from `gocode` will show up in the terminal. 
 If you see expected results in the terminal, but not in VS Code, log an issue in the [vscode-go](https://github.com/Microsoft/vscode-go) repo, else 
 log an issue in the [gocode](https://github.com/nsf/gocode) repo.
