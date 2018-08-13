@@ -150,9 +150,17 @@ You may see this in the debug console, while trying to run in the `test` mode. T
 
 ### could not launch process: could not fork/exec
 
+#### OSX ####
+
 This usually happens in OSX due to signing issues. See the discussions in please see [#717](https://github.com/Microsoft/vscode-go/issues/717), [#269](https://github.com/Microsoft/vscode-go/issues/269) and [derekparker/delve/357](https://github.com/derekparker/delve/issues/357)
 
 **_Solution_**: You may have to uninstall dlv and install it manually as per [instructions](https://github.com/derekparker/delve/blob/master/Documentation/installation/osx/install.md#manual-install)
+
+#### Linux/Docker ####
+
+Docker has security settings preventing ptrace(2) operations by default within the container.
+
+**_Solution_**: To run your container insecurely, pass `--security-opt=seccomp:unconfined` to docker run when starting. Reference: [derekparker/delve/515](https://github.com/derekparker/delve/issues/515)
 
 ### could not launch process: exec: "lldb-server": executable file not found in $PATH
 
