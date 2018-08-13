@@ -112,6 +112,8 @@ Then, create a remote debug configuration in VS Code `launch.json`.
 }
 ```
 
+> Note: `remotePath` must be correct otherwise breakpoints will silently fail
+
 When you launch the debugger with this new `Remote` target selected, VS Code will send debugging
 commands to the `dlv` server you started previously instead of launching it's own `dlv` instance against your app.
 
