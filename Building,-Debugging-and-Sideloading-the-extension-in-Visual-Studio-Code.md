@@ -24,21 +24,6 @@ To debug the debugger, see [the debugAdapter readme](/Microsoft/vscode-go/tree/m
 ## Running the tests
 Tests may be run locally via the Debug viewlet: select `Launch Tests` then hit run (`F5`).
 
-Linter tests require gometalinter in order to run properly:
-
-```bash
-go get -u github.com/alecthomas/gometalinter
-gometalinter --install
-```
-
-Additionally, linux systems also may require manual installation of `gogetdoc`:
-
-```bash
-go get -u github.com/zmb3/gogetdoc
-```
-
-See [this](https://github.com/Microsoft/vscode-go/wiki/Go-tools-that-the-Go-extension-depends-on) page for a complete list of dependencies required by the extension.
-
 ## Sideloading the extension
 If you are working on the extension itself, you might want to sideload it to test it in Code. This can be done by preparing the extension and loading it directly.
 
@@ -62,7 +47,4 @@ Open the extensions menu in VSCode and choose `Install from VSIX` and select the
 
 ## Beta testing this extension
 
-If you want to help with testing the next update to this extension, its easy to do so
-- Download https://github.com/Microsoft/vscode-go/blob/master/Go-latest.vsix
-- Run `code --install-extension Go-latest.vsix` 
-- Reload VS Code
+If you want to help with testing the next update to this extension, its easy to do so. Please see [Beta testing the Go extension](https://github.com/Microsoft/vscode-go/wiki/Use-the-beta-version-of-the-latest-Go-extension)
