@@ -25,7 +25,7 @@ If you make edits in the extension `.ts` files, just reload (`cmd-r`) the `[Exte
 To debug the debugger, see [the debugAdapter readme](/Microsoft/vscode-go/tree/master/src/debugAdapter).
 
 ## Running the tests
-Tests may be run locally via the Debug viewlet: select `Launch Tests` then hit run (`F5`).
+To run the tests locally, open the Debug viewlet (`Ctrl+Shift+D`), select `Launch Tests`, then hit run (`F5`)
 
 ## Sideloading the extension
 After making changes to the extension, you might want to test it end to end instead of running it in debug mode. To do this, you can sideload the extension. This can be done by preparing the extension and loading it directly.
@@ -37,6 +37,6 @@ After making changes to the extension, you might want to test it end to end inst
 5. `vsce package` to build the package. This will generate a file with extension `vsix`
 6. Run the command `Extensions: Install from VSIX...`, choose the vsix file generated in the previous step
 
-## Beta testing this extension
+## Use the beta version of this extension
 
-If you want to help with testing the next update to this extension or you want to use the latest features that arent released yet, its easy to do so. Please see [Beta testing the Go extension](https://github.com/Microsoft/vscode-go/wiki/Use-the-beta-version-of-the-latest-Go-extension)
+If you want to help with testing the next update to this extension or you want to use the latest features that arent released yet, its easy to do so. Please see [Use the beta version of the Go extension](https://github.com/Microsoft/vscode-go/wiki/Use-the-beta-version-of-the-latest-Go-extension)
