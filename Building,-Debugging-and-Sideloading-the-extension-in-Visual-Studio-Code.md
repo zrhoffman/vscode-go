@@ -12,7 +12,7 @@ npm install
 code .
 ```
 
-You can now go to the Debug viewlet and select `Launch Extension` then hit run (`F5`).
+You can now go to the Debug viewlet (`Ctrl+Shift+D`) and select `Launch Extension` then hit run (`F5`).
 
 In the `[Extension Development Host]` instance, open any folder with Go code. Make sure the `window.openFoldersInNewWindow` setting is not `"on"`, otherwise a new, non-`[Extension Development Host]`, window may be opened.
 
