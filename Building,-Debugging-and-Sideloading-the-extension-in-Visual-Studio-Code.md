@@ -2,6 +2,7 @@ You can set up a development environment for debugging the extension during exte
 
 ## Building and Debugging the extension
 
+Ensure you have [node](https://nodejs.org/en/) installed.
 Clone the repo, run `npm install` and open a development instance of Code.
 
 ```bash
