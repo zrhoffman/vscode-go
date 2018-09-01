@@ -12,9 +12,11 @@ npm install
 code .
 ```
 
+Make sure the `window.openFoldersInNewWindow` setting is not `"on"`.
+
 You can now go to the Debug viewlet (`Ctrl+Shift+D`) and select `Launch Extension` then hit run (`F5`).
 
-This will open a new VS Code window which will have the title `[Extension Development Host]`. In this window, open any folder with Go code. Make sure the `window.openFoldersInNewWindow` setting is not `"on"`, otherwise a new, non-`[Extension Development Host]`, window may be opened.
+This will open a new VS Code window which will have the title `[Extension Development Host]`. In this window, open any folder with Go code. 
 
 In the original VS Code window, you can now add breakpoints which will be hit when you use any of the the plugin's features in the second window.
 
