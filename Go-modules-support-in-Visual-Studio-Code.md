@@ -16,6 +16,10 @@ To ensure you have the latest Go tools with the Go modules support, please follo
 - Add the setting `"go.docsTool": "gogetdoc"` to use `gogetdoc` which drives the Go to definition feature
 - Run the command `Go: Install/Update Tools`, choose `gogetdoc` and `gopkgs` from the list to update them
 
+## Features that are broken, but we are in the process of fixing:
+- Auto-completion
+- Code coverage  
+
 ## Features not affected in the first place:
 - Build : The build on save features as well as the `Go: Build ...` commands
 - Test : Running tests via the `Go: Test` commands as well as the "run tests" codelens. 
@@ -25,11 +29,7 @@ To ensure you have the latest Go tools with the Go modules support, please follo
 - Code snippets
 - Debugging
 
-## Features that are broken, but we are in the process of fixing:
-- Auto-completion
-- Code coverage  
 
 Please do try the [beta version](https://github.com/Microsoft/vscode-go/wiki/Use-the-beta-version-of-the-latest-Go-extension) and share any feedback/bugs you have.
-
 
 
