@@ -12,6 +12,7 @@ While that is in progress, the currently available [beta version](https://github
 
 
 To ensure you have the latest Go tools with the Go modules support, please follow the below:
+- Install the [beta version](https://github.com/Microsoft/vscode-go/wiki/Use-the-beta-version-of-the-latest-Go-extension) of this extension.
 - Add the setting `"go.docsTool": "gogetdoc"` to use `gogetdoc` which drives the Go to definition feature
 - Run the command `Go: Install/Update Tools`, choose `gogetdoc` and `gopkgs` from the list to update them
 
@@ -29,7 +30,6 @@ To ensure you have the latest Go tools with the Go modules support, please follo
 - Code coverage  
 
 Please do try the [beta version](https://github.com/Microsoft/vscode-go/wiki/Use-the-beta-version-of-the-latest-Go-extension) and share any feedback/bugs you have.
-
 
 
 
