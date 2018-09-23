@@ -6,9 +6,9 @@ While that is in progress, the currently available [beta version](https://github
 
 ## Features that work in the beta version
 
-- Go to definition, symbol info on hover and Signature Help (only after adding the setting `"go.docsTool": "gogetdoc"`) 
+- Go to definition, symbol info on hover and Signature Help when the setting `go.docsTool` is set to `gogetdoc` 
 - `Go: Add Import` & `Go: Browse Packages` commands that will show the appropriate packages from the current module instead of GOPATH
-- Auto-completion of unimported packages when `go.autocompleteUnimportedPackages` is set to `true`
+- Auto-completion of unimported packages when the setting `go.autocompleteUnimportedPackages` is set to `true`
 
 
 To ensure you have the latest Go tools with the Go modules support, please follow the below:
