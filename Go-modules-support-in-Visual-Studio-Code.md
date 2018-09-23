@@ -6,9 +6,10 @@ While that is in progress, the currently available [beta version](https://github
 
 ## Features that work in the beta version
 
+- Go to definition, symbol info on hover and Signature Help (only after adding the setting `"go.docsTool": "gogetdoc"`) 
 - `Go: Add Import` & `Go: Browse Packages` commands that will show the appropriate packages from the current module instead of GOPATH
 - Auto-completion of unimported packages when `go.autocompleteUnimportedPackages` is set to `true`
-- Go to definition, symbol info on hover and Signature Help
+
 
 To ensure you have the latest Go tools with the Go modules support, please follow the below:
 - Add the setting `"go.docsTool": "gogetdoc"` to use `gogetdoc` which drives the Go to definition feature
@@ -28,7 +29,6 @@ To ensure you have the latest Go tools with the Go modules support, please follo
 - Code coverage  
 
 Please do try the [beta version](https://github.com/Microsoft/vscode-go/wiki/Use-the-beta-version-of-the-latest-Go-extension) and share any feedback/bugs you have.
-
 
 
 
