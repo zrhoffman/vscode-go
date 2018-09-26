@@ -14,9 +14,6 @@ While that is in progress, the currently available [beta version](https://github
 
 To ensure you have the latest Go tools with the Go modules support, and follow the prompts to install/update the required tools.
 
-## Features that are broken, but we are in the process of fixing:
-- Code coverage  
-
 ## Features not affected in the first place:
 - Build : The build on save features as well as the `Go: Build ...` commands
 - Test : Running tests via the `Go: Test` commands as well as the "run tests" codelens. 
