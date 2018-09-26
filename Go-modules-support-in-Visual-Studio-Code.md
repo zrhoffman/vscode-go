@@ -6,18 +6,15 @@ While that is in progress, the currently available [beta version](https://github
 
 ## Features that work in the beta version
 
-- Go to definition, symbol info on hover and Signature Help when the setting `go.docsTool` is set to `gogetdoc` 
+- Go to definition, symbol info on hover and Signature Help when the setting `go.docsTool` is set to `gogetdoc`. You will be prompted to update `gogetdoc`
+- Go to definition feature if you havent changed the `go.docsTool` setting. You will be prompted to install a [fork](https://github.com/ianthehat/godef) of `godef` that we are testing.
+- Auto-completion. You will be prompted to install a [fork](https://github.com/stamblerre/gocode) of `gocode` that we are testing as well as to update the `gopkgs` tool.
 - `Go: Add Import` & `Go: Browse Packages` commands that will show the appropriate packages from the current module instead of GOPATH
-- Auto-completion of unimported packages when the setting `go.autocompleteUnimportedPackages` is set to `true`
 
 
-To ensure you have the latest Go tools with the Go modules support, please follow the below:
-- Install the [beta version](https://github.com/Microsoft/vscode-go/wiki/Use-the-beta-version-of-the-latest-Go-extension) of this extension.
-- Add the setting `"go.docsTool": "gogetdoc"` to use `gogetdoc` which drives the Go to definition feature
-- Run the command `Go: Install/Update Tools`, choose `gogetdoc` and `gopkgs` from the list to update them
+To ensure you have the latest Go tools with the Go modules support, and follow the prompts to install/update the required tools.
 
 ## Features that are broken, but we are in the process of fixing:
-- Auto-completion
 - Code coverage  
 
 ## Features not affected in the first place:
