@@ -21,9 +21,7 @@ Some common cases where you might want to tweak the configurations passed to del
 
 ## Set up configurations in launch.json
 
-Once delve is installed, you can either press `F5` or go to the Code debug viewlet and select the configuration gear.  
-
-You will now see a `launch.json` file created for your workspace, which will contain the configurations for debugging. By default, there would be a single configuration as below:
+Once delve is installed and is available in your $PATH, run the command `Debug: Open launch.json`. If you didnt already have a launch.json file, this will create one with the below default configuration.
 
 ```json
 {
@@ -33,31 +31,28 @@ You will now see a `launch.json` file created for your workspace, which will con
 			"name": "Launch",
 			"type": "go",
 			"request": "launch",
-			"mode": "debug",
-			"remotePath": "",
-			"port": 2345,
-			"host": "127.0.0.1",
+			"mode": "auto",
 			"program": "${fileDirname}",
 			"env": {},
-			"args": [],
-			"showLog": true
+			"args": []
 		}
 	]
 }
 ```
-Ignore `remotePath`, `host` and `port` if you are not remote debugging.
 
-The `program` option is mandatory.
+The `program` option is mandatory and takes path to a folder or file.
 
 * This can refer to a package folder to debug, or a file within that folder. 
 * This should be a full path and not relative.
 * Use `${workspaceFolder}` to debug package at the root of the workspace that is opened in VS Code 
 * Use `${file}` to debug the current file.
+* Use `${fileDirname}` to debug the package to which the current file belongs to.
 
 The `mode` parameter can be set to:
 
 * `debug` to compile the contents of the program folder and launch under the debugger. [default]
 * `test` to debug tests in the program folder. To debug a single test, pass `-test.run` and the Test name as args. Additionally, you can pass `-test.v` to get verbose output as well.
+* `auto` to automatically detect whether to use `debug` or `test` based in the current file that is open.
 * `exec` to run a pre-built binary specified in program, for example `"program":"${workspaceRoot}/mybin"`.
 * `remote` to attach to a remote headless Delve server.  You must manually run Delve on the remote machine, and provide the additional `remotePath`, `host` and `port` debug configuration options pointing at the remote machine.
 
