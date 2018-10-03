@@ -2,9 +2,9 @@ This wiki page tracks the status of Go modules support in the Go extension for V
 
 https://github.com/golang/go/issues/24661 is the issue used by the Go tools team to track the update of Go modules support in various Go tools.
 
-While that is in progress, the currently available [beta version](https://github.com/Microsoft/vscode-go/wiki/Use-the-beta-version-of-the-latest-Go-extension) of this extension has fixes for some of the features.
+While that is in progress, the latest version of this extension has fixes for some of the features.
 
-## Features that work in the beta version
+## Features that work now
 
 - Go to definition, symbol info on hover and Signature Help when the setting `go.docsTool` is set to `gogetdoc`. You will be prompted to update `gogetdoc`
 - Go to definition feature if you havent changed the `go.docsTool` setting. You will be prompted to install a [fork](https://github.com/ianthehat/godef) of `godef` that we are testing.
