@@ -4,7 +4,7 @@ https://github.com/golang/go/issues/24661 is the issue used by the Go tools team
 
 While that is in progress, the latest version of this extension has fixes for some of the features.
 
-## Features that work now
+## Features that work as of v0.6.90 
 
 - Go to definition, symbol info on hover and Signature Help when the setting `go.docsTool` is set to `gogetdoc`. You will be prompted to update `gogetdoc`
 - Go to definition feature if you havent changed the `go.docsTool` setting. You will be prompted to install a [fork](https://github.com/ianthehat/godef) of `godef` that we are testing.
