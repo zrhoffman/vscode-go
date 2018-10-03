@@ -23,7 +23,10 @@ To ensure you have the latest Go tools with the Go modules support, and follow t
 - Code snippets
 - Debugging
 
+## Features that arent working yet
 
-Please do try the [beta version](https://github.com/Microsoft/vscode-go/wiki/Use-the-beta-version-of-the-latest-Go-extension) and share any feedback/bugs you have.
+These are tracked as issues and have the label [go-modules](https://github.com/Microsoft/vscode-go/issues?q=is%3Aopen+is%3Aissue+label%3Ago-modules)
+
+
 
 
