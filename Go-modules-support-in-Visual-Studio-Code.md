@@ -1,6 +1,6 @@
 _This wiki page tracks the status of Go modules support in the Go extension for Visual Studio Code_
 
-Issues in this repo with the label [go-modules](https://github.com/Microsoft/vscode-go/issues?q=is%3Aopen+is%3Aissue+label%3Ago-modules) are tracking currently known issues when using Go modules.
+Issues in this repo with the label [go-modules](https://github.com/Microsoft/vscode-go/issues?q=is%3Aopen+is%3Aissue+label%3Ago-modules) are tracking currently known issues when using Go modules in VS Code.
 
 https://github.com/golang/go/issues/24661 is the issue used by the Go tools team to track the update of Go modules support in various Go tools.
 
