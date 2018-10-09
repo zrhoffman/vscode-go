@@ -13,10 +13,18 @@ Apart from what we have already achieved in v0.6.90, the below are available in 
 
 ## Features that work as of v0.6.90 
 
-- **Go to definition, symbol info on hover and Signature Help** when the setting `go.docsTool` is set to `gogetdoc`. You will be prompted to update `gogetdoc`
-- **Go to definition** feature if you havent changed the `go.docsTool` setting. You will be prompted to install a [fork](https://github.com/ianthehat/godef) of `godef` that we are testing.
-- **Auto-completion**. You will be prompted to install a [fork](https://github.com/stamblerre/gocode) of `gocode` that we are testing as well as to update the `gopkgs` tool. Currently it only works if the package is already imported and used atleast once
-- **`Go: Add Import` & `Go: Browse Packages`** commands that will show the appropriate packages from the current module instead of GOPATH
+- **Go to definition, symbol info on hover and Signature Help** 
+    - These features will work as expected when the setting `go.docsTool` is set to `gogetdoc`. 
+    - You will be prompted to update `gogetdoc`
+- **Go to definition** feature 
+    - If you havent changed the `go.docsTool` setting, you will be prompted to install a [fork](https://github.com/ianthehat/godef) of `godef` that we are testing. 
+    - _Note_: This feature may be slower than usual because the fork depends on `go list` which itself is slower when using modules.
+- **Auto-completion**. 
+    - You will be prompted to install a [fork](https://github.com/stamblerre/gocode) of `gocode` that we are testing as well as to update the `gopkgs` tool. 
+    - Currently it only works if the package is already imported and used atleast once. 
+    - _Note_: This feature may be slower than usual because the fork depends on `go list` which itself is slower when using modules.
+- **`Go: Add Import` & `Go: Browse Packages`** commands 
+    - These commands will show the appropriate packages from the current module instead of GOPATH
 
 
 To ensure you have the latest Go tools with the Go modules support, and follow the prompts to install/update the required tools.
@@ -33,5 +41,4 @@ To ensure you have the latest Go tools with the Go modules support, and follow t
 ## Features that arent working yet
 
 These are tracked as issues and have the label [go-modules](https://github.com/Microsoft/vscode-go/issues?q=is%3Aopen+is%3Aissue+label%3Ago-modules)
-
 
