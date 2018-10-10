@@ -4,7 +4,7 @@ https://github.com/golang/go/issues/24661 is the issue used by the Go tools team
 
 While that is in progress, the latest version of this extension has fixes for some of the features.
 
-## Features that will work in the current beta version.
+## Features that work as of v0.6.91 
 
 Apart from what we have already achieved in v0.6.90, the below are available in the current [beta version](https://github.com/Microsoft/vscode-go/wiki/Use-the-beta-version-of-the-latest-Go-extension)
 
@@ -41,4 +41,3 @@ To ensure you have the latest Go tools with the Go modules support, and follow t
 ## Features that arent working yet
 
 These are tracked as issues and have the label [go-modules](https://github.com/Microsoft/vscode-go/issues?q=is%3Aopen+is%3Aissue+label%3Ago-modules)
-
