@@ -10,7 +10,8 @@
 
 **Q: How do I just run my code? Not debug, just run.**
 
-**A:** Use the keybinding `Ctrl+F5` or run the command `Debug: Start without Debugging` to run the file opened in the current editor.
+**A:** Use the keybinding `Ctrl+F5` or run the command `Debug: Start without Debugging`.
+Behind the scenes, we use `go run` command which takes a file path. Therefore, it is important that you have a debug configuration in the launch.json file with `program` pointing to the file you want to run.
 
 **Q: Why is the GOPATH I set in the integrated terminal not being used by the plugin? Why isn't my program getting the environment variables I set in the integrated terminal?**
 
