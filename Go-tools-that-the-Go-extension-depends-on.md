@@ -39,7 +39,7 @@ go get -u -v github.com/mdempsky/gocode
 go get -u -v github.com/rogpeppe/godef
 go get -u -v golang.org/x/tools/cmd/godoc
 go get -u -v github.com/zmb3/gogetdoc
-go get -u -v github.com/golang/lint/golint
+go get -u -v golang.org/x/lint/golint
 go get -u -v github.com/fatih/gomodifytags
 go get -u -v golang.org/x/tools/cmd/gorename
 go get -u -v sourcegraph.com/sqs/goreturns
