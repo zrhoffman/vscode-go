@@ -21,7 +21,6 @@ The below settings are used by the debugger
      
 
 Some common cases where you might want to tweak the configurations passed to delve
-- Use the latest v2 apis
 - Change the default cap of 64 on string and array length when inspecting variables in the debug viewlet.
 - Evaluate variables that are nested when inspecting them in the debug viewlet.
 
