@@ -12,7 +12,7 @@ The below settings are used by the debugger
 - `go.inferGopath`. See [GOPATH in VS Code](https://github.com/Microsoft/vscode-go/wiki/GOPATH-in-the-VS-Code-Go-extension)
 - `go.delveConfig`
      - `apiVersion`: Controls the version of delve apis to be used when launching the delve headless server. Default is 2.
-     - `dlvLoadConfig`: The configuration passed to delve. Controls [various features of delve](https://github.com/Microsoft/vscode-go/blob/0.6.85/package.json#L431-L468) that affects the variables shown in the debug pane.
+     - `dlvLoadConfig`: Not applicable when `apiVersion` is 1. The configuration passed to delve. Controls [various features of delve](https://github.com/Microsoft/vscode-go/blob/0.6.85/package.json#L431-L468) that affects the variables shown in the debug pane.
          - `maxStringLen`:  maximum number of bytes read from a string
          - `maxArrayValues`:  maximum number of elements read from an array, a slice or a map
          - `maxStructFields`:  maximum number of fields read from a struct, -1 will read all fields
