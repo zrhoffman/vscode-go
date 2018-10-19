@@ -11,8 +11,14 @@ The below settings are used by the debugger
 - `go.gopath`. See [GOPATH in VS Code](https://github.com/Microsoft/vscode-go/wiki/GOPATH-in-the-VS-Code-Go-extension)
 - `go.inferGopath`. See [GOPATH in VS Code](https://github.com/Microsoft/vscode-go/wiki/GOPATH-in-the-VS-Code-Go-extension)
 - `go.delveConfig`
-     - `useApiV1`: Controls whether the version of delve apis to be used when launching the delve headless server
-     - `dlvLoadConfig`: The configuration passed to delve. Controls [various features of delve](https://github.com/Microsoft/vscode-go/blob/0.6.85/package.json#L431-L468)
+     - `apiVersion`: Controls the version of delve apis to be used when launching the delve headless server. Default is 2.
+     - `dlvLoadConfig`: The configuration passed to delve. Controls [various features of delve](https://github.com/Microsoft/vscode-go/blob/0.6.85/package.json#L431-L468) that affects the variables shown in the debug pane.
+         - `maxStringLen`:  maximum number of bytes read from a string
+         - `maxArrayValues`:  maximum number of elements read from an array, a slice or a map
+         - `maxStructFields`:  maximum number of fields read from a struct, -1 will read all fields
+         - `maxVariableRecurse`:  maximum number of bytes read from a string
+         - `followPointers`:  requests pointers to be automatically dereferenced         
+     
 
 Some common cases where you might want to tweak the configurations passed to delve
 - Use the latest v2 apis
