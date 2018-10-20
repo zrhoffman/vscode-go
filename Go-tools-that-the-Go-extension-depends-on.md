@@ -11,7 +11,7 @@ Tools essential for the general features of this extension:
 - [goreturns](https://github.com/sqs/goreturns) or [goimports](https://golang.org/x/tools/cmd/goimports) for formatting code
 - [godef](https://github.com/rogpeppe/godef) or [gogetdoc](https://github.com/zmb3/gogetdoc) for the `Go to Definition` feature
 - [godoc](https://golang.org/x/tools/cmd/godoc) or [gogetdoc](https://github.com/zmb3/gogetdoc) for the documentation that appears on hover
-- [golint](https://github.com/golang/lint/golint) or [gometalinter](https://github.com/alecthomas/gometalinter) or  [megacheck](https://honnef.co/go/tools/) or [golangci-lint](https://github.com/golangci/golangci-lint) or [revive](https://github.com/mgechev/revive) for linting
+- [golint](https://golang.org/x/lint/golint) or [gometalinter](https://github.com/alecthomas/gometalinter) or  [megacheck](https://honnef.co/go/tools/) or [golangci-lint](https://github.com/golangci/golangci-lint) or [revive](https://github.com/mgechev/revive) for linting
 - [dlv](https://github.com/derekparker/delve/tree/master/cmd/dlv) for debugging
 
 If any of these tools are missing, you will see an "Analysis Tools Missing" warning in the bottom right corner of the editor.  Clicking it will offer to install the missing tools for you.
