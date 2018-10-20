@@ -12,8 +12,9 @@
 
 **A:** Use the keybinding `Ctrl+F5` or run the command `Debug: Start without Debugging`.
 
-Behind the scenes, we use `go run` command which takes a file path. Therefore, it is important that you have a debug configuration in the launch.json file with `program` pointing to the file you want to run.
-In the absence of the file path, `Start without Debugging` falls back to normal debugging
+Behind the scenes, we use `go run` command which takes a file path. Therefore, If you already have a `launch.json` file with default configuration, update it to use `${file}` instead of `${fileDirname}` instead. If you are using your own debug configuration, ensure that the `program` property needs to point to a file and not directory.
+
+In the absence of a file path in the `program` property, `Start without Debugging` falls back to normal debugging
 
 **Q: Why is the GOPATH I set in the integrated terminal not being used by the plugin? Why isn't my program getting the environment variables I set in the integrated terminal?**
 
