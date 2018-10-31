@@ -16,7 +16,7 @@ The below settings are used by the debugger
          - `maxStringLen`:  maximum number of bytes read from a string
          - `maxArrayValues`:  maximum number of elements read from an array, a slice or a map
          - `maxStructFields`:  maximum number of fields read from a struct, -1 will read all fields
-         - `maxVariableRecurse`:  maximum number of bytes read from a string
+         - `maxVariableRecurse`:  how far to recurse when evaluating nested types
          - `followPointers`:  requests pointers to be automatically dereferenced         
      
 
