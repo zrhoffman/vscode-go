@@ -27,11 +27,11 @@ In the absence of a file path in the `program` property, `Start without Debuggin
 **Q: Auto-completions stopped working. What do I do?**
 
 - If this is for symbols from external packages, then ensure they installed first. You can do this by either running `Go: Build Current Package` which will install all dependencies or install the dependencies manually yourself using `go install`.
-- If it still doesnt work, run `gocode close` in a terminal and try again.
-- If it still doesnt work, run `Go: Install/Update Tools`, choose `gocode` to update the tool. 
-- If it still doesnt work, run `gocode -s -debug` in a terminal and try again. Results from `gocode` will show up in the terminal. 
+- If it still doesnt work, run `gocode close` or `gocode exit` in a terminal and try again.
+- If it still doesnt work, run `Go: Install/Update Tools`, choose `gocode` to update the tool. Choose `gocode-gomod` if you are using Go modules
+- If it still doesnt work, run `gocode close` or `gocode exit` followed by `gocode -s -debug` in a terminal and try again. Results from `gocode` will show up in the terminal. 
 If you see expected results in the terminal, but not in VS Code, log an issue in the [vscode-go](https://github.com/Microsoft/vscode-go) repo, else 
-log an issue in the [gocode](https://github.com/nsf/gocode) repo.
+log an issue in the [gocode](https://github.com/mdempsky/gocode) repo. If you are using Go modules, log the issue in https://github.com/stamblerre/gocode
 
 **Q: Why doesn't formatting doesn't work on file save?**
 
