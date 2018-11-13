@@ -7,7 +7,7 @@ If `dlv` binary is in your `GOPATH/bin` and this GOPATH is not set as an environ
 
 ## Set up configurations in your settings
 
-The below settings are used by the debugger
+The below settings are used by the debugger. You may not need to add/change any of them to have debugging working in simple cases, but do give them a read sometime
 - `go.gopath`. See [GOPATH in VS Code](https://github.com/Microsoft/vscode-go/wiki/GOPATH-in-the-VS-Code-Go-extension)
 - `go.inferGopath`. See [GOPATH in VS Code](https://github.com/Microsoft/vscode-go/wiki/GOPATH-in-the-VS-Code-Go-extension)
 - `go.delveConfig`
