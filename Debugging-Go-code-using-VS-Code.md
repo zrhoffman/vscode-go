@@ -170,4 +170,4 @@ This error can show up for Mac users using delve of version 0.12.2 or above. Not
 
 ### Unverified breakpoints when remote debugging
 
-Check the version of delve api being used in the remote delve process. v2 is not yet supported in the Go extension. So if you have `–api-version=2` being passed to `dlv`, remove that flag and try again
+Check the version of delve api being used in the remote delve process i.e check the value for the flag `–api-version`. This needs to match the version used by the Go extension which uses version 2 by default. You can change the api version being used by the extension by editing the debug configuration in the launch.json file.
