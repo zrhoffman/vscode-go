@@ -171,3 +171,7 @@ This error can show up for Mac users using delve of version 0.12.2 or above. Not
 ### Unverified breakpoints when remote debugging
 
 Check the version of delve api being used in the remote delve process i.e check the value for the flag `–api-version`. This needs to match the version used by the Go extension which uses version 2 by default. You can change the api version being used by the extension by editing the debug configuration in the launch.json file.
+
+### Try using dlv from the terminal/command-line
+
+Add `"trace": "verbose"` to your debug configuration and debug in VS Code. This will send logs to the debug console where you can see the actual call being made to dlv. You can copy that and run it in your terminal
