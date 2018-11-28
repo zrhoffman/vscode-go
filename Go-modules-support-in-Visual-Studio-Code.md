@@ -25,7 +25,8 @@ Apart from what we have already achieved in v0.6.90, the below are available in 
     - _Note_: This feature may be slower than usual because the fork depends on `go list` which itself is slower when using modules.
 - **`Go: Add Import` & `Go: Browse Packages`** commands 
     - These commands will show the appropriate packages from the current module instead of GOPATH
-
+- **Formatting**
+    - `goimports` and `goreturns` do not support Go modules yet. So, to get the formatting feature, add `"go.formatTool": "gofmt"` in your settings.
 
 To ensure you have the latest Go tools with the Go modules support, and follow the prompts to install/update the required tools.
 
