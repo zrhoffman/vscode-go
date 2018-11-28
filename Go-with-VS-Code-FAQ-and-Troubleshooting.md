@@ -24,6 +24,10 @@ In the absence of a file path in the `program` property, `Start without Debuggin
 
 **A:** See [GOPATH in the VS Code Go extension](https://github.com/Microsoft/vscode-go/wiki/GOPATH-in-the-VS-Code-Go-extension)
 
+**Q: Does VS Code support Go modules?**
+
+**A:** See [Go modules support in VS Code](https://github.com/Microsoft/vscode-go/wiki/Go-modules-support-in-Visual-Studio-Code)
+
 **Q: Auto-completions stopped working. What do I do?**
 
 - If this is for symbols from external packages, then ensure they installed first. You can do this by either running `Go: Build Current Package` which will install all dependencies or install the dependencies manually yourself using `go install`.
@@ -40,3 +44,7 @@ log an issue in the [gocode](https://github.com/mdempsky/gocode) repo. If you ar
 **Q: My imports have red lines saying "package not found"**
 
 **A:** These are build errors. Go to View -> Output -> Select "Go" from the dropdown on the top right corner of the panel. Here you can see the output of the `go build` (or `go test` if the current file is a test file). Copy the `go build` command along with arguments and try running it in the terminal. If you still see the same errors, then the problem is in your setup of GOPATH. If it runs fine, then log an issue and we can look into it
+
+**Q: How do I get the features/bug fixes that are implemented but not released yet? How do I get the beta version of the Go extension?**
+
+**A:** See [Install the beta version](https://github.com/Microsoft/vscode-go/wiki/Use-the-beta-version-of-the-latest-Go-extension)
