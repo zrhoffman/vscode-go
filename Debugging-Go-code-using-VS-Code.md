@@ -122,6 +122,12 @@ example of running these on different hosts, see the example of debugging a proc
 
 ## Troubleshooting
 
+### Breakpoints added after debugging starts don't get hit
+
+Breakpoints can be added either before starting a debug session or when another breakpoint is hit. This is a limitation from delve which doesn't allow interacting with the target process without pausing/stopping it.
+
+The feature to pause the debugging program is being tracked in [issue number 978](https://github.com/Microsoft/vscode-go/issues/978). 
+
 ### Cannot find Delve debugger at ... Ensure it is in your "GOPATH/bin" or "PATH".
 
 Like the error message says, the extension cannot find `dlv`. Remember, the debug adapter cannot read the VS Code settings.
