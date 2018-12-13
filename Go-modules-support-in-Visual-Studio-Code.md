@@ -4,7 +4,7 @@ https://github.com/golang/go/issues/24661 is the issue used by the Go tools team
 
 While that is in progress, the latest version of this extension has fixes for some of the features.
 
-## Updates as of [v0.7.1-beta.5](https://github.com/Microsoft/vscode-go/wiki/Use-the-beta-version-of-the-latest-Go-extension)
+## Updates as of 0.8.0
 
 - Run `Go: Install/Update Tools`, select `gocode-gomod` and `godef-gomod`, press Ok to get the latest updates for these tools which improve the auto-completion and code navigation features.
 - Run `go get github.com/saibing/bingo` and add the below in your settings if you want to make use of the language server [bingo](http://github.com/saibing/bingo) by [@saibing](http://github.com/saibing)
