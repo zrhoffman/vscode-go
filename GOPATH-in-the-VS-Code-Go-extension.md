@@ -16,11 +16,12 @@ For example, if your project looks like `/aaa/bbb/ccc/src/...`, then opening the
 This setting is useful when you are working on different Go projects which have different GOPATHs. Instead of setting the GOPATH in the workspace settings of each project or setting all the paths as `;`/`:` separated string, you can just set `go.inferGopath` to `true`and the extension uses the right GOPATH automatically.
 
 ### GOPATH for installing the Go tools using `go.toolsGopath`
-By default, all the dependent Go tools are used from the GOPATH derived from the above logic. If not found in the GOPATH, then they are looked for in the paths that are part of the PATH environment variable. 
 
-To prevent the Go tools from cluttering your GOPATH, use the `go.toolsGopath` setting to provide a separate location for the Go tools. 
+The `go get` command installs Go tools in your GOPATH. To prevent the Go tools from cluttering your GOPATH, use the `go.toolsGopath` setting to provide a separate GOPATH to use just for the Go tools. 
 
 The first time you set `go.toolsGopath`, you will have to run `Go: Install Tools` command so that the Go tools get installed in the provided location.
+
+If `go.toolsGopath` is not set or if the Go tools are not found there, then the Go tools from the GOPATH derived from the logic described in the previous section are used. If not found in there as well, then they are looked for in the paths that are part of the PATH environment variable. 
 
 ### GOPATH while debugging
 
