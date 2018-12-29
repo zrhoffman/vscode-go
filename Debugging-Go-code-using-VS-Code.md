@@ -78,7 +78,11 @@ Set `showLog` attribute in your debug configuration to `true`. You will see logs
 
 Set `trace` attribute in your debug configuration to `verbose`. You will see logs in the debug console from the Go extension's debug adapter. These logs will be saved to a file whose path will be printed at the beginning in the debug console.
 
-If you want to dig deeper and debug the debugger using source code of this extension, read [building-and-debugging-the-extension](https://github.com/Microsoft/vscode-go/wiki/Building,-Debugging-and-Sideloading-the-extension-in-Visual-Studio-Code#building-and-debugging-the-extension)
+Set `logOutput` attribute in your debug configuration to `rpc`. You will see logs corresponding to the RPC messages going back and forth between VS Code and delve. Note that this first requires to set `showLog` to `true`. 
+
+The `logOutput` attribute corresponds to the `--log-output` flag used by delve and can be a comma separated list of components that should produce debug output. 
+
+If you want to dig deeper and debug the debugger using source code of this extension, see [building-and-debugging-the-extension](https://github.com/Microsoft/vscode-go/wiki/Building,-Debugging-and-Sideloading-the-extension-in-Visual-Studio-Code#building-and-debugging-the-extension)
 
 ## Remote Debugging
 
