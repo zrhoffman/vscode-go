@@ -1,9 +1,8 @@
 ## Install delve
 
-You can manually install delve as per the [Installation Instructions](https://github.com/derekparker/delve/tree/master/Documentation/installation).
-
-Based on how you install delve it will either end up in your `PATH` or `GOPATH/bin`. 
-If `dlv` binary is in your `GOPATH/bin` and this GOPATH is not set as an environment variable, then make sure your PATH points to this `GOPATH/bin` so that the Go extension can find the `dlv` binary.
+There are 2 ways to install delve
+- Run the command `Go: Install/Update Tools`, select `dlv`, press `Ok` to install/update delve
+- Or install it manually install delve as per the [Installation Instructions](https://github.com/derekparker/delve/tree/master/Documentation/installation).
 
 ## Set up configurations in your settings
 
