@@ -16,6 +16,15 @@
 
 **A:** See [Go modules support in VS Code](https://github.com/Microsoft/vscode-go/wiki/Go-modules-support-in-Visual-Studio-Code)
 
+**Q: Can I use language server when using Go modules?**
+
+**A:** Currently, there are 3 language servers in the market for Go. The one from go-langserver from Sourcegraph, bingo by @saibing and go-lsp from Google
+
+- The Go language server by Sourcegraph does not support modules and has stopped adding new features
+- If you want to use bingo as your language server, then see https://github.com/Microsoft/vscode-go/wiki/Go-modules-support-in-Visual-Studio-Code#updates-as-of-080
+- The language server from Google is work in progress.
+
+
 **Q: How do I just run my code? Not debug, just run.**
 
 **A:** Use the keybinding `Ctrl+F5` or run the command `Debug: Start without Debugging`.
