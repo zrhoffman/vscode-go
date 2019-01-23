@@ -1,8 +1,10 @@
 _This wiki page tracks the status of Go modules support in the Go extension for Visual Studio Code_
 
+As you already know, the Go extension depends on various [Go tools](https://github.com/Microsoft/vscode-go/wiki/Go-tools-that-the-Go-extension-depends-on) from the community to provide language support. Some of these tools support Go modules already, and others don't. Therefore, you will see that some features of the Go extension will work and others won't.
+
 https://github.com/golang/go/issues/24661 is the issue used by the Go tools team to track the update of Go modules support in various Go tools.
 
-While that is in progress, the latest version of this extension has fixes for some of the features.
+To get Go module support in VS Code, ensure that you have the latest Go extension and you have run `Go: Install/Update Tools` to update all the relevant tools. If you are missing any of the tools, you will get prompted to install them.
 
 ## Updates as of 0.8.0
 
