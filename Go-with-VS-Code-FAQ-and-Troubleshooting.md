@@ -4,6 +4,10 @@
 
 **A:** Make sure to install all the dependent Go tools. Run `Go: Install/Update Tools`. If you want to install only selected tools, then go through the [Go tools that this plugin depends on](https://github.com/Microsoft/vscode-go/wiki/Go-tools-that-the-Go-extension-depends-on) and install the ones you need manually
 
+**Q: I see "git pull --ff-only" errors when installing tools.**
+
+**A:** Chances are that there was a force pushed commit to the repo for the tool being installed. Delete the folder corresponding to this tool in your `$GOPATH/src` (if you have set `go.toolsGopath`, then check there) and try again.
+
 **Q: Why do my imported packages keep disappearing?**
 
 **A:** By default, the plugin formats your code on save. To format, it uses the [goreturns](https://github.com/sqs/goreturns) tool that removes unused imports. You can add `"go.formatTool": "gofmt"` to your settings to use the gofmt tool instead which doesn't remove unused imports.
