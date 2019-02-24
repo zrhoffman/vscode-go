@@ -10,6 +10,7 @@ To get Go module support in VS Code, ensure that you have the latest Go extensio
 
 - Module support is now available in the main repo for `godef` and so we no longer rely on its fork. As a result, you will no longer need `godef-gomod`. You will be prompted to update your version of `godef` though.
 - Go to definition with sub modules will now work when the main module is opened in VS Code. Note: The second jump from sub-modules still won't work and this is being tracked in https://github.com/Microsoft/vscode-go/issues/2296
+- `goimports` now supports formatting with modules. Change your `go.formatTool` setting to `goimports` and use `Go: Install/Update Tools` to update it to ensure you have the latest changes.
 
 ## Updates as of 0.8.0
 
