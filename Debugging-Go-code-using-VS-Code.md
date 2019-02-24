@@ -100,8 +100,6 @@ Any arguments that you want to pass to the program you are debugging must be pas
 $ dlv debug --headless --listen=:2345 --log -- -myArg=123
 ```
 
-> Note: Do not pass the flag `–api-version=2` to dlv. The Go extension doesn't support v2 of delve APIs yet.
-
 Then, create a remote debug configuration in VS Code `launch.json`.
 
 ```json
