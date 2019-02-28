@@ -165,7 +165,9 @@ Then, create a remote debug configuration in VS Code `launch.json`.
 }
 ```
 
-The above example runs both the headless `dlv` server and the VS Code debugger locally on the same machine. Update `port` and `host` as per your set up on the remote machine instead.
+- The above example runs both the headless `dlv` server and the VS Code debugger locally on the same machine. Update `port` and `host` as per your set up on the remote machine instead.
+- `remotePath` should point to the absolute path of the file (in your source code) being debugged in the remote machine
+- `program` should point to the absolute path of the file on your local machine that is the counterpart of the file in `remotePath`
 
 When you launch the debugger with this new `Launch remote` target selected, VS Code will send debugging
 commands to the `dlv` server you started previously instead of launching it's own `dlv` instance against your app.
