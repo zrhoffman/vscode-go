@@ -28,6 +28,10 @@
 - If you want to use bingo as your language server, then see https://github.com/Microsoft/vscode-go/wiki/Go-modules-support-in-Visual-Studio-Code#updates-as-of-080
 - The language server from Google is work in progress.
 
+**Q: Where do I see the logs from the extension?**
+
+**A:** In the `View` menu, select `Output` which will bring up the output panel. In the top right corner of this panel, select `Log (Extension Host)` from the drop down. 
+_Tip_: If you are looking for logs after doing a particular operation, first clear the logs and try again to reduce the noise 
 
 **Q: How do I just run my code? Not debug, just run.**
 
@@ -52,7 +56,7 @@ log an issue in the [gocode](https://github.com/mdempsky/gocode) repo. If you ar
 
 **Q: Why doesn't formatting doesn't work on file save?**
 
-**A:** Check the console (Help -> Toggle Developer Tools -> Console) for messages like "Formatting took too long" or "Format On Save feature could be aborted". If you find such a message, then chances are formatted was aborted because it took too long and so can affect the save experience. You can control this timeout using the setting `editor.formatOnSaveTimeout`
+**A:** Check the logs (View -> Output -> Log (Extension Host) from the drop down in the top right corner) for messages like "Formatting took too long" or "Format On Save feature could be aborted". If you find such a message, then chances are formatted was aborted because it took too long and so can affect the save experience. You can control this timeout using the setting `editor.formatOnSaveTimeout`
 
 **Q: My imports have red lines saying "package not found"**
 
