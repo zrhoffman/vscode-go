@@ -194,15 +194,13 @@ If you want to dig deeper and debug the debugger using source code of this exten
 
 ### Common issues
 
-
-
-### Cannot find package ".." in any of ... 
+#### Cannot find package ".." in any of ... 
 
 The debugger is not using the right GOPATH. This shouldn't happen, if it does, log a bug. 
 
 **_Solution_**: Until the bug you logged is resolved, the work around is to add the GOPATH as an env var in the `env` property in the `launch.json` file.
 
-### Failed to continue: "Error: spawn EACCES"
+#### Failed to continue: "Error: spawn EACCES"
 
 You have `dlv` running just fine from command line, but VS Code gives this access related error. 
 This can happen if the extension is trying to run the `dlv` binary from a wrong location.
@@ -211,34 +209,34 @@ The Go extension first tries to find `dlv` in your $GOPATH/bin and then in your 
 **_Solution_**: Run `which dlv` in the command line. If this doesn't match your `GOPATH/bin`, then delete the `dlv` file in 
 your `GOPATH/bin`
 
-### could not launch process: stat ***/debug.test: no such file or directory
+#### could not launch process: stat ***/debug.test: no such file or directory
 
 You may see this in the debug console, while trying to run in the `test` mode. This happens when the `program` attribute points to a folder with no test files.
 
 **_Solution_**: Ensure that the `program` attribute points to the folder that contains the test files you want to run.
 
-### could not launch process: could not fork/exec
+#### could not launch process: could not fork/exec
 
-#### OSX ####
+##### OSX 
 
 This usually happens in OSX due to signing issues. See the discussions in please see [#717](https://github.com/Microsoft/vscode-go/issues/717), [#269](https://github.com/Microsoft/vscode-go/issues/269) and [derekparker/delve/357](https://github.com/derekparker/delve/issues/357)
 
 **_Solution_**: You may have to uninstall dlv and install it manually as per [instructions](https://github.com/derekparker/delve/blob/master/Documentation/installation/osx/install.md#manual-install)
 
-#### Linux/Docker ####
+##### Linux/Docker 
 
 Docker has security settings preventing ptrace(2) operations by default within the container.
 
 **_Solution_**: To run your container insecurely, pass `--security-opt=seccomp:unconfined` to docker run when starting. Reference: [derekparker/delve/515](https://github.com/derekparker/delve/issues/515)
 
-### could not launch process: exec: "lldb-server": executable file not found in $PATH
+#### could not launch process: exec: "lldb-server": executable file not found in $PATH
 
 This error can show up for Mac users using delve of version 0.12.2 or above. Not sure why, but doing a `xcode-select --install` has solved the problem for users who have seen this issue.
 
-### Unverified breakpoints when remote debugging
+#### Unverified breakpoints when remote debugging
 
 Check the version of delve api being used in the remote delve process i.e check the value for the flag `–api-version`. This needs to match the version used by the Go extension which uses version 2 by default. You can change the api version being used by the extension by editing the debug configuration in the launch.json file.
 
-### Try using dlv from the terminal/command-line
+#### Try using dlv from the terminal/command-line
 
-Add `"trace": "verbose"` to your debug configuration and debug in VS Code. This will send logs to the debug console where you can see the actual call being made to dlv. You can copy that and run it in your terminal
+Add `"trace": "log"` to your debug configuration and debug in VS Code. This will send logs to the debug console where you can see the actual call being made to dlv. You can copy that and run it in your terminal
