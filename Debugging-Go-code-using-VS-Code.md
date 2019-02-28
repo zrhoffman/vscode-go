@@ -192,17 +192,9 @@ If you have issues debugging your Go code, first try to update your version of d
 
 If you want to dig deeper and debug the debugger using source code of this extension, see [building-and-debugging-the-extension](https://github.com/Microsoft/vscode-go/wiki/Building,-Debugging-and-Sideloading-the-extension-in-Visual-Studio-Code#building-and-debugging-the-extension)
 
-### Breakpoints added after debugging starts don't get hit
+### Common issues
 
-Breakpoints can be added either before starting a debug session or when another breakpoint is hit. This is a limitation from delve which doesn't allow interacting with the target process without pausing/stopping it.
 
-The feature to pause the debugging program is being tracked in [issue number 978](https://github.com/Microsoft/vscode-go/issues/978). 
-
-### Cannot find Delve debugger at ... Ensure it is in your "GOPATH/bin" or "PATH".
-
-Like the error message says, the extension cannot find `dlv`. Remember, the debug adapter cannot read the VS Code settings.
-
-**_Solution_**: Add the location where dlv is installed to your PATH. You can find this location by running `which dlv` or `where dlv`
 
 ### Cannot find package ".." in any of ... 
 
@@ -218,7 +210,6 @@ The Go extension first tries to find `dlv` in your $GOPATH/bin and then in your 
 
 **_Solution_**: Run `which dlv` in the command line. If this doesn't match your `GOPATH/bin`, then delete the `dlv` file in 
 your `GOPATH/bin`
-
 
 ### could not launch process: stat ***/debug.test: no such file or directory
 
