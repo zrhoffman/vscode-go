@@ -6,6 +6,24 @@ https://github.com/golang/go/issues/24661 is the issue used by the Go tools team
 
 To get Go module support in VS Code, ensure that you have the latest Go extension and you have run `Go: Install/Update Tools` to update all the relevant tools. If you are missing any of the tools, you will get prompted to install them.
 
+## FAQ
+
+### Can I use the language server when using Go modules?
+
+The language server from Sourcegraph doesn't support Go module yet. The one from Google is still in the works. Some of our users have found the [bingo](https://github.com/saibing/bingo) language server to work well. 
+
+Run `go get github.com/saibing/bingo` and add the below in your settings if you want to make use of the language server [bingo](http://github.com/saibing/bingo) by [@saibing](http://github.com/saibing)
+```
+  "go.alternateTools": {
+    "go-langserver": "bingo",
+  },
+  "go.languageServerExperimentalFeatures": {
+    "format": true,
+    "autoComplete": true
+  },
+  "go.useLanguageServer": true
+```
+
 ### Why is code navigation and code completion slow when using Go modules?
 
 This is mostly due to the limitation of the tools that power these features. The Go tools team at Google are working on improving them and also working on a [language server](https://godoc.org/golang.org/x/tools/cmd/gopls) which will be the long term solution for all language features.
@@ -18,21 +36,6 @@ For slowness in code navigation, log an issue in the [godef repo](https://github
 - Module support is now available in the main repo for `godef` and so we no longer rely on its fork. As a result, you will no longer need `godef-gomod`. You will be prompted to update your version of `godef` though.
 - Go to definition with sub modules will now work when the main module is opened in VS Code. Note: The second jump from sub-modules still won't work and this is being tracked in https://github.com/Microsoft/vscode-go/issues/2296
 - `goimports` now supports formatting with modules. Change your `go.formatTool` setting to `goimports` and use `Go: Install/Update Tools` to update it to ensure you have the latest changes.
-
-## Updates as of 0.8.0
-
-- Run `Go: Install/Update Tools`, select `gocode-gomod` and `godef-gomod`, press Ok to get the latest updates for these tools which improve the auto-completion and code navigation features.
-- Run `go get github.com/saibing/bingo` and add the below in your settings if you want to make use of the language server [bingo](http://github.com/saibing/bingo) by [@saibing](http://github.com/saibing)
-```
-  "go.alternateTools": {
-    "go-langserver": "bingo",
-  },
-  "go.languageServerExperimentalFeatures": {
-    "format": true,
-    "autoComplete": true
-  },
-  "go.useLanguageServer": true
-```
 
 
 ## Features that work as of v0.6.91 
