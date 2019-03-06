@@ -20,6 +20,13 @@
 
 **A:** See [Go modules support in VS Code](https://github.com/Microsoft/vscode-go/wiki/Go-modules-support-in-Visual-Studio-Code)
 
+**Q: Why is code navigation and code completion slow when using Go modules?**
+
+This is mostly due to the limitation of the tools that power these features. The Go tools team at Google are working on improving them and also working on a [language server](https://godoc.org/golang.org/x/tools/cmd/gopls) which will be the long term solution for all language features.
+
+For slowness in code completion, log an issue in the [gocode repo](https://github.com/stamblerre/gocode).
+For slowness in code navigation, log an issue in the [godef repo](https://github.com/rogpeppe/godef) or if you chosen to `gogetdoc` in your settings, then log an issue in the [gogetdoc repo](https://github.com/zmb3/gogetdoc)
+
 **Q: Can I use language server when using Go modules?**
 
 **A:** Currently, there are 3 language servers in the market for Go. The one from go-langserver from Sourcegraph, bingo by @saibing and go-lsp from Google
