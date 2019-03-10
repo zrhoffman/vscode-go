@@ -194,6 +194,10 @@ If you want to dig deeper and debug the debugger using source code of this exten
 
 ### Common issues
 
+#### Unverified breakpoint or variables not loading when debugging a binary
+
+Ensure that the binary being debugged was built with no optimizations. Use the flags `-gcflags="all=-N -l"` when building the binary.
+
 #### Cannot find package ".." in any of ... 
 
 The debugger is not using the right GOPATH. This shouldn't happen, if it does, log a bug. 
