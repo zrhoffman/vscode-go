@@ -12,6 +12,10 @@
 
 **A:** By default, the plugin formats your code on save. To format, it uses the [goreturns](https://github.com/sqs/goreturns) tool that removes unused imports. You can add `"go.formatTool": "gofmt"` to your settings to use the gofmt tool instead which doesn't remove unused imports.
 
+**Q: Why do my spaces keep getting replaced with tabs when saving the file?**
+
+**A:** Because the formatting tools used by this extension either `goreturns`, `goimports` or `gofmt` all follow the rule of using tabs instead of spaces.
+
 **Q: How does the plugin determine the GOPATH to use?**
 
 **A:** See [GOPATH in the VS Code Go extension](https://github.com/Microsoft/vscode-go/wiki/GOPATH-in-the-VS-Code-Go-extension)
