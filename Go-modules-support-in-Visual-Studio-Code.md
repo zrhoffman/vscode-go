@@ -10,12 +10,13 @@ To get Go module support in VS Code, ensure that you have the latest Go extensio
 
 ### Can I use the language server when using Go modules?
 
-The [language server from Sourcegraph](https://github.com/sourcegraph/go-langserver) doesn't support Go modules yet. Some of our users have found the [bingo](https://github.com/saibing/bingo) language server to work well. Our plan is to eventually move to using the [language server from Google](https://godoc.org/golang.org/x/tools/cmd/gopls) which is currently a work in progress.
+The [language server from Sourcegraph](https://github.com/sourcegraph/go-langserver) doesn't support Go modules. Some of our users have found the [bingo](https://github.com/saibing/bingo) language server to work well. The language server from Google called [gopls](https://github.com/golang/go/wiki/gopls) is also known to work with modules. Our plan is to eventually move to using the [language server from Google](https://godoc.org/golang.org/x/tools/cmd/gopls) which is currently a work in progress.
 
-Run `go get github.com/saibing/bingo` and add the below in your settings if you want to make use of the language server [bingo](http://github.com/saibing/bingo) by [@saibing](http://github.com/saibing)
+Run `go get -u github.com/saibing/bingo` or `go get -u golang.org/x/tools/cmd/gopls` to install either `bingo` or `gopls` respectively. Add the below in your settings to tell the Go extension to uses these language servers instead of the one from Sourcegraph 
+
 ```
   "go.alternateTools": {
-    "go-langserver": "bingo",
+    "go-langserver": "gopls", // or bingo
   },
   "go.languageServerExperimentalFeatures": {
     "format": true,
