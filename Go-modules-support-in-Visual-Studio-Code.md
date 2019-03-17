@@ -32,6 +32,12 @@ This is mostly due to the limitation of the tools that power these features. The
 For slowness in code completion, log an issue in the [gocode repo](https://github.com/stamblerre/gocode).
 For slowness in code navigation, log an issue in the [godef repo](https://github.com/rogpeppe/godef) or if you chosen to `gogetdoc` in your settings, then log an issue in the [gogetdoc repo](https://github.com/zmb3/gogetdoc)
 
+### Auto import no longer happens on file save. Why?
+
+The auto importing of packages was a feature driven by the [goreturns](https://github.com/sqs/goreturns) tool which was the default formatting tool used by this extension. Since this tool doesn't support modules, the auto import feature on file save no longer works.
+
+Add the setting `"go.formatTool": "goimports"` and then use `Go: Install/Update Tools` to install/update `goimports` as it has recently added support for modules.
+
 ## Updates as of 0.9.0
 
 - Module support is now available in the main repo for `godef` and so we no longer rely on its fork. As a result, you will no longer need `godef-gomod`. You will be prompted to update your version of `godef` though.
