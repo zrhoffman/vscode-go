@@ -27,10 +27,12 @@ Run `go get -u github.com/saibing/bingo` or `go get -u golang.org/x/tools/cmd/go
 
 ### Why is code navigation and code completion slow when using Go modules?
 
-This is mostly due to the limitation of the tools that power these features. The Go tools team at Google are working on improving them and also working on a [language server](https://godoc.org/golang.org/x/tools/cmd/gopls) which will be the long term solution for all language features.
+This is mostly due to the limitation of the tools that power these features which are `godef` and `gocode` respectively. The Go tools team at Google are working on improving them and also working on a [language server](https://godoc.org/golang.org/x/tools/cmd/gopls) which will be the long term solution for all language features.
 
 For slowness in code completion, log an issue in the [gocode repo](https://github.com/stamblerre/gocode).
 For slowness in code navigation, log an issue in the [godef repo](https://github.com/rogpeppe/godef) or if you chosen to `gogetdoc` in your settings, then log an issue in the [gogetdoc repo](https://github.com/zmb3/gogetdoc)
+
+Code navigation and code completion definitely works better when using the language server from Google. So, please give that a try. Check the previous question on this wiki to learn how to enable the language server.
 
 ### Auto import no longer happens on file save. Why?
 
