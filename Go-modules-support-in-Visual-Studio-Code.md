@@ -1,44 +1,64 @@
 _This wiki page tracks the status of Go modules support in the Go extension for Visual Studio Code_
 
-As you already know, the Go extension depends on various [Go tools](https://github.com/Microsoft/vscode-go/wiki/Go-tools-that-the-Go-extension-depends-on) from the community to provide language support. Some of these tools support Go modules already, and others don't. Therefore, you will see that some features of the Go extension will work and others won't when using Go modules.
+To get Go module support in VS Code, ensure that you have the latest Go extension and use the new language server [gopls](https://github.com/golang/go/wiki/gopls) from Google by adding the below in your settings
+```json
+// The only setting you need in version 0.10.0 and above to use gopls
+"go.useLanguageServer": true
+```
 
-https://github.com/golang/go/issues/24661 is the issue used by the Go tools team to track the update of Go modules support in various Go tools.
+If you are on version lower than 0.10.0 of this extension, then you will need to install [gopls](https://github.com/golang/go/wiki/gopls) manually and add the below extra setting to use the language server from Google
+```json
+  // All the settings you need in version lower than 0.10.0 in order to tell this extension
+  // to use `gopls` instead of `go-langserver` as the language server
+  "go.useLanguageServer": true
+  "go.alternateTools": {
+    "go-langserver": "gopls", 
+  },
+  "go.languageServerExperimentalFeatures": {
+    "format": true,
+    "autoComplete": true
+  }
+```
 
-To get Go module support in VS Code, ensure that you have the latest Go extension and you have run `Go: Install/Update Tools` to update all the relevant tools. If you are missing any of the tools, you will get prompted to install them.
+Remember to update your version of `gopls` from time to time using `Go: Install/Update Tools` so that you keep getting the improvements that are being made to the language server.
+
+If you don't want to use the language server for any reason, then please know that not all the [Go tools](https://github.com/Microsoft/vscode-go/wiki/Go-tools-that-the-Go-extension-depends-on) that this extension depends on supports Go modules. https://github.com/golang/go/issues/24661 is the issue used by the Go tools team to track the update of Go modules support in various Go tools.
 
 ## FAQ
 
 ### Can I use the language server when using Go modules?
 
-The [language server from Sourcegraph](https://github.com/sourcegraph/go-langserver) doesn't support Go modules. Some of our users have found the [bingo](https://github.com/saibing/bingo) language server to work well. The language server from Google called [gopls](https://github.com/golang/go/wiki/gopls) is also known to work with modules. Our plan is to eventually move to using the [language server from Google](https://godoc.org/golang.org/x/tools/cmd/gopls) which is currently a work in progress.
-
-Run `go get -u github.com/saibing/bingo` or `go get -u golang.org/x/tools/cmd/gopls` to install either `bingo` or `gopls` respectively. Add the below in your settings to tell the Go extension to use one of these language servers instead of the one from Sourcegraph 
-
-```
-  "go.alternateTools": {
-    "go-langserver": "gopls", // or bingo
-  },
-  "go.languageServerExperimentalFeatures": {
-    "format": true,
-    "autoComplete": true
-  },
-  "go.useLanguageServer": true
-```
+Yes, you can! Please see the section right above this question for details
 
 ### Why is code navigation and code completion slow when using Go modules?
 
 This is mostly due to the limitation of the tools that power these features which are `godef` and `gocode` respectively. The Go tools team at Google are working on improving them and also working on a [language server](https://godoc.org/golang.org/x/tools/cmd/gopls) which will be the long term solution for all language features.
 
-For slowness in code completion, log an issue in the [gocode repo](https://github.com/stamblerre/gocode).
-For slowness in code navigation, log an issue in the [godef repo](https://github.com/rogpeppe/godef) or if you chosen to `gogetdoc` in your settings, then log an issue in the [gogetdoc repo](https://github.com/zmb3/gogetdoc)
+Please try out the language server as described in the first section of this page.
+If you don't want to use the language server then,
+- For slowness in code completion, log an issue in the [gocode repo](https://github.com/stamblerre/gocode).
+- For slowness in code navigation, log an issue in the [godef repo](https://github.com/rogpeppe/godef) or if you chosen to `gogetdoc` in your settings, then log an issue in the [gogetdoc repo](https://github.com/zmb3/gogetdoc)
 
 Code navigation and code completion definitely works better when using the language server from Google. So, please give that a try. Check the previous question on this wiki to learn how to enable the language server.
 
 ### Auto import no longer happens on file save. Why?
 
-The auto importing of packages was a feature driven by the [goreturns](https://github.com/sqs/goreturns) tool which was the default formatting tool used by this extension. Since this tool doesn't support modules, the auto import feature on file save no longer works.
+If you are using the language server `gopls`, then please add the below to your settings to get missing imports added when you save your file
+```
+"[go]": {
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    },
+}
+```
 
-Add the setting `"go.formatTool": "goimports"` and then use `Go: Install/Update Tools` to install/update `goimports` as it has recently added support for modules.
+If you are not using the language server, 
+- This extension uses [goreturns](https://github.com/sqs/goreturns) tool by default to format your files and auto import missing packages. Since this tool doesn't support modules, the auto import feature on file save no longer works.
+- Add the setting `"go.formatTool": "goimports"` and then use `Go: Install/Update Tools` to install/update `goimports` as it has recently added support for modules.
+
+## Updates as of 0.10.0
+
+We now officially support `gopls`, the language server from Google. Please follow the instructions at the top of this page to use it.
 
 ## Updates as of 0.9.0
 
