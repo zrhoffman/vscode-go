@@ -16,6 +16,15 @@
 
 **A:** Because the formatting tools used by this extension either `goreturns`, `goimports` or `gofmt` all follow the rule of using tabs instead of spaces.
 
+**Q: Shoudln't the formatting tools be using a tab size of 8?
+
+**A:** The default tab size in VS Code is 4. To change this to 8 for Go files, add the below to your settings.
+```json
+"[go]": {
+  "editor.tabSize": 8
+}
+```
+
 **Q: How does the plugin determine the GOPATH to use?**
 
 **A:** See [GOPATH in the VS Code Go extension](https://github.com/Microsoft/vscode-go/wiki/GOPATH-in-the-VS-Code-Go-extension)
