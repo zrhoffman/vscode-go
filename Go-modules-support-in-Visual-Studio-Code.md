@@ -43,7 +43,7 @@ Code navigation and code completion definitely works better when using the langu
 
 ### Auto import no longer happens on file save. Why?
 
-If you are using the language server `gopls`, then please add the below to your settings to get missing imports added when you save your file
+If you are using the language server `gopls`, and are on version lower than `0.10.2` of this extension, then please add the below to your settings to get missing imports added when you save your file
 ```
 "[go]": {
     "editor.codeActionsOnSave": {
@@ -55,6 +55,17 @@ If you are using the language server `gopls`, then please add the below to your 
 If you are not using the language server, 
 - This extension uses [goreturns](https://github.com/sqs/goreturns) tool by default to format your files and auto import missing packages. Since this tool doesn't support modules, the auto import feature on file save no longer works.
 - Add the setting `"go.formatTool": "goimports"` and then use `Go: Install/Update Tools` to install/update `goimports` as it has recently added support for modules.
+
+## Updates as of 0.10.2
+The below settings are set by default, so you don't need to add them specifically to get the adding of missing imports and removal of unused imports feature when you save your file while using `gopls`
+```
+"[go]": {
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    },
+}
+```
+
 
 ## Updates as of 0.10.0
 
