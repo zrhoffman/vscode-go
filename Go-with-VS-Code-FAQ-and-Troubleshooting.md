@@ -16,7 +16,7 @@
 
 **A:** Because the formatting tools used by this extension either `goreturns`, `goimports` or `gofmt` all follow the rule of using tabs instead of spaces.
 
-**Q: Shoudln't the formatting tools be using a tab size of 8?
+**Q: Shoudln't the formatting tools be using a tab size of 8?**
 
 **A:** The default tab size in VS Code is 4. To change this to 8 for Go files, add the below to your settings.
 ```json
@@ -35,23 +35,11 @@
 
 **Q: Why is code navigation and code completion slow when using Go modules?**
 
-This is mostly due to the limitation of the tools that power these features. The Go tools team at Google are working on improving them and also working on a [language server](https://godoc.org/golang.org/x/tools/cmd/gopls) which will be the long term solution for all language features.
-
-For slowness in code completion, log an issue in the [gocode repo](https://github.com/stamblerre/gocode).
-For slowness in code navigation, log an issue in the [godef repo](https://github.com/rogpeppe/godef) or if you chosen to `gogetdoc` in your settings, then log an issue in the [gogetdoc repo](https://github.com/zmb3/gogetdoc)
+Please see [Go modules support in VS Code](https://github.com/Microsoft/vscode-go/wiki/Go-modules-support-in-Visual-Studio-Code)
 
 **Q: Can I use language server when using Go modules?**
 
-**A:** Currently, there are 3 language servers in the market for Go. The one from go-langserver from Sourcegraph, bingo by @saibing and go-lsp from Google
-
-- The Go language server by Sourcegraph does not support modules and has stopped adding new features
-- If you want to use bingo as your language server, then see https://github.com/Microsoft/vscode-go/wiki/Go-modules-support-in-Visual-Studio-Code#updates-as-of-080
-- The language server from Google is work in progress.
-
-**Q: Where do I see the logs from the extension?**
-
-**A:** In the `View` menu, select `Output` which will bring up the output panel. In the top right corner of this panel, select `Log (Extension Host)` from the drop down. 
-_Tip_: If you are looking for logs after doing a particular operation, first clear the logs and try again to reduce the noise 
+**A:** Yes! Please see [Go language server in VS Code](https://github.com/Microsoft/vscode-go#go-language-server)
 
 **Q: How do I just run my code? Not debug, just run.**
 
@@ -65,13 +53,20 @@ In the absence of a file path in the `program` property, `Start without Debuggin
 
 **A:** The extensions run in a separate process than the terminal or rest of the VS Code window. Therefore, environment variables set specifically in the integrated terminal is not visible to the extensions.
 
-**Q: Auto-completions stopped working. What do I do?**
+**Q: Where do I see the logs from the extension?**
 
-- If this is for symbols from external packages, then ensure they installed first. You can do this by either running `Go: Build Current Package` which will install all dependencies or install the dependencies manually yourself using `go install`.
-- If it still doesnt work, run `gocode close` or `gocode exit` in a terminal and try again. Use `gocode-gomod` instead of `gocode` if you are using Go modules.
-- If it still doesnt work, run `Go: Install/Update Tools`, choose `gocode` to update the tool. Choose `gocode-gomod` if you are using Go modules
-- If it still doesnt work, run `gocode close` or `gocode exit` followed by `gocode -s -debug` in a terminal and try again. Results from `gocode` will show up in the terminal. Use `gocode-gomod` instead of `gocode` if you are using Go modules.
-If you see expected results in the terminal, but not in VS Code, log an issue in the [vscode-go](https://github.com/Microsoft/vscode-go) repo, else 
+**A:** In the `View` menu, select `Output` which will bring up the output panel. In the top right corner of this panel, select `Log (Extension Host)` from the drop down. 
+_Tip_: If you are looking for logs after doing a particular operation, first clear the logs and try again to reduce the noise 
+
+**Q: Auto-completions stopped working. What do I do?**
+- Check the logs for errors first. See the previous question on how to view logs from the extension.
+- If you are using the language server, then the dropdown for output pane in the previous step will have an entry for the language server. Check that out.
+- If you are **not** using the language server,
+     - and this is for symbols from external packages, then ensure they installed first. You can do this by either running `Go: Build Current Package` which will install all dependencies or install the dependencies manually yourself using `go install`.
+     - If it still doesnt work, run `gocode close` or `gocode exit` in a terminal and try again. Use `gocode-gomod` instead of `gocode` if you are using Go modules.
+     - If it still doesnt work, run `Go: Install/Update Tools`, choose `gocode` to update the tool. Choose `gocode-gomod` if you are using Go modules
+     - If it still doesnt work, run `gocode close` or `gocode exit` followed by `gocode -s -debug` in a terminal and try again. Results from `gocode` will show up in the terminal. Use `gocode-gomod` instead of `gocode` if you are using Go modules.
+     - If you see expected results in the terminal, but not in VS Code, log an issue in the [vscode-go](https://github.com/Microsoft/vscode-go) repo, else 
 log an issue in the [gocode](https://github.com/mdempsky/gocode) repo. If you are using Go modules, log the issue in https://github.com/stamblerre/gocode
 
 **Q: Why doesn't formatting doesn't work on file save?**
