@@ -10,7 +10,21 @@
 
 **Q: Why do my imported packages keep disappearing?**
 
-**A:** By default, the plugin formats your code on save. To format, it uses the [goreturns](https://github.com/sqs/goreturns) tool that removes unused imports. You can add `"go.formatTool": "gofmt"` to your settings to use the gofmt tool instead which doesn't remove unused imports.
+**A:** By default, the plugin formats your code and organizes your imports (add missing imports, remove unused imports, order imports) on each file save. You can disable this feature using settings.
+- If not using the `gopls` language server, then either add `"go.formatTool": "gofmt"` to your settings to choose a formatting tool that doesn't touch imports or disable the format on save feature entirely using the below
+```json
+"[go]": {
+   "editor.formatOnSave": false
+}
+```
+- If you are using the `gopls` language server, then the organizing of imports is pulled out of the formatting process. To disable the organizing of imports in this case, add the below in your settings
+```
+"[go]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": false
+    }
+  }
+```
 
 **Q: Why do my spaces keep getting replaced with tabs when saving the file?**
 
