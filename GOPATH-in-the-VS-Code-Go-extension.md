@@ -19,13 +19,6 @@ This setting is useful when you are working on different Go projects which have 
 
 The `go get` command installs Go tools in your GOPATH. To prevent the Go tools from cluttering your GOPATH, use the `go.toolsGopath` setting to provide a separate GOPATH to use just for the Go tools. 
 
-The first time you set `go.toolsGopath`, you will have to run `Go: Install Tools` command so that the Go tools get installed in the provided location.
+The first time you set `go.toolsGopath`, you will have to run `Go: Install/Update Tools` command so that the Go tools get installed in the provided location.
 
 If `go.toolsGopath` is not set or if the Go tools are not found there, then the Go tools from the GOPATH derived from the logic described in the previous section are used. If not found in there as well, then they are looked for in the paths that are part of the PATH environment variable. 
-
-### GOPATH while debugging
-
-The debug adapter in the Go extension does not have access to your User/Workspace settings. Therefore, the only GOPATH the debugger is aware of is the one set as environment variable outside of VS Code. If there is no such environment variable, then the debugger tries to guess the GOPATH by using the same logic as the `inferGopath` setting described above
-
-You can also provide GOPATH in the `env` property of the debug configuration
-Read more on debugging at [Debugging-Go-code-using-VS-Code](https://github.com/Microsoft/vscode-go/wiki/Debugging-Go-code-using-VS-Code)
