@@ -8,7 +8,7 @@
 
 **A:** Chances are that there was a force pushed commit to the repo for the tool being installed. Delete the folder corresponding to this tool in your `$GOPATH/src` (if you have set `go.toolsGopath`, then check there) and try again.
 
-**Q: Why do my imported packages keep disappearing?**
+**Q: Why do my imported packages keep getting removed or re-ordered?**
 
 **A:** By default, the plugin formats your code and organizes your imports (add missing imports, remove unused imports, order imports) on each file save. You can disable this feature using settings.
 - If not using the `gopls` language server, then either add `"go.formatTool": "gofmt"` to your settings to choose a formatting tool that doesn't touch imports or disable the format on save feature entirely using the below
