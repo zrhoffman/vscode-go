@@ -51,9 +51,9 @@ Property | Description
 ------- | ------
 name | Name for your configuration that appears in the drop down in the Debug viewlet
 type | Always set to "go". This is used by VS Code to figure out which extension should be used for debugging your code
-request | At present, this extension only supports the "launch" request.
-mode | Either of `auto`, `debug`, `remote`, `test`, `exec`.
-program | Absolute path to the package or file to debug when in `debug` & `test` mode, or to the pre-built binary file to debug in `exec` mode. 
+request | Either of `launch` or `attach`. Use `attach` when you want to attach to an already running process.
+mode | For launch requests, either of `auto`, `debug`, `remote`, `test`, `exec`. For attach requests, use either `local` or `remote`
+program | Absolute path to the package or file to debug when in `debug` & `test` mode, or to the pre-built binary file to debug in `exec` mode. Not applicable to attach requests.
 env | Environment variables to use when debugging. Example: `{ "ENVNAME": "ENVVALUE" }`
 envFile | Absolute path to a file containing environment variable definitions. The environment variables passed in the `env` property overrides the ones in this file.
 args | Array of command line arguments that will be passed to the program being debugged. 
@@ -61,6 +61,7 @@ showLog | Boolean indicating if logs from delve should be printed in the debug c
 logOutput | Comma separated list of delve components (`debugger`, `gdbwire`, `lldbout`, `debuglineerr`, `rpc`) that should produce debug output when `showLog` is set to `true`.
 buildFlags | Build flags to be passed to the Go compiler
 remotePath | Absolute path to the file being debugged on the remote machine in case of remote debugging i.e when `mode` is set to `remote`. See the section on [Remote Debugging](#remote-debugging) for details
+processId | Applicable only when using the `attach` request with `local` mode. This is the id of the process that is running your executable which needs debugging.
 
 
 ### Using VS Code variables in debug configuration
@@ -132,6 +133,19 @@ Type "Go" and you will get snippets for debugging current file/package, a test f
 	"request": "launch",
 	"mode": "exec",
 	"program": "absolute-path-to-the-executable"
+}
+```
+
+### Sample configuration to attach to an already running local process using processId
+Enter the id of the process running your executable in the below snippet
+
+```json
+{
+	"name": "Attach to local process",
+	"type": "go",
+	"request": "attach",
+	"mode": "local",
+	"processId": 0
 }
 ```
 
