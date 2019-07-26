@@ -1,4 +1,8 @@
-VS Code uses a host of [Go tools](https://github.com/Microsoft/vscode-go/wiki/Go-tools-that-the-Go-extension-depends-on) to provide features like code navigation, code completion, build, lint etc. These tools do not support [Go modules](https://blog.golang.org/modules2019) yet. Therefore, please use the new language server [gopls](https://github.com/golang/go/wiki/gopls) by adding the below in your [settings](https://code.visualstudio.com/docs/getstarted/settings).
+VS Code uses a host of [Go tools](https://github.com/Microsoft/vscode-go/wiki/Go-tools-that-the-Go-extension-depends-on) to provide features like code navigation, code completion, build, lint etc. 
+
+> ⚠️ These tools **do not** provide a good support for [Go modules](https://blog.golang.org/modules2019) yet. 
+
+The new language server [gopls](https://github.com/golang/go/wiki/gopls) does support modules. Add the below in your [settings](https://code.visualstudio.com/docs/getstarted/settings) to use it.
 
 ```json
 "go.useLanguageServer": true
