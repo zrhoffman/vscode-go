@@ -8,7 +8,7 @@ The new language server [gopls](https://github.com/golang/go/wiki/gopls) does su
 "go.useLanguageServer": true
 ```
 
-> **Note**: Remember to update your version of `gopls` from time to time using `Go: Install/Update Tools` so that you keep getting the improvements that are being made to the language server.
+> **Note**: You will be prompted to install the latest stable version of `gopls` as and when the Go tools team tag a new version as stable.
 
 Known issues in VS Code when using `gopls`:
 
