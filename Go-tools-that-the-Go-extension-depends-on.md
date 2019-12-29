@@ -4,7 +4,7 @@ Below are the tools essential for the general features of this extension. If you
 
 **NOTE**: If you are using Go modules, then we strongly recommend using the Go language server as it performs much better than the tools below. 
 
-- [gocode](https://github.com/mdempsky/gocode) for auto-completion _(not needed if using language server)_
+- [gocode](http://github.com/stamblerre/gocode/) for auto-completion 
 - [go-outline](https://github.com/ramya-rao-a/go-outline) for symbol search in the current file
 - [go-symbols](https://github.com/acroca/go-symbols) for symbol search in the current workspace
 - [gopkgs](https://github.com/uudashr/gopkgs) for auto-completion of unimported packages
@@ -32,28 +32,3 @@ You can install all these tools at once by running the command `Go: Install/Upda
 
 If you wish to have the extension use a separate GOPATH for its tools, provide the desired location in the setting `go.toolsGopath`.
 
-To install the tools manually in the current GOPATH, just copy the below (after choosing the tools) in your terminal run:
-
-```bash
-go get -u -v github.com/ramya-rao-a/go-outline
-go get -u -v github.com/acroca/go-symbols
-go get -u -v github.com/mdempsky/gocode
-go get -u -v github.com/rogpeppe/godef
-go get -u -v golang.org/x/tools/cmd/godoc
-go get -u -v github.com/zmb3/gogetdoc
-go get -u -v golang.org/x/lint/golint
-go get -u -v github.com/fatih/gomodifytags
-go get -u -v golang.org/x/tools/cmd/gorename
-go get -u -v sourcegraph.com/sqs/goreturns
-go get -u -v golang.org/x/tools/cmd/goimports
-go get -u -v github.com/cweill/gotests/...
-go get -u -v golang.org/x/tools/cmd/guru
-go get -u -v github.com/josharian/impl
-go get -u -v github.com/haya14busa/goplay/cmd/goplay
-go get -u -v github.com/uudashr/gopkgs/cmd/gopkgs
-go get -u -v github.com/davidrjenni/reftools/cmd/fillstruct
-```
-
-And for debugging:
-
-- delve: Follow the instructions at https://github.com/derekparker/delve/blob/master/Documentation/installation/README.md.
