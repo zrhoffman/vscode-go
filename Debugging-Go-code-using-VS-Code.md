@@ -151,7 +151,8 @@ Enter the id of the process running your executable in the below snippet
 
 ## Remote Debugging
 
-To remote debug using VS Code, you must first run a headless Delve server on the target machine.  For example:
+To remote debug using VS Code, you must first run a headless Delve server on the target machine. The below examples assume
+that you are in the same folder as the package you want to debug. If not, please refer to the [usage doc on dlv debug](https://github.com/go-delve/delve/blob/master/Documentation/usage/dlv_debug.md) command. 
 
 ```bash
 $ dlv debug --headless --listen=:2345 --log --api-version=2
