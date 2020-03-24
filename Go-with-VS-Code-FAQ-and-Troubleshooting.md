@@ -4,6 +4,8 @@
 
 **A:** Make sure to install all the dependent Go tools. Run `Go: Install/Update Tools`. If you want to install only selected tools, then go through the [Go tools that this plugin depends on](https://github.com/Microsoft/vscode-go/wiki/Go-tools-that-the-Go-extension-depends-on) and install the ones you need manually
 
+If you see an error of the form `command <command-name-here> not found`, it means that the extension has failed to activate and register its commands. Please try to uninstall and re-install the extension.
+
 **Q: I see "git pull --ff-only" errors when installing tools.**
 
 **A:** Chances are that there was a force pushed commit to the repo for the tool being installed. Delete the folder corresponding to this tool in your `$GOPATH/src` (if you have set `go.toolsGopath`, then check there) and try again.
