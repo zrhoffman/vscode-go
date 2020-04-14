@@ -168,15 +168,14 @@ Then, create a remote debug configuration in VS Code `launch.json`.
 
 ```json
 {
-	"name": "Launch remote",
+	"name": "Attach remote",
 	"type": "go",
-	"request": "launch",
+	"request": "attach",
 	"mode": "remote",
 	"remotePath": "absolute-path-to-the-file-being-debugged-on-the-remote-machine",
 	"port": 2345,
 	"host": "127.0.0.1",
-	"program": "absolute-path-to-the-file-on-the-local-machine",
-	"env": {}
+	"cwd": "absolute-path-to-the-file-on-the-local-machine",
 }
 ```
 
